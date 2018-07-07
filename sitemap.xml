@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://denseidel.github.io/help.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/en/help.html" /> </url>
+<url> <loc>https://denseidel.github.io/index.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/en/index.html" /> </url>
+<url> <loc>https://denseidel.github.io/users.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/en/users.html" /> </url>
+<url> <loc>https://denseidel.github.io/blog/2017/12/28/change-git-origin.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://denseidel.github.io/blog/2017/12/27/indent-multiple-lines-in-visual-studio-code.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://denseidel.github.io/blog/2017/12/18/react-bind-this-keyword-in-callbacks.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://denseidel.github.io/blog/2017/11/25/windows-setup.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://denseidel.github.io/blog/2017/11/25/dev-tool-setup.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://denseidel.github.io/blog/2017/11/24/types-of-relevant-resources-to-ecosystems.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://denseidel.github.io/blog/2017/11/24/strategy-to-transform-to-one-global-enterprise.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://denseidel.github.io/blog/2017/11/24/create-rest-api-with-spring-boot.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://denseidel.github.io/blog/2017/11/24/blog-on-github-pages.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://denseidel.github.io/docs/doc1.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/doc1.html" /> </url>
+<url> <loc>https://denseidel.github.io/docs/doc2.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/doc2.html" /> </url>
+<url> <loc>https://denseidel.github.io/docs/doc3.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/doc3.html" /> </url>
+<url> <loc>https://denseidel.github.io/docs/doc4.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/doc4.html" /> </url>
+<url> <loc>https://denseidel.github.io/docs/doc5.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/doc5.html" /> </url>
+</urlset>
