@@ -1,0 +1,300 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Setup · Dennis&#x27; Notebook</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Platform &amp; Infrastructure"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Setup · Dennis&#x27; Notebook"/><meta property="og:type" content="website"/><meta property="og:url" content="https://denseidel.github.io/index.html"/><meta property="og:description" content="## Platform &amp; Infrastructure"/><meta property="og:image" content="https://denseidel.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://denseidel.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://denseidel.github.io/blog/atom.xml" title="Dennis&#x27; Notebook Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://denseidel.github.io/blog/feed.xml" title="Dennis&#x27; Notebook Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">Dennis&#x27; Notebook</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/support.html" target="_self">Knowledge Base</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="/docs/adr.html" target="_self">ADRs</a></li><li class=""><a href="/docs/techradar.html" target="_self">My Tech Radar</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Plattform</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul><li class="navListItem"><a class="navItem" href="/docs/support.html">Get Started</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture.html">Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/softwareengineering.html">Software Engineering</a></li><li class="navListItem"><a class="navItem" href="/docs/bootstrap.html">Bootstraping</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Learning</h3><ul><li class="navListItem"><a class="navItem" href="/docs/techstack.html">HealthTech Stack</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Development Environment</h3><ul><li class="navListItem"><a class="navItem" href="/docs/developmentenvironment.html">Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/account.html">Cloud Accounts</a></li><li class="navListItem"><a class="navItem" href="/docs/vi.html">VI Basics</a></li><li class="navListItem"><a class="navItem" href="/docs/tools.html">Tools</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Services</h3><ul><li class="navListItem"><a class="navItem" href="/docs/services.html">Design</a></li><li class="navListItem"><a class="navItem" href="/docs/backend/serverless.html">Serverless</a></li><li class="navListItem"><a class="navItem" href="/docs/backend/containers.html">Containers</a></li><li class="navListItem"><a class="navItem" href="/docs/backend/python.html">Python</a></li><li class="navListItem"><a class="navItem" href="/docs/backend/firebase.html">Firebase</a></li><li class="navListItem"><a class="navItem" href="/docs/backend/chatbots.html">Chatbots</a></li><li class="navListItem"><a class="navItem" href="/docs/backend/testing.html">Testing</a></li><li class="navListItem"><a class="navItem" href="/docs/backend/persistance.html">Persistance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Frontend</h3><ul><li class="navListItem"><a class="navItem" href="/docs/frontend.html">Frontend</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Plattform</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/plattform.html">Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/iam.html">IAM</a></li><li class="navListItem"><a class="navItem" href="/docs/events.html">Event Driven / Streaming aaS</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Automation</h3><ul><li class="navListItem"><a class="navItem" href="/docs/ai.html">AI</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Setup</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="platform-infrastructure"></a><a href="#platform-infrastructure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Platform &amp; Infrastructure</h2>
+<p>The platform provides the tools to increase productivity it should abstract away the operations tasks to get fast feedback loops but it also should design for change as we should be prepared that we have to change in the future:</p>
+<ul>
+<li>Serverless (great speed and plattform) vs Istio (great portability) or Flask on Serverless for speed and platform but migratable?</li>
+<li>SaaS Components for
+<ul>
+<li><a href="persistance-dbaas/">Persistance - DBaaS (DynamoDB)</a></li>
+<li><a href="iam-iamaas.md">IAM - IAMaaS </a></li>
+<li><a href="event-driven-streaming-aas/">Event Driven / Streaming aaS</a></li>
+<li><a href="ai-aiaas.md">AI - AIaaS</a></li>
+<li>Reliability aaS - Logging</li>
+<li>... but don't forget ports and adapters</li>
+</ul></li>
+</ul>
+<p><strong>Architecture Decisions</strong></p>
+<ol>
+<li><a href="https://github.com/denseidel/developer-playbook/blob/master/adr/2018-02-18%20Select%20a%20application%20runtime%20for%20plattform.md">Select Application Runtime: Serverless over Istio for now</a></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="c-ontainers-or-serverless"></a><a href="#c-ontainers-or-serverless" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>C_ontainers_ or <em>serverless</em></h2>
+<p>Serverless increases the efficiency of your implementation. But at the same time you bind yourself very tightly to a special vendor like Amazon with AWS Lambda. Another Option is to use a multi cloud apporach and use Containers as your abstraction layer - Lambdas also use containers themselves. Downside you don't have the you pay only what you use and you miss the non functional features the platform provides like monitoring, routing ... This is where service meshs like Istio come into play.</p>
+<ul>
+<li><a href="https://serverless.com/blog/serverless-faas-vs-containers/">https://serverless.com/blog/serverless-faas-vs-containers/</a></li>
+<li><a href="http://rancher.com/containers-vs-serverless-computing/">http://rancher.com/containers-vs-serverless-computing/</a></li>
+</ul>
+<p><strong>Can you integrate serverless with a service mesh and when to do it?</strong></p>
+<ul>
+<li><a href="https://medium.com/@jeffzzq/how-to-integrate-an-aws-lambda-function-into-your-kubernetes-service-mesh-5d665f351675">https://medium.com/@jeffzzq/how-to-integrate-an-aws-lambda-function-into-your-kubernetes-service-mesh-5d665f351675</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="containers"></a><a href="#containers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Containers</h2>
+<h3><a class="anchor" aria-hidden="true" id="infrastructure-automation-with-terraform"></a><a href="#infrastructure-automation-with-terraform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Infrastructure Automation with - Terraform</h3>
+<ul>
+<li><a href="https://www.udemy.com/learn-devops-infrastructure-automation-with-terraform/">https://www.udemy.com/learn-devops-infrastructure-automation-with-terraform/</a></li>
+<li><a href="https://github.com/wardviaene/terraform-course">https://github.com/wardviaene/terraform-course</a></li>
+<li><a href="https://aws.amazon.com/blogs/apn/terraform-beyond-the-basics-with-aws/">https://aws.amazon.com/blogs/apn/terraform-beyond-the-basics-with-aws/</a></li>
+<li><a href="https://github.com/shuaibiyy/awesome-terraform">https://github.com/shuaibiyy/awesome-terraform</a></li>
+<li><a href="https://github.com/mcuadros/terraform-provider-helm">https://github.com/mcuadros/terraform-provider-helm</a></li>
+<li><a href="https://www.terraform.io/docs/providers/aws/guides/eks-getting-started.html">https://www.terraform.io/docs/providers/aws/guides/eks-getting-started.html</a></li>
+<li><a href="https://www.terraform.io/intro/getting-started/install.html">https://www.terraform.io/intro/getting-started/install.html</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="setup-docker-environment"></a><a href="#setup-docker-environment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup Docker Environment</h3>
+<p><a href="https://medium.com/@ssola/building-microservices-with-python-part-2-9f951199094a">Python Connexion Docker Tutorial</a></p>
+<ol>
+<li><a href="https://docs.docker.com/docker-for-mac/install/">Install Docker</a></li>
+</ol>
+<p>Create Dockerfile</p>
+<p>Build the dockerfile (<a href="http://container-solutions.com/tagging-docker-images-the-right-way/">tagging</a>).</p>
+<pre><code class="hljs css languages- text"><span class="hljs-symbol">docker</span> <span class="hljs-keyword">build </span>-t products:<span class="hljs-number">1</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span> .
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="setup-kubernetes"></a><a href="#setup-kubernetes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup Kubernetes</h3>
+<p>When you want to bring your docker containers into production - you need to orchestrate those containers. This is where <a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">Kubernetes</a> helps getting a reliable and reporducable, production read ( scalable ...), &quot;simple&quot; (routes, services, ...), vendor independent (compared to serverless) and multi cloud ready solution.</p>
+<p><a href="https://de.slideshare.net/InfoQ/building-a-microservices-platform-with-kubernetes">https://de.slideshare.net/InfoQ/building-a-microservices-platform-with-kubernetes</a></p>
+<h4><a class="anchor" aria-hidden="true" id="local-development-environment"></a><a href="#local-development-environment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Local Development Environment</h4>
+<p>Start minikube [<a href="https://kubernetes.io/docs/getting-started-guides/minikube/">Source</a>]</p>
+<pre><code class="hljs css languages- text">minikube <span class="hljs-built_in">start</span> <span class="hljs-comment">--memory 4096</span>
+</code></pre>
+<p>Setup <a href="https://docs.helm.sh/">Helm</a> and tiller [<a href="https://docs.helm.sh/using_helm/#quickstart">Source</a>] and Istio [<a href="https://istio.io/docs/setup/kubernetes/quick-start.html">Source</a>] / <strong>helm install currently not working check back in a few weeks.</strong></p>
+<pre><code class="hljs css languages- text"><span class="hljs-comment">#find the locally configure cluster where tiller will be installed by helm</span>
+kubectl config current-context
+
+<span class="hljs-comment">#install helm on client / ci/cd pipeline</span>
+brew install kubernetes-helm
+
+<span class="hljs-comment">#https://github.com/istio/istio/tree/master/install/kubernetes/helm/istio</span>
+git clone https:<span class="hljs-string">//github.com/istio/istio.git</span>
+<span class="hljs-keyword">cd</span> istio
+kubectl create -f install/kubernetes/helm/helm-service-account.yaml
+
+<span class="hljs-comment"># for production secure helm https://docs.helm.sh/using_helm/#securing-your-helm-installation</span>
+helm init \ 
+<span class="hljs-params">--tiller-tls</span> \ 
+<span class="hljs-params">--tiller-tls-verify</span> \ 
+<span class="hljs-params">--tiller-tls-ca-cert=ca</span>.pem \ 
+<span class="hljs-params">--tiller-tls-cert=cert</span>.pem \ 
+<span class="hljs-params">--tiller-tls-key=key</span>.pem \ 
+<span class="hljs-params">--service-account=tiller</span>
+
+helm install install/kubernetes/helm/istio <span class="hljs-params">--name</span> istio
+</code></pre>
+<p>To build images directly in minishift use minikube's built-in docker daemon:</p>
+<pre><code class="hljs css languages- text"><span class="hljs-keyword">eval</span> $(minikube docker-<span class="hljs-keyword">env</span>)
+docker ps
+</code></pre>
+<p>Create Env variables: <a href="https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/">https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/</a></p>
+<p>Create secrets: <a href="https://kubernetes.io/docs/concepts/configuration/secret/">https://kubernetes.io/docs/concepts/configuration/secret/</a></p>
+<pre><code class="hljs css languages- text">kubectl create<span class="hljs-built_in"> secret </span>generic gcloud-cred <span class="hljs-attribute">--from-file</span>=/Users/den/.config/keys/marketplaceapp.json
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="production-environment"></a><a href="#production-environment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Production Environment</h4>
+<p>In my experience maintaining and setting up a kuebrnetes cluster is hard - there are now many great fully manged offerings: Openshift, AWS EKS, IBM,<br>
+Microsoft, Google GKE, Joyent Kubernetes</p>
+<p><strong>TODO</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="setup-service-mesh"></a><a href="#setup-service-mesh" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup Service Mesh</h3>
+<h4><a class="anchor" aria-hidden="true" id="what-is-istio"></a><a href="#what-is-istio" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is Istio?</h4>
+<ul>
+<li>Source:
+<ul>
+<li><a href="https://programmaticponderings.com/2017/12/22/deploying-and-configuring-istio-on-google-kubernetes-engine-gke/">https://programmaticponderings.com/2017/12/22/deploying-and-configuring-istio-on-google-kubernetes-engine-gke/</a> (Udemy Course Istio)</li>
+<li>Istio Introduction:
+<ul>
+<li><a href="https://www.youtube.com/watch?v=muoCgHkkPxo">https://www.youtube.com/watch?v=muoCgHkkPx</a></li>
+<li><a href="https://istio.io/docs/concepts/what-is-istio/overview.html">https://istio.io/docs/concepts/what-is-istio/overview.html</a></li>
+</ul></li>
+</ul></li>
+<li>Improve development time (library vs sidecar)</li>
+<li>improve plattform (tracing, a/b testing, dashboarding, service graph)</li>
+<li>... without changing the code!</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="tutorial"></a><a href="#tutorial" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tutorial</h3>
+<p>Setup a kubernetes cluster (see chapter above) then install Istio:</p>
+<pre><code class="hljs css languages- text">curl -L https://git.io/getLatestIstio | sh -
+export PATH="$PATH:/Users/den/repo/istio-0.5.0/bin"
+cd istio-0.5.0
+kubectl apply -f <span class="hljs-keyword">install</span>/kubernetes/istio.yaml
+kubectl <span class="hljs-keyword">apply</span> -f <span class="hljs-keyword">install</span>/kubernetes/istio-auth.yaml
+kubectl <span class="hljs-keyword">apply</span> \
+  -f <span class="hljs-keyword">install</span>/kubernetes/addons/prometheus.yaml \
+  -f <span class="hljs-keyword">install</span>/kubernetes/addons/grafana.yaml \
+  -f <span class="hljs-keyword">install</span>/kubernetes/addons/servicegraph.yaml \
+  -f <span class="hljs-keyword">install</span>/kubernetes/addons/zipkin.yaml
+
+openssl req -x509 -nodes -<span class="hljs-keyword">days</span> <span class="hljs-number">365</span> -newkey rsa:<span class="hljs-number">2048</span> -keyout /tmp/tls.key -<span class="hljs-keyword">out</span> /tmp/tls.crt -subj <span class="hljs-string">"/CN=d10l.de"</span>
+kubectl <span class="hljs-keyword">create</span> -n istio-<span class="hljs-keyword">system</span> secret tls istio-ingress-certs <span class="hljs-comment">--key /tmp/tls.key --cert /tmp/tls.crt</span>
+
+#<span class="hljs-keyword">get</span> <span class="hljs-keyword">external</span> ip
+kubectl <span class="hljs-keyword">get</span> svc -n istio-<span class="hljs-keyword">system</span>
+minikube ip
+<span class="hljs-keyword">export</span> GATEWAY_URL=$(kubectl <span class="hljs-keyword">get</span> po -l istio=ingress -n istio-<span class="hljs-keyword">system</span> -o <span class="hljs-string">'jsonpath={.items[0].status.hostIP}'</span>):$(kubectl <span class="hljs-keyword">get</span> svc istio-ingress -n istio-<span class="hljs-keyword">system</span> -o <span class="hljs-string">'jsonpath={.spec.ports[0].nodePort}'</span>)
+Deploy app
+kubectl <span class="hljs-keyword">apply</span> -f &lt;(istioctl kube-inject -f samples/bookinfo/kube/bookinfo.yaml)
+kubectl <span class="hljs-keyword">get</span> services
+</code></pre>
+<p>Deploy</p>
+<pre><code class="hljs css languages- text">kubectl apply -f &lt;(<span class="hljs-name">istioctl</span> kube-inject -f ./deployment.yaml)
+</code></pre>
+<p>Set it up (you should do this with <a href="https://github.com/denseidel/developer-playbook/tree/0de27ab0d5cf97c58fdeec5a26159b0fa55f0ef2/devsecops.md">DevSecOps </a>in Mind (Automation is everything!):</p>
+<p><a href="https://www.joyent.com/blog/kubernetes-the-easy-way">https://www.joyent.com/blog/kubernetes-the-easy-way</a></p>
+<p><a href="https://www.terraform.io/docs/providers/kubernetes/guides/getting-started.html">https://www.terraform.io/docs/providers/kubernetes/guides/getting-started.html</a> ?</p>
+<p>Register with <a href="https://cloud.google.com/?hl=de">Google Cloud Platform</a></p>
+<p>Setup SDK locally and in Pipeline</p>
+<p>Install Google Cloud SDK (MacOS)</p>
+<p><a href="https://cloud.google.com/sdk/docs/quickstart-macos">https://cloud.google.com/sdk/docs/quickstart-macos</a></p>
+<pre><code class="hljs css languages- text"><span class="hljs-keyword">brew </span>cask <span class="hljs-keyword">install </span>google-<span class="hljs-keyword">cloud-sdk
+</span></code></pre>
+<p>Install Istio: <a href="https://istio.io/docs/setup/kubernetes/quick-start.html">https://istio.io/docs/setup/kubernetes/quick-start.html</a></p>
+<pre><code class="hljs css languages- text"><span class="hljs-comment">#Retrieve your credentials for kubectl (replace &lt;cluster-name&gt; with the name of the cluster you want to use, and &lt;zone&gt; with the zone where that cluster is located):</span>
+<span class="hljs-string">gcloud </span><span class="hljs-string">container </span><span class="hljs-string">clusters </span><span class="hljs-built_in">get-credentials</span> &lt;<span class="hljs-string">cluster-name&gt;</span> <span class="hljs-built_in">--zone</span> &lt;<span class="hljs-string">zone&gt;</span> <span class="hljs-built_in">--project</span> &lt;<span class="hljs-string">project-name&gt;</span>
+<span class="hljs-string">Grant </span><span class="hljs-string">cluster </span><span class="hljs-string">admin </span><span class="hljs-string">permissions </span><span class="hljs-string">to </span><span class="hljs-string">the </span><span class="hljs-string">current </span><span class="hljs-string">user </span>(<span class="hljs-string">admin </span><span class="hljs-string">permissions </span><span class="hljs-string">are </span><span class="hljs-string">required </span><span class="hljs-string">to </span><span class="hljs-string">create </span><span class="hljs-string">the </span><span class="hljs-string">necessary </span><span class="hljs-string">RBAC </span><span class="hljs-string">rules </span><span class="hljs-string">for </span><span class="hljs-string">Istio)</span>:
+<span class="hljs-string">kubectl </span><span class="hljs-string">create </span><span class="hljs-string">clusterrolebinding </span><span class="hljs-string">cluster-admin-</span><span class="hljs-string">binding </span><span class="hljs-built_in">--clusterrole=cluster-admin</span> <span class="hljs-built_in">--user=$(gcloud</span> <span class="hljs-string">config </span><span class="hljs-built_in">get-value</span> <span class="hljs-string">core/</span><span class="hljs-string">account)</span>
+<span class="hljs-comment">#download istio</span>
+<span class="hljs-string">curl </span>-L <span class="hljs-string">https:</span>//<span class="hljs-string">git.</span><span class="hljs-string">io/</span><span class="hljs-string">getLatestIstio </span>| <span class="hljs-string">sh </span>-
+<span class="hljs-comment"># go to folder</span>
+<span class="hljs-string">cd </span><span class="hljs-string">istio-0.</span>5.0
+<span class="hljs-comment"># add istiocrl</span>
+<span class="hljs-string">export </span><span class="hljs-string">PATH=</span>$<span class="hljs-string">PWD/</span><span class="hljs-string">bin:</span>$<span class="hljs-string">PATH
+</span><span class="hljs-comment">#Install Istio and enable mutual TLS authentication between sidecars.:</span>
+<span class="hljs-string">kubectl </span><span class="hljs-string">apply </span>-f <span class="hljs-string">install/</span><span class="hljs-string">kubernetes/</span><span class="hljs-string">istio-auth.</span><span class="hljs-string">yaml
+</span><span class="hljs-comment"># Optional: If your cluster has Kubernetes version 1.9 or greater, and you wish to enable automatic proxy injection, install the sidecar injector webhook using the instructions at (/docs/setup/kubernetes/sidecar-injection.html#automatic-sidecar-injection).</span>
+
+<span class="hljs-comment">#Verify</span>
+<span class="hljs-string">kubectl </span><span class="hljs-string">get </span><span class="hljs-string">svc </span>-n <span class="hljs-string">istio-system
+</span><span class="hljs-string">kubectl </span><span class="hljs-string">get </span><span class="hljs-string">pods </span>-n <span class="hljs-string">istio-system
+</span>
+<span class="hljs-comment">#create/update the namespace for my application with istio enabled</span>
+<span class="hljs-string">kubectl </span><span class="hljs-string">label </span><span class="hljs-string">namespace </span>&lt;<span class="hljs-string">namespace&gt;</span> <span class="hljs-string">istio-injection=</span><span class="hljs-string">enabled
+</span><span class="hljs-comment"># isnstall BookInfo Sample https://istio.io/docs/guides/bookinfo.html</span>
+<span class="hljs-string">kubectl </span><span class="hljs-string">create </span>-n &lt;<span class="hljs-string">namspace&gt;</span> -f &lt;<span class="hljs-string">your-app-</span><span class="hljs-string">spec&gt;</span>.<span class="hljs-string">yaml
+</span></code></pre>
+<p>Access the non exposed components:</p>
+<pre><code class="hljs css languages- text"><span class="hljs-comment">#login first</span>
+gcloud container clusters get-credentials marketplace-istio \
+      --zone us-east1-b --project trusty-acre-156607
+
+kubectl -n istio-system port-forward \
+  $(kubectl -n istio-system <span class="hljs-builtin-name">get</span> pod -l <span class="hljs-attribute">app</span>=zipkin -o <span class="hljs-attribute">jsonpath</span>=<span class="hljs-string">'{.items[0].metadata.name}'</span>) \
+  9411:9411 &amp;
+
+kubectl -n istio-system port-forward \
+  $(kubectl -n istio-system <span class="hljs-builtin-name">get</span> pod -l <span class="hljs-attribute">app</span>=grafana -o <span class="hljs-attribute">jsonpath</span>=<span class="hljs-string">'{.items[0].metadata.name}'</span>) \
+  3000:3000 &amp;
+
+kubectl -n istio-system port-forward \
+  $(kubectl -n istio-system <span class="hljs-builtin-name">get</span> pod -l <span class="hljs-attribute">app</span>=servicegraph -o <span class="hljs-attribute">jsonpath</span>=<span class="hljs-string">'{.items[0].metadata.name}'</span>) \
+  8088:8088 &amp;
+
+kubectl -n istio-system port-forward \
+  $(kubectl -n istio-system <span class="hljs-builtin-name">get</span> pod -l <span class="hljs-attribute">app</span>=prometheus -o <span class="hljs-attribute">jsonpath</span>=<span class="hljs-string">'{.items[0].metadata.name}'</span>) \
+  9090:9090 &amp;
+
+kubectl<span class="hljs-built_in"> proxy </span>(8080/ui -&gt; management ui)
+</code></pre>
+<p>To enable TLS create certficate and deploy it as a secret and add the following to the ingress config ([<a href="https://istio.io/docs/tasks/traffic-management/ingress.html](https://istio.io/docs/tasks/traffic-management/ingress.html%29)">https://istio.io/docs/tasks/traffic-management/ingress.html](https://istio.io/docs/tasks/traffic-management/ingress.html%29)</a></p>
+<pre><code class="hljs css languages- text">---
+###########################################################################
+# Ingress resource (gateway)
+##########################################################################
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  ...
+spec:
+  tls:
+    - secretName: istio-ingress-certs # currently ignored
+  rules:
+  - ...
+
+---
+</code></pre>
+<p>Add your own domain to the static ip address of the cluster: <a href="https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip">https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip</a></p>
+<p>Find your static IP address:</p>
+<pre><code class="hljs css languages- text">kubectl <span class="hljs-builtin-name">get</span> ingress -o wide
+</code></pre>
+<p>Setup your DNS (with Route53) <a href="https://serverless-stack.com/chapters/setup-your-domain-with-cloudfront.html">https://serverless-stack.com/chapters/setup-your-domain-with-cloudfront.html</a></p>
+<p>Remove untagged images and stopped containers <a href="http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html">http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html</a></p>
+<pre><code class="hljs css languages- text">docker rmi $(docker images | <span class="hljs-type">grep</span> <span class="hljs-string">"^&lt;none&gt;"</span> | <span class="hljs-type">awk</span> <span class="hljs-string">"{print $3}"</span>)
+</code></pre>
+<p>Small images <a href="https://nickjanetakis.com/blog/alpine-based-docker-images-make-a-difference-in-real-world-apps">https://nickjanetakis.com/blog/alpine-based-docker-images-make-a-difference-in-real-world-apps</a></p>
+<p>testing with postman and different environments: <a href="https://www.getpostman.com/docs/postman/environments_and_globals/variables">https://www.getpostman.com/docs/postman/environments_and_globals/variables</a></p>
+<p>Egress Rules currently don't work well with HTTPS <a href="https://istio.io/blog/2018/egress-https.html">https://istio.io/blog/2018/egress-https.html</a> so better enable direct connection: <a href="https://istio.io/docs/tasks/traffic-management/egress.html">https://istio.io/docs/tasks/traffic-management/egress.html</a></p>
+<pre><code class="hljs css languages- text"><span class="hljs-comment"># minikube</span>
+kubectl apply -f &lt;(istioctl kube-inject -f ./deployment.yaml <span class="hljs-attribute">--includeIPRanges</span>=10.0.0.1/24)
+<span class="hljs-comment">#for gke check https://istio.io/docs/tasks/traffic-management/egress.html</span>
+gcloud container clusters describe marketplace-istio <span class="hljs-attribute">--zone</span>=us-east1-b | grep -e clusterIpv4Cidr -e servicesIpv4Cidr
+kubectl apply -f &lt;(istioctl kube-inject -f ./deployment.yaml <span class="hljs-attribute">--includeIPRanges</span>=10.12.0.0/14,10.15.240.0/20)
+</code></pre>
+<p>Mount Containers locally: <a href="https://docs.docker.com/storage/bind-mounts/#start-a-container-with-a-bind-mount">https://docs.docker.com/storage/bind-mounts/#start-a-container-with-a-bind-mount</a></p>
+<p>Save docker image in docker hub to use it in kubernetes cluster</p>
+<pre><code class="hljs css languages- text">docker login
+docker <span class="hljs-keyword">tag</span> product<span class="hljs-variable">s:1</span>.<span class="hljs-number">2.0</span> dennisseidel/product<span class="hljs-variable">s:1</span>.<span class="hljs-number">2.0</span>
+docker push dennisseidel/product<span class="hljs-variable">s:1</span>.<span class="hljs-number">2.0</span>
+</code></pre>
+<p>and add it to the deloyment config</p>
+<p>create the secret with</p>
+<pre><code class="hljs css languages- text">kubectl create<span class="hljs-built_in"> secret </span>generic gcloud-cred <span class="hljs-attribute">--from-file</span>=/Users/den/.config/keys/marketplaceapp.json
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="service-discovery"></a><a href="#service-discovery" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Service Discovery</h3>
+<p>Use Envoy on ECS: <a href="https://blog.turbinelabs.io/replacing-aws-application-load-balancers-with-envoy-2a25c74bde9a">https://blog.turbinelabs.io/replacing-aws-application-load-balancers-with-envoy-2a25c74bde9a</a></p>
+<h3><a class="anchor" aria-hidden="true" id="register-your-domain"></a><a href="#register-your-domain" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Register your DOMAIN</h3>
+<p><a href="https://console.aws.amazon.com/route53">https://console.aws.amazon.com/route53</a></p>
+<h2><a class="anchor" aria-hidden="true" id="encryption-how-to-use-the-public-cloud-securly-n26"></a><a href="#encryption-how-to-use-the-public-cloud-securly-n26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Encryption - how to use the public cloud securly? N26?</h2>
+<p>Other Serverless Assets:</p>
+<ul>
+<li>File based Maleware detection : <a href="https://medium.com/airbnb-engineering/binaryalert-real-time-serverless-malware-detection-ca44370c1b90">https://medium.com/airbnb-engineering/binaryalert-real-time-serverless-malware-detection-ca44370c1b90</a></li>
+</ul>
+<p>Containers on AWS:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/de_de/AmazonECS/latest/developerguide/ECS_CLI_tutorial.html">https://docs.aws.amazon.com/de_de/AmazonECS/latest/developerguide/ECS_CLI_tutorial.html</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html</a></li>
+<li><a href="https://blog.valiantys.com/en/expert-tips/deploying-docker-containers-aws">https://blog.valiantys.com/en/expert-tips/deploying-docker-containers-aws</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="create-k8s-secrets"></a><a href="#create-k8s-secrets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>create-k8s-secrets</h2>
+<p><a href="https://kubernetes.io/docs/concepts/configuration/secret/">https://kubernetes.io/docs/concepts/configuration/secret/</a> -&gt; use <code>Creating a Secret Manually</code></p>
+<p>Encode the values base64 / better use visual studio code plugin Encode Decode (<code>Convert Section)</code></p>
+<pre><code class="hljs css languages- text">echo -n <span class="hljs-string">"admin"</span> <span class="hljs-string">| base64</span>
+</code></pre>
+<p>! in kubernetes the env variables are authomatically decoded !</p>
+<p>create secret file in a folder without version control</p>
+<pre><code class="hljs css languages- text">apiVersion: v1
+kind:<span class="hljs-built_in"> Secret
+</span>metadata:
+  name: mysecret
+type: Opaque
+data:
+  username: YWRtaW4=
+  password: MWYyZDFlMmU2N2Rm
+</code></pre>
+<p>encrypt the folder with gpg</p>
+<p>install gpg tools: <a href="https://gpgtools.org/">https://gpgtools.org/</a></p>
+<p><a href="https://www.gnupg.org/documentation/manuals/gnupg/gpg_002dzip.html">https://www.gnupg.org/documentation/manuals/gnupg/gpg_002dzip.html</a></p>
+<p>create to following aliases in <code>.zshrc</code>:</p>
+<pre><code class="hljs css languages- text"><span class="hljs-keyword">alias</span> lock-secret-<span class="hljs-keyword">files</span>=<span class="hljs-string">"cd ~/Desktop/ &amp;&amp; gpg-zip -e -o secret-files -r den.seidel@gmail.com secret &amp;&amp; mv -f ~/Desktop/secret-files ~/Google\ Drive/backupx/ &amp;&amp; rm -rf ~/Desktop/secret"</span>
+
+<span class="hljs-keyword">alias</span> unlock-secret-<span class="hljs-keyword">files</span>=<span class="hljs-string">"cd ~/Desktop &amp;&amp; gpg-zip -d ~/Google\ Drive/backupx/secret-files -r den.seidel@gmail.com"</span>
+</code></pre>
+<p>create secret in kubernetes (secrets muss be in the same namespace as the pod!)</p>
+<pre><code class="hljs css languages- text">kubectl create --<span class="hljs-keyword">namespace</span>=<span class="hljs-keyword">default</span> -f ./secret.yaml
+</code></pre>
+<p>in kubernetes</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/frontend.html">← Frontend</a><a class="docs-next button" href="/docs/iam.html">IAM →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#platform-infrastructure">Platform &amp; Infrastructure</a></li><li><a href="#c-ontainers-or-serverless">C_ontainers_ or <em>serverless</em></a></li><li><a href="#containers">Containers</a><ul class="toc-headings"><li><a href="#infrastructure-automation-with-terraform">Infrastructure Automation with - Terraform</a></li><li><a href="#setup-docker-environment">Setup Docker Environment</a></li><li><a href="#setup-kubernetes">Setup Kubernetes</a></li><li><a href="#setup-service-mesh">Setup Service Mesh</a></li><li><a href="#tutorial">Tutorial</a></li><li><a href="#service-discovery">Service Discovery</a></li><li><a href="#register-your-domain">Register your DOMAIN</a></li></ul></li><li><a href="#encryption-how-to-use-the-public-cloud-securly-n26">Encryption - how to use the public cloud securly? N26?</a></li><li><a href="#create-k8s-secrets">create-k8s-secrets</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Knowledge Base</a><a href="/docs/en/blog">News</a><a href="/docs/en/doc4.html">ADRs</a></div><div><h5>Let&#x27;s build a a community</h5><a href="https://twitter.com/search?l=&amp;q=%23d10l%20since%3A2018-07-07&amp;src=typd" target="_blank" rel="noreferrer noopener">Disucss using #d10l</a><a href="https://twitter.com/denseidel" target="_blank" rel="noreferrer noopener">Contact me @denseidel</a></div><div><h5>More</h5><a href="https://github.com/denseidel">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Dennis Seidel</section></footer></div></body></html>
