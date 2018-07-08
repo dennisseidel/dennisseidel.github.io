@@ -1,0 +1,64 @@
+---
+id: events
+title: Event Driven / Streaming aaS
+---
+## Architectural Decisions
+
+* [ADR-0006](https://github.com/denseidel/developer-playbook/blob/master/docs/adr/0006-i-use-aws-for-ml-and-event-driven-architecture.md) - I use AWS for ML and Event Driven Architecture to get started
+
+## Event Types: Business Events\(BE\) vs Data Change Events \(DE\)
+
+* [https://zalando.github.io/nakadi/manual.html\#using\_event-types](https://zalando.github.io/nakadi/manual.html#using_event-types)
+
+## In the frontend/client:
+
+* [https://pusher.com/](https://pusher.com/)
+* [https://auth0.com/blog/build-a-chat-app-with-react/](https://auth0.com/blog/build-a-chat-app-with-react/)
+
+## In the backend:
+
+* AWS Lambda
+* Kafka 
+* [Edx Architecture](https://edx.readthedocs.io/projects/edx-developer-guide/en/latest/architecture.html)
+
+## Event Infrastructure:
+
+* Kafka on GPC: [https://console.cloud.google.com/launcher/details/bitnami-launchpad/kafka?project=chatbot-157819](https://console.cloud.google.com/launcher/details/bitnami-launchpad/kafka?project=chatbot-157819)
+* [https://www.confluent.io/blog/running-kafka-streams-applications-aws/](https://www.confluent.io/blog/running-kafka-streams-applications-aws/)
+
+[https://cloud.google.com/solutions/architecture/complex-event-processing](https://cloud.google.com/solutions/architecture/complex-event-processing)
+
+[https://jobs.zalando.com/tech/blog/backing-up-kafka-zookeeper/](https://jobs.zalando.com/tech/blog/backing-up-kafka-zookeeper/)
+
+[https://jobs.zalando.com/tech/blog/rock-solid-kafka/](https://jobs.zalando.com/tech/blog/rock-solid-kafka/)
+
+
+
+## Kinesis
+
+{% embed data="{\"url\":\"https://medium.com/@harlow/processing-kinesis-streams-w-aws-lambda-and-golang-264efc8f979a\",\"type\":\"link\",\"title\":\"Processing Kinesis Streams w/ AWS Lambda and Golang\",\"description\":\"Using Kinesis Streams as a trigger for AWS Lambda has made it easier than ever to process real-time event data. The days of managing…\",\"icon\":{\"type\":\"icon\",\"url\":\"https://cdn-images-1.medium.com/fit/c/304/304/1\*8I-HPL0bfoIzGied-dzOvA.png\",\"width\":152,\"height\":152,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://cdn-images-1.medium.com/max/1200/1\*vyqXef96S1hNFhK8Fo0x4A.gif\",\"width\":662,\"height\":468,\"aspectRatio\":0.7069486404833837}}" %}
+
+{% embed data="{\"url\":\"https://medium.com/retailmenot-engineering/building-a-high-throughput-data-pipeline-with-kinesis-lambda-and-dynamodb-7d78e992a02d\",\"type\":\"link\",\"title\":\"Building a High-Throughput Data Pipeline With Kinesis, Lambda and DynamoDB\",\"description\":\"As users interact with RetailMeNot.com, the engineering team receives a massive amount of data containing valuable information that can…\",\"icon\":{\"type\":\"icon\",\"url\":\"https://cdn-images-1.medium.com/fit/c/304/304/1\*c96yFw-d3VyuLdBS9CqGzw.png\",\"width\":152,\"height\":152,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://cdn-images-1.medium.com/max/1200/1\*O\_gCmLpXstX8YPA-j8FF2g.png\",\"width\":1200,\"height\":470,\"aspectRatio\":0.39166666666666666}}" %}
+
+{% embed data="{\"url\":\"https://www.youtube.com/watch?v=G7ZY8Pak-6w\",\"type\":\"video\",\"title\":\"Serverless data collection with Amazon Kinesis and AWS Lambda\",\"description\":\"In this webinar, our data scientists - Roberto Turrin and David Santucci - will drive you through the configuration of different cloud services such as Kinesis Stream, Lambda functions, and StepFunctions, to implement a data collection pipeline. \\n\\nThe talk illustrates a real-world example of how to collect data from your web server, mobile client and cloud application, and forward them to third-party services and tools or load them into your data warehouse.\\n\\nIf you\'d like to have access to the entire Cloud Academy content library, you can have 7 free days at https://goo.gl/4Yaqd2.\",\"icon\":{\"type\":\"icon\",\"url\":\"https://www.youtube.com/yts/img/favicon\_144-vfliLAfaB.png\",\"width\":144,\"height\":144,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://i.ytimg.com/vi/G7ZY8Pak-6w/mqdefault.jpg\",\"width\":320,\"height\":180,\"aspectRatio\":0.5625},\"embed\":{\"type\":\"player\",\"url\":\"https://www.youtube.com/embed/G7ZY8Pak-6w?rel=0&showinfo=0\",\"html\":\"<div style=\\\"left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.2493%;\\\"><iframe src=\\\"https://www.youtube.com/embed/G7ZY8Pak-6w?rel=0&amp;showinfo=0\\\" style=\\\"border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;\\\" allowfullscreen scrolling=\\\"no\\\"></iframe></div>\",\"aspectRatio\":1.7778}}" %}
+
+{% embed data="{\"url\":\"https://read.acloud.guru/aws-lambda-3-pro-tips-for-working-with-kinesis-streams-8f6182a03113\",\"type\":\"link\",\"title\":\"3 Pro Tips for Developers using AWS Lambda with Kinesis Streams\",\"description\":\"TL; DR: Lessons learned from our pitfalls include considering partial failures, using dead letter queues, and avoiding hot streams\",\"icon\":{\"type\":\"icon\",\"url\":\"https://cdn-images-1.medium.com/fit/c/304/304/1\*vldYywhRO\_sQ4fsj6X\_yVA.png\",\"width\":152,\"height\":152,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://cdn-images-1.medium.com/max/1200/1\*7mOWzHqFwU6rri-PdixOtA.png\",\"width\":1200,\"height\":560,\"aspectRatio\":0.4666666666666667}}" %}
+
+{% embed data="{\"url\":\"https://sbstjn.com/serverless-analytics-with-kinesis-stream-lambda.html\",\"type\":\"link\",\"title\":\"Serverless Analytics with Amazon Kinesis and AWS Lambda\",\"description\":\"Run your very own serverless Google Analytics clone with Amazon Kinesis and AWS Lambda functions to process your website’s visitor events.\",\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://sbstjn.com/assets/images/posts/serverless\_analytics.jpg\",\"width\":2400,\"height\":1594,\"aspectRatio\":0.6641666666666667}}" %}
+
+{% embed data="{\"url\":\"https://read.acloud.guru/deep-dive-into-aws-kinesis-at-scale-2e131ffcfa08\",\"type\":\"link\",\"title\":\"A deep-dive into lessons learned using Amazon Kinesis Streams at scale\",\"description\":\"Best practices discovered while processing over 200 billion records on AWS every month with Amazon Kinesis Streams\",\"icon\":{\"type\":\"icon\",\"url\":\"https://cdn-images-1.medium.com/fit/c/304/304/1\*vldYywhRO\_sQ4fsj6X\_yVA.png\",\"width\":152,\"height\":152,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://cdn-images-1.medium.com/max/1200/0\*mMhkNvKtCeMdonFt.\",\"width\":953,\"height\":703,\"aspectRatio\":0.7376705141657922}}" %}
+
+{% embed data="{\"url\":\"https://medium.com/@harlow/processing-kinesis-streams-w-aws-lambda-and-golang-264efc8f979a\",\"type\":\"link\",\"title\":\"Processing Kinesis Streams w/ AWS Lambda and Golang\",\"description\":\"Using Kinesis Streams as a trigger for AWS Lambda has made it easier than ever to process real-time event data. The days of managing…\",\"icon\":{\"type\":\"icon\",\"url\":\"https://cdn-images-1.medium.com/fit/c/304/304/1\*8I-HPL0bfoIzGied-dzOvA.png\",\"width\":152,\"height\":152,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://cdn-images-1.medium.com/max/1200/1\*vyqXef96S1hNFhK8Fo0x4A.gif\",\"width\":662,\"height\":468,\"aspectRatio\":0.7069486404833837}}" %}
+
+{% embed data="{\"url\":\"https://medium.com/@martatatiana/aws-lambdas-triggered-by-kinesis-streams-in-java-a-few-lessons-d1cffe5ea683\",\"type\":\"link\",\"title\":\"AWS Lambdas triggered by Kinesis Streams \(in Java \)— a few lessons…\",\"description\":\"So it’s a few months of my work with a solution implemented as a set of AWS Lambda functions in Java. While giving AWS Lambdas a try was a…\",\"icon\":{\"type\":\"icon\",\"url\":\"https://cdn-images-1.medium.com/fit/c/304/304/1\*8I-HPL0bfoIzGied-dzOvA.png\",\"width\":152,\"height\":152,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://cdn-images-1.medium.com/max/1200/1\*BIWozTAtBNEVnuA391qLfA.png\",\"width\":1196,\"height\":503,\"aspectRatio\":0.4205685618729097}}" %}
+
+{% embed data="{\"url\":\"https://github.com/alexcasalboni/kinesis-streams-fan-out-kinesis-analytics\",\"type\":\"link\",\"title\":\"alexcasalboni/kinesis-streams-fan-out-kinesis-analytics\",\"description\":\"kinesis-streams-fan-out-kinesis-analytics - Amazon Kinesis Streams fan-out via Kinesis Analytics \(powered by the Serverless Framework\)\",\"icon\":{\"type\":\"icon\",\"url\":\"https://github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://avatars2.githubusercontent.com/u/2457588?s=400&v=4\",\"width\":400,\"height\":400,\"aspectRatio\":1}}" %}
+
+{% embed data="{\"url\":\"https://hackernoon.com/applying-the-pub-sub-and-push-pull-messaging-patterns-with-aws-lambda-73d5ee346faa\",\"type\":\"link\",\"title\":\"Applying the pub-sub and push-pull messaging patterns with AWS Lambda\",\"description\":\"AWS offers a wealth of options for implementing messaging patterns such as pub-sub and push-pull with Lambda, let’s compare and contrast…\",\"icon\":{\"type\":\"icon\",\"url\":\"https://cdn-images-1.medium.com/fit/c/304/304/1\*76XiKOa05Yya6\_CdYX8pVg.jpeg\",\"width\":152,\"height\":152,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://cdn-images-1.medium.com/max/1200/1\*NnGOc6JXb5A1adnn-kHFTQ.png\",\"width\":940,\"height\":491,\"aspectRatio\":0.5223404255319148}}" %}
+
+{% embed data="{\"url\":\"https://xiongyeblog.wordpress.com/2018/02/08/processing-real-time-big-data-streams-using-kinesis-lambda/\",\"type\":\"link\",\"title\":\"Processing Real Time Big Data Streams Using Kinesis & Lambda\",\"description\":\"This is the first part of a series of posts, you can find the second post here : Processing Real Time Big Data Streams Using Kinesis & Lambda The second tutorial adds a Lambda-based microservic…\",\"icon\":{\"type\":\"icon\",\"url\":\"https://s1.wp.com/i/favicon.ico\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://xiongyeblog.files.wordpress.com/2018/02/2a3e8-1bqx7zzrdw3x671y59m2n\_w.jpeg\",\"width\":982,\"height\":630,\"aspectRatio\":0.6415478615071283}}" %}
+
+{% embed data="{\"url\":\"https://www.udemy.com/code-along-aws-lambda-kinesis-serverless-framework/\",\"type\":\"link\",\"title\":\"Code Along - AWS Lambda, Kinesis and Serverless Framework\",\"description\":\"Architect a real time search platform using the \\\"Serverless Framework\\\" and AWS Lambda, API Gateway, Kinesis & Algolia\",\"icon\":{\"type\":\"icon\",\"url\":\"https://www.udemy.com/staticx/udemy/images/v6/favicon-196x196.png\",\"width\":196,\"height\":196,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://udemy-images.udemy.com/course/480x270/1317546\_70fd\_12.jpg\",\"width\":480,\"height\":270,\"aspectRatio\":0.5625}}" %}
+
+
+

@@ -1,10 +1,15 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "Introduction": ["support", "architecture", "softwareengineering", "bootstrap"],
+    "Learning": ["techstack"],
+    "Development Environment": ["developmentenvironment", "account", "vi", "tools"],
+    "Services": ["services", "backend/serverless", "backend/containers", "backend/python", "backend/firebase", "backend/chatbots", "backend/testing", "backend/persistance"],
+    "Frontend": ["frontend"],
+    "Plattform": ["plattform", "iam", "events"],
+    "Automation": ["ai"]
   },
   "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "Introduction": ["adr"],
+    "ADRs": ["adr/adr1", "adr/adr2", "adr/adr3", "adr/adr4", "adr/adr5", "adr/adr6"]
   }
 }
