@@ -4,7 +4,7 @@
         <title>Dennis&apos; Notebook Blog</title>
         <link>https://denseidel.github.io/blog</link>
         <description>The best place to stay up-to-date with the latest Dennis&apos; Notebook news and events.</description>
-        <lastBuildDate>Thu, 28 Dec 2017 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 08 Jul 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,14 @@
             <link>https://denseidel.github.io/blog</link>
         </image>
         <copyright>Copyright © 2018 Dennis Seidel</copyright>
+        <item>
+            <title><![CDATA[Migration of all online resources to this page]]></title>
+            <link>https://denseidel.github.io/blog/2018/07/08/migrating-my-online-resources.html</link>
+            <guid>https://denseidel.github.io/blog/2018/07/08/migrating-my-online-resources.html</guid>
+            <pubDate>Sun, 08 Jul 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>This weekend I started to migrate all my online resouces to this page. This includes my <a href="https://den.gitbook.io/developerplaybook/">Developer Playbook</a>, where I noted down all my tech lessons (including architectural decision records). As of today th</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Change git origin]]></title>
             <link>https://denseidel.github.io/blog/2017/12/28/change-git-origin.html</link>

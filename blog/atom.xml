@@ -2,12 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://denseidel.github.io/blog</id>
     <title>Dennis&apos; Notebook Blog</title>
-    <updated>2017-12-28T06:00:00Z</updated>
+    <updated>2018-07-08T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://denseidel.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Dennis&apos; Notebook news and events.</subtitle>
     <logo>https://denseidel.github.io/</logo>
     <rights>Copyright © 2018 Dennis Seidel</rights>
+    <entry>
+        <title type="html"><![CDATA[Migration of all online resources to this page]]></title>
+        <id>https://denseidel.github.io/blog/2018/07/08/migrating-my-online-resources.html</id>
+        <link href="https://denseidel.github.io/blog/2018/07/08/migrating-my-online-resources.html">
+        </link>
+        <updated>2018-07-08T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>This weekend I started to migrate all my online resouces to this page. This includes my <a href="https://den.gitbook.io/developerplaybook/">Developer Playbook</a>, where I noted down all my tech lessons (including architectural decision records). As of today th</p>
+]]></summary>
+        <author>
+            <name>Den</name>
+            <uri>http://twitter.com/denseidel</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Change git origin]]></title>
         <id>https://denseidel.github.io/blog/2017/12/28/change-git-origin.html</id>
