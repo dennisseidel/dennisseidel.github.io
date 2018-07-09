@@ -195,7 +195,8 @@ Just create a secret note within lastpass:
 #### Set environment variable \(e.g. key\_id \(username\) and secret\(password\)
 
 ```bash
-export AWS_ACCESS_KEY_ID=$(lpass show aws-serverless-devops --username)export AWS_SECRET_ACCESS_KEY=$(lpass show aws-serverless-devops --password)
+export AWS_ACCESS_KEY_ID=$(lpass show aws-serverless-devops --username)
+export AWS_SECRET_ACCESS_KEY=$(lpass show aws-serverless-devops --password)
 ```
 
 ## Getting started with GCP
