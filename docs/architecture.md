@@ -25,6 +25,9 @@ Architecture should be designed for change, and you must never make comproises t
   * [Netflix](https://www.slideshare.net/SuudhanRangarajan/netflix-play-api-why-we-built-an-evolutionary-architecture/83?src=clipsharse)
 
 
+### Other Sources: 
+* [Zalando's Engineering Principles](https://github.com/zalando/engineering-principles)
+
 
 ## Fitness Functions
 
