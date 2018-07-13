@@ -10,8 +10,21 @@ Architectural decision should be documented in a [light weight architecture deci
 
 Use the [adr tool](https://github.com/npryce/adr-tools) and [MADR](https://github.com/adr/madr)
 
-```text
+```bash
 brew install adr-tools
 npm install madr && mkdir -p docs/adr && cp node_modules/madr/template/* docs/adr
 npm i -g adr-log
+# init in root of project
+ adr init doc/architecture/decisions
+```
+
+### Create a new ADR 
+```bash
+adr new Implement as Unix shell scripts
+```
+
+
+### Replace an ADR
+```bash
+ adr new -s 9 Use Rust for performance-critical functionality
 ```
