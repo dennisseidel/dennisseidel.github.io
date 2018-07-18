@@ -2,16 +2,13 @@
 id: plattform
 title: Setup
 ---
-## Platform & Infrastructure
-
 The platform provides the tools to increase productivity it should abstract away the operations tasks to get fast feedback loops but it also should design for change as we should be prepared that we have to change in the future:
 
 * Serverless \(great speed and plattform\) vs Istio \(great portability\) or Flask on Serverless for speed and platform but migratable? 
 * SaaS Components for 
-  * [Persistance - DBaaS \(DynamoDB\)](persistance-dbaas/) 
-  * [IAM - IAMaaS ](iam-iamaas.md)
-  * [Event Driven / Streaming aaS](event-driven-streaming-aas/)
-  * [AI - AIaaS](ai-aiaas.md)
+  * [Persistance \(DynamoDB\)](persistance-dbaas/) 
+  * [IAM](iam-iamaas.md)
+  * [Events](event-driven-streaming-aas/)
   * Reliability aaS - Logging
   * ... but don't forget ports and adapters
 
@@ -19,7 +16,7 @@ The platform provides the tools to increase productivity it should abstract away
 
 1. [Select Application Runtime: Serverless over Istio for now](https://github.com/denseidel/developer-playbook/blob/master/adr/2018-02-18%20Select%20a%20application%20runtime%20for%20plattform.md)
 
-## C_ontainers_ or _serverless_
+## Containers or serverless
 
 Serverless increases the efficiency of your implementation. But at the same time you bind yourself very tightly to a special vendor like Amazon with AWS Lambda. Another Option is to use a multi cloud apporach and use Containers as your abstraction layer - Lambdas also use containers themselves. Downside you don't have the you pay only what you use and you miss the non functional features the platform provides like monitoring, routing ... This is where service meshs like Istio come into play.
 
@@ -41,6 +38,34 @@ Serverless increases the efficiency of your implementation. But at the same time
 * [https://github.com/mcuadros/terraform-provider-helm](https://github.com/mcuadros/terraform-provider-helm)
 * [https://www.terraform.io/docs/providers/aws/guides/eks-getting-started.html](https://www.terraform.io/docs/providers/aws/guides/eks-getting-started.html)
 * [https://www.terraform.io/intro/getting-started/install.html](https://www.terraform.io/intro/getting-started/install.html)
+
+1. Install Terraform
+```bash
+brew install terraform
+```
+2. Get an AWS account and a [IAM user](accounts.md) with the [required rights](https://www.reddit.com/r/Terraform/comments/7qj02z/aws_permissions_for_terraform/)
+3. Create Folder and create the terraform files
+```bash
+# create the folder
+mkdir -p ./container-starter/devops && cd ./container-starter && git init . && cd ./devops
+# create the provider file (do not add the credentials here use environment variables)
+vim provider
+# create a instance file
+vim instance.tf
+```
+1. Run the terraform commands
+```bash
+# get an overview of available commands
+terraform -h
+# initialize terraform (provider plugins like aws)
+terraform init
+# run the setup
+terraform apply # alternatively in production do: terraform plan -out out.terraform ; terraform apply out.terraform ; rm out.terraform
+# destory 
+terraform destroy
+```
+
+
 
 ### Setup Docker Environment
 
