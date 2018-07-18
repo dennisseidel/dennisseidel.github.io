@@ -3,6 +3,7 @@
 <url> <loc>https://denseidel.github.io/help.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/en/help.html" /> </url>
 <url> <loc>https://denseidel.github.io/index.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/en/index.html" /> </url>
 <url> <loc>https://denseidel.github.io/users.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/en/users.html" /> </url>
+<url> <loc>https://denseidel.github.io/blog/2018/07/13/markdown-to-medium.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://denseidel.github.io/blog/2018/07/08/migrating-my-online-resources.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://denseidel.github.io/blog/2017/12/28/change-git-origin.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://denseidel.github.io/blog/2017/12/27/indent-multiple-lines-in-visual-studio-code.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>

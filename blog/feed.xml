@@ -4,7 +4,7 @@
         <title>Dennis&apos; Notebook Blog</title>
         <link>https://denseidel.github.io/blog</link>
         <description>The best place to stay up-to-date with the latest Dennis&apos; Notebook news and events.</description>
-        <lastBuildDate>Sun, 08 Jul 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 13 Jul 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,14 @@
             <link>https://denseidel.github.io/blog</link>
         </image>
         <copyright>Copyright © 2018 Dennis Seidel</copyright>
+        <item>
+            <title><![CDATA[Write Markdown to Medium]]></title>
+            <link>https://denseidel.github.io/blog/2018/07/13/markdown-to-medium.html</link>
+            <guid>https://denseidel.github.io/blog/2018/07/13/markdown-to-medium.html</guid>
+            <pubDate>Fri, 13 Jul 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>To keep the ownership of my content I decided to first publish my content in markdown on my own page - and then share it with the world on medium.com. Medium does not support markdown therefore I have to use the [markdown-to-medium npm package](https</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Migration of all online resources to this page]]></title>
             <link>https://denseidel.github.io/blog/2018/07/08/migrating-my-online-resources.html</link>

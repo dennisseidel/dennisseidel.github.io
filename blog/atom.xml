@@ -2,12 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://denseidel.github.io/blog</id>
     <title>Dennis&apos; Notebook Blog</title>
-    <updated>2018-07-08T06:00:00Z</updated>
+    <updated>2018-07-13T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://denseidel.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Dennis&apos; Notebook news and events.</subtitle>
     <logo>https://denseidel.github.io/</logo>
     <rights>Copyright © 2018 Dennis Seidel</rights>
+    <entry>
+        <title type="html"><![CDATA[Write Markdown to Medium]]></title>
+        <id>https://denseidel.github.io/blog/2018/07/13/markdown-to-medium.html</id>
+        <link href="https://denseidel.github.io/blog/2018/07/13/markdown-to-medium.html">
+        </link>
+        <updated>2018-07-13T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>To keep the ownership of my content I decided to first publish my content in markdown on my own page - and then share it with the world on medium.com. Medium does not support markdown therefore I have to use the [markdown-to-medium npm package](https</p>
+]]></summary>
+        <author>
+            <name>Den</name>
+            <uri>http://twitter.com/denseidel</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Migration of all online resources to this page]]></title>
         <id>https://denseidel.github.io/blog/2018/07/08/migrating-my-online-resources.html</id>
