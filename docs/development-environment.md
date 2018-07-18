@@ -2,6 +2,11 @@
 id: developmentenvironment
 title: Setup
 ---
+
+## Mac Setup 
+
+follow this [mac setup guide](http://sourabhbajaj.com/mac-setup/).
+
 ## Serverless Development Environment for Python, Javascript/React and Node Developers \(on OSX\):
 
 Install Prerequesits Package Manger Homebrew and CLI Tools:
