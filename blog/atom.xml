@@ -2,12 +2,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://denseidel.github.io/blog</id>
     <title>Dennis&apos; Notebook Blog</title>
-    <updated>2018-07-13T06:00:00Z</updated>
+    <updated>2018-08-05T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://denseidel.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Dennis&apos; Notebook news and events.</subtitle>
     <logo>https://denseidel.github.io/</logo>
     <rights>Copyright © 2018 Dennis Seidel</rights>
+    <entry>
+        <title type="html"><![CDATA[Intrapreneur Hustleing / Idea Sales]]></title>
+        <id>https://denseidel.github.io/blog/2018/08/05/intrapreneur-husteling.html</id>
+        <link href="https://denseidel.github.io/blog/2018/08/05/intrapreneur-husteling.html">
+        </link>
+        <updated>2018-08-05T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>There are so many ideas in the world that your idea is just one of many. People only use, invest in ideas and product they know, and will not use the best product if they don't know about it's greatness. Therefore one key activity of business is to p</p>
+]]></summary>
+        <author>
+            <name>Den</name>
+            <uri>http://twitter.com/denseidel</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Building Java Docker images with Gradle and Docker multistage builds]]></title>
+        <id>https://denseidel.github.io/blog/2018/07/25/docker-gradle-multistage-builds.html</id>
+        <link href="https://denseidel.github.io/blog/2018/07/25/docker-gradle-multistage-builds.html">
+        </link>
+        <updated>2018-07-25T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Today I had the challange that I needed to build java images. Most of the examples I found where building the artefact on the host and then copying it into the image. I don't like this because it creates some dependencies on the host. Better is build</p>
+]]></summary>
+        <author>
+            <name>Den</name>
+            <uri>http://twitter.com/denseidel</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Write Markdown to Medium]]></title>
         <id>https://denseidel.github.io/blog/2018/07/13/markdown-to-medium.html</id>

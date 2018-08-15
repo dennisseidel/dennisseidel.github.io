@@ -3,6 +3,8 @@
 <url> <loc>https://denseidel.github.io/help.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/en/help.html" /> </url>
 <url> <loc>https://denseidel.github.io/index.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/en/index.html" /> </url>
 <url> <loc>https://denseidel.github.io/users.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/en/users.html" /> </url>
+<url> <loc>https://denseidel.github.io/blog/2018/08/05/intrapreneur-husteling.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://denseidel.github.io/blog/2018/07/25/docker-gradle-multistage-builds.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://denseidel.github.io/blog/2018/07/13/markdown-to-medium.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://denseidel.github.io/blog/2018/07/08/migrating-my-online-resources.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://denseidel.github.io/blog/2017/12/28/change-git-origin.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
@@ -39,6 +41,7 @@
 <url> <loc>https://denseidel.github.io/docs/frontend.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/frontend.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/iam.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/iam.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/plattform.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/plattform.html" /> </url>
+<url> <loc>https://denseidel.github.io/docs/saas.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/saas.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/services.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/services.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/softwareengineering.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/softwareengineering.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/support.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/support.html" /> </url>

@@ -4,7 +4,7 @@
         <title>Dennis&apos; Notebook Blog</title>
         <link>https://denseidel.github.io/blog</link>
         <description>The best place to stay up-to-date with the latest Dennis&apos; Notebook news and events.</description>
-        <lastBuildDate>Fri, 13 Jul 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 Aug 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,22 @@
             <link>https://denseidel.github.io/blog</link>
         </image>
         <copyright>Copyright © 2018 Dennis Seidel</copyright>
+        <item>
+            <title><![CDATA[Intrapreneur Hustleing / Idea Sales]]></title>
+            <link>https://denseidel.github.io/blog/2018/08/05/intrapreneur-husteling.html</link>
+            <guid>https://denseidel.github.io/blog/2018/08/05/intrapreneur-husteling.html</guid>
+            <pubDate>Sun, 05 Aug 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>There are so many ideas in the world that your idea is just one of many. People only use, invest in ideas and product they know, and will not use the best product if they don't know about it's greatness. Therefore one key activity of business is to p</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Building Java Docker images with Gradle and Docker multistage builds]]></title>
+            <link>https://denseidel.github.io/blog/2018/07/25/docker-gradle-multistage-builds.html</link>
+            <guid>https://denseidel.github.io/blog/2018/07/25/docker-gradle-multistage-builds.html</guid>
+            <pubDate>Wed, 25 Jul 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today I had the challange that I needed to build java images. Most of the examples I found where building the artefact on the host and then copying it into the image. I don't like this because it creates some dependencies on the host. Better is build</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Write Markdown to Medium]]></title>
             <link>https://denseidel.github.io/blog/2018/07/13/markdown-to-medium.html</link>
