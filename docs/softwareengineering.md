@@ -4,6 +4,7 @@ title: Software Engineering
 ---
 
 * Clean Code 
+* [System Design](https://github.com/donnemartin/system-design-primer/blob/master/README.md)
 * Google - 3 flaws of software design
   * [Writing code that isn't needed](https://www.youtube.com/watch?v=JOAq3YN45YE)
   * [Not making the code easy to change](https://www.youtube.com/watch?v=eCg_VoFW46s)

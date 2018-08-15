@@ -15,7 +15,7 @@ Architecture should be designed for change, and you must never make comproises t
 
 * **API First & One Identity** - [one identity](https://www.slideshare.net/SuudhanRangarajan/netflix-play-api-why-we-built-an-evolutionary-architecture/14?src=clipshare)/ [api service per function with low coupling between apis](https://www.slideshare.net/SuudhanRangarajan/netflix-play-api-why-we-built-an-evolutionary-architecture/15?src=clipshare)
 * **Type 1/2 Decisons** - Identify [Type 1 and Type 2 decisions](https://www.slideshare.net/SuudhanRangarajan/netflix-play-api-why-we-built-an-evolutionary-architecture/23?src=clipshare); Spend 80% of the time debating and aligning on Type 1 decisions; For Type 2 choose a path, experiement and iterate
-  * SaaS vs Containers
+  * [SaaS](saas.md) vs Containers ([Overview Graph](bootstrap.md))
   * Port & Adapter Pattern
   * Shared Libraries & Communication
   * Syncronous vs Asynchronous 

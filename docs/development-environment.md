@@ -107,17 +107,21 @@ code --list-extensions
 ```
 
 ```text
-HookyQR.beautify
 PeterJausovec.vscode-docker
 dbaeumer.vscode-eslint
 dzannotti.vscode-babel-coloring
+erd0s.terraform-autocomplete
 formulahendry.auto-close-tag
+HookyQR.beautify
 jebbs.plantuml
 magicstack.MagicPython
+mauve.terraform
+mitchdenny.ecdc
 ms-python.python
 msjsdiag.debugger-for-chrome
 taichi.react-beautify
 tht13.python
+toba.vsfire
 tushortz.python-extended-snippets
 vscodevim.vim
 yzhang.markdown-all-in-one
@@ -193,3 +197,42 @@ Link to config.yml file
 * for containers
 * for serverless
 
+
+## Local Kubernetes/Istio Setup with Mincube
+
+* Check the Istio [Prerequisits](https://istio.io/docs/setup/kubernetes/quick-start/#prerequisites)
+* Create a cicd machine preparation file & local setup ([machine-setup.sh](#))  
+* Prepare the Machine Setup (create a local secret folder include all the infos required)
+
+To run locally export `export KUBE_ENV=local` and execute the `./machine-setup.sh`
+
+### Access distributed tracing
+
+https://istio.io/docs/tasks/telemetry/distributed-tracing/
+
+`kubectl port-forward -n istio-system $(kubectl get pod -n istio-system -l app=jaeger -o jsonpath='{.items[0].metadata.name}') 16686:16686 &`
+Open [http://localhost:16686](http://localhost:16686)
+
+### Important Commands 
+Delete the minkube cluster with `minikube delete`
+`helm del --purge istio` delete isto from cluster
+`kubectl get deployments` [pods ...] get the list of deployments
+`kubectl delete deployment echo-v1` delete something
+`kubectl get srv -n istio-system` get the services in the istio namespace
+`kubectl describe pod echo-v1` (always use tab for complete) status of the cluster and events
+`kubectl logs pod echo-v1` get the strout logs of the pod
+`minishift logs` the minishift logs
+`kubectl exec -it proposals-fccd8f5ff-jzrrx sh` to access the od 
+`kubectl exec proposals-v1-fccd8f5ff-75wbt -- nc -w 3 -v httpbin.org 80` run directly a command in the container
+
+
+### Get a local dns
+
+Open the local hosts file with `sudo vim /etc/hosts` and add your `minikube ip` address to the domains you want e.g.
+
+```txt
+192.168.64.12  open.d10l.de
+192.168.64.12  api.d10l.de
+```
+
+You have to update this entries with every start and when you want to connect to this domain on the internet you have to comment those entries out or remove them.

@@ -3,7 +3,7 @@
     "Introduction": ["support", "architecture", "softwareengineering", "bootstrap"],
     "Learning": ["techstack"],
     "Development Environment": ["developmentenvironment", "account", "vi", "tools"],
-    "Services": ["services", "backend/serverless", "backend/containers", "backend/python", "backend/firebase", "backend/chatbots", "backend/testing", "backend/persistance"],
+    "Services": ["services", "backend/containers", "backend/python", "backend/firebase", "backend/chatbots", "backend/testing", "backend/persistance"],
     "Frontend": ["frontend"],
     "Plattform": ["plattform", "iam", "events"],
     "Automation": ["ai"]
