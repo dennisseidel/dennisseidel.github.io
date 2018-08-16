@@ -3,11 +3,11 @@ id: support
 title: Get Started
 ---
 
-This includes my notes on building healthcare and insurance applications currently using a **javascript** and **python** based stack:
+This includes my notes on building healthcare and insurance applications currently using a **javascript** and **python** based stack.
 
 ## Architecture
 
-It follows the [evolutionary architecture principles](architecture/) and the decisions are documented as [architecture decision records](adr/).
+It follows the [evolutionary architecture principles](architecture.md) and the decisions are documented as [architecture decision records](adr.html).
 
 ## Topics
 
@@ -23,3 +23,7 @@ It follows the [evolutionary architecture principles](architecture/) and the dec
 * Basic programming knowledge \(best Python & Javascript\)
 * Mac / Linux / Windows machine
 * Know the basic command line
+
+## How I document here? 
+
+When ever I work on something I create a sample repo - then I create a documentation in this notebook describing the topic and linking to the sample. 

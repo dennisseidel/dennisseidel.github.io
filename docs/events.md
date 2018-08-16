@@ -1,6 +1,6 @@
 ---
 id: events
-title: Event Driven / Streaming aaS
+title: Events
 ---
 ## Architectural Decisions
 

@@ -2,7 +2,7 @@
 id: adr1
 title: 1. Use Serverless with Python and keep an eye on Istio as application runtime
 ---
-* Status: accepted 
+* Status: superseeded by [ADR-0008](adr8.html)
 * Date: 2018-05-31
 
 ## Context and Problem Statement
@@ -17,14 +17,6 @@ To run the applications I need to decide which platform to chose.
 ## Decision Outcome
 
 Chosen option: "AWS Lambda", because currently Istio as well as EKS is still in beta and for private projects AWS Lambda is the more cost efficient version. And for different workloads different solutions might be best e.g. [_BinaryAlert_](https://github.com/airbnb/binaryalert) \(Serverless\).
-
-Positive Consequences: 
-* [e.g., improvement of quality attribute satisfaction, follow-up decisions required, …]
-* …
-
-Negative consequences: 
-* [e.g., compromising quality attribute, follow-up decisions required, …]
-* …
 
 ## Pros and Cons of the Options
 

@@ -1,15 +1,15 @@
 {
   "docs": {
-    "Introduction": ["support", "architecture", "softwareengineering", "bootstrap"],
-    "Learning": ["techstack"],
-    "Development Environment": ["developmentenvironment", "account", "vi", "tools"],
-    "Services": ["services", "backend/containers", "backend/python", "backend/firebase", "backend/chatbots", "backend/testing", "backend/persistance"],
+    "Basics": ["support", "architecture", "softwareengineering", "bootstrap", "devsecops"],
+    "Development Environment": ["developmentenvironment", "account", "tools"],
+    "Plattform": ["plattform", "iam", "events", "backend/persistance", "ai"],
+    "Services": ["services", "backend/containers", "backend/python", "backend/testing"],
     "Frontend": ["frontend"],
-    "Plattform": ["plattform", "iam", "events"],
-    "Automation": ["ai"]
+    "Automation": ["datascience", "backend/chatbots"],
+    "Learning": ["techstack"]
   },
   "docs-other": {
     "Introduction": ["adr"],
-    "ADRs": ["adr/adr1", "adr/adr2", "adr/adr3", "adr/adr4", "adr/adr5", "adr/adr6", "adr/adr7"]
+    "ADRs": ["adr/adr1", "adr/adr2", "adr/adr3", "adr/adr4", "adr/adr5", "adr/adr6", "adr/adr7", "adr/adr8"]
   }
 }
