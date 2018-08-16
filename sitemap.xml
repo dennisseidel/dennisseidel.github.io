@@ -25,6 +25,7 @@
 <url> <loc>https://denseidel.github.io/docs/adr/adr5.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/adr/adr5.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/adr/adr6.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/adr/adr6.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/adr/adr7.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/adr/adr7.html" /> </url>
+<url> <loc>https://denseidel.github.io/docs/adr/adr8.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/adr/adr8.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/adr/templates/adrNUMBER.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/adr/templates/adrNUMBER.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/ai.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/ai.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/architecture.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/architecture.html" /> </url>
@@ -36,7 +37,9 @@
 <url> <loc>https://denseidel.github.io/docs/backend/serverless.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/backend/serverless.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/backend/testing.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/backend/testing.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/bootstrap.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/bootstrap.html" /> </url>
+<url> <loc>https://denseidel.github.io/docs/datascience.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/datascience.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/developmentenvironment.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/developmentenvironment.html" /> </url>
+<url> <loc>https://denseidel.github.io/docs/devsecops.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/devsecops.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/events.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/events.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/frontend.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/frontend.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/iam.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/iam.html" /> </url>
@@ -48,5 +51,4 @@
 <url> <loc>https://denseidel.github.io/docs/techstack.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/techstack.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/techradar.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/techradar.html" /> </url>
 <url> <loc>https://denseidel.github.io/docs/tools.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/tools.html" /> </url>
-<url> <loc>https://denseidel.github.io/docs/vi.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://denseidel.github.io/docs/vi.html" /> </url>
 </urlset>
