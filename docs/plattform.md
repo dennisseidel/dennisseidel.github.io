@@ -17,6 +17,8 @@ The plattform uses:
 * Helm
 * Istio
 
+The plattform is manage in a central mono repo based on a [template](link-to-service-mesh-quickstarter). Clone it and follow the `README.md` in the root directory to setup either a local or a cluster in the cloud.
+
 ## Local Setup
 
 Install a local cluster including Kubernetes and Istio on OSX with the following script: 
