@@ -3,6 +3,18 @@ id: python
 title: Python
 ---
 
+Use `Make` for automation in service development https://medium.com/@xobb/help-you-devops-use-make-aebedd33c40f
+
+
+Use [Google Best Practices](https://github.com/google/styleguide/blob/gh-pages/pyguide.md)
+
+Python Clean Code: 
+* https://github.com/zedr/clean-code-python
+* http://pythonforengineers.com/writing-great-code/
+* https://www.packtpub.com/application-development/clean-code-python
+* https://github.com/pluralsight/Clean-Code-The-Polyglot-Edition
+* https://docs.python-guide.org/writing/style/
+
 ### Object Oriented Programming:
 
 {% embed data="{\"url\":\"https://realpython.com/python3-object-oriented-programming/\",\"type\":\"link\",\"title\":\"Object-Oriented Programming \(OOP\) in Python 3 – Real Python\",\"description\":\"In this article you’ll learn the fundamentals of object-oriented programming \(OOP\) in Python and how to work with classes, objects, and constructors. The tutorial also comes with several OOP exercises to review your learning progress.\",\"icon\":{\"type\":\"icon\",\"url\":\"https://realpython.com/static/favicon.68cbf4197b0c.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://files.realpython.com/media/Object-Oriented-Programming-OOP-in-Python-3\_Watermarked.0d29780806d5.jpg\",\"width\":1920,\"height\":1080,\"aspectRatio\":0.5625}}" %}
@@ -82,4 +94,14 @@ else:
 {% embed data="{\"url\":\"https://stackoverflow.com/a/25833661/1929968\",\"type\":\"link\",\"title\":\"Python safe method to get value of nested dictionary\",\"description\":\"I have a nested dictionary. Is there only one way to get values out safely?  try:     example\_dict\[\'key1\'\]\[\'key2\'\] except KeyError:     pass Or maybe python has a method like get\(\) for nested dict...\",\"icon\":{\"type\":\"icon\",\"url\":\"https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded\",\"width\":316,\"height\":316,\"aspectRatio\":1}}" %}
 
 
+### Questions
 
+* [Check if a file or directory exists](https://stackabuse.com/python-check-if-a-file-or-directory-exists/)
+* Run commandline commands from python: [subprocess](https://codecalamity.com/run-subprocess-run/)
+* How to run commands with pipes in python either use os.system or [subprocess](https://security.openstack.org/guidelines/dg_avoid-shell-true.html)
+* [Logging](https://fangpenlin.com/posts/2012/08/26/good-logging-practice-in-python/), [2](https://docs.python-guide.org/writing/logging/)
+* [How do I abort the execution of a Python script?](https://stackoverflow.com/questions/179369/how-do-i-abort-the-execution-of-a-python-script)
+* [Vendorizing & Structuring Code](https://docs.python-guide.org/writing/structure/#vendorizing-dependencies) [vendoring](https://medium.com/underdog-io-engineering/vendoring-python-dependencies-with-pip-b9eb6078b9c0)
+* [Default Arguments in Python](http://blog.thedigitalcatonline.com/blog/2015/02/11/default-arguments-in-python/)
+* [f-strings / Template Strings](https://cito.github.io/blog/f-strings/)
+* [How to extract a substring from inside a string in Python?](https://stackoverflow.com/questions/4666973/how-to-extract-a-substring-from-inside-a-string-in-python)

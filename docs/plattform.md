@@ -52,7 +52,7 @@ export KUBE_ENV=gcp
 
 ### Automate Infrastructure with Terraform
 
-https://nickcharlton.net/posts/kubernetes-terraform-google-cloud.html
+https://nickcharlton.net/posts/kubernetes-terraform-google-cloud.html & do the scripting according to the [devsecops](devsecops.md) chapter.
 
 ## Kubernetes Basics
 

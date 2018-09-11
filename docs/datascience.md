@@ -10,6 +10,27 @@ title: Data Science (AI)
 * [ADR-0003](adr/adr3.html) - For Machine learning select a vendor specific stack of a general stack
 * [ADR-0006](adr/adr6.html) - I use AWS for ML and Event Driven Architecture
 
+## Software Development
+
+Software Development is changing because of AI the actual "logic coding" is done by optimization - the algorithm itself. The new process looks like
+
+1. Design a "code skeleton" 
+2. Measure performance: this requires data to evaluate if something is right or not (human task, and decision factor if a problem can be solved this way)
+3. Update (automated process) 
+
+The benefit is that this requires much less domain knowledge. Human Tasks in this chain are: find example to evaluate / samples (labels), maintain surrounding data infrastructure.
+
+The old approaches are still needed for OS Programming, Evaluation & Visualisation, Distributed Training & Node Communication.
+
+[Source](https://www.figure-eight.com/building-the-software-2-0-stack-by-andrej-karpathy-from-tesla/)
+
+
+
+## Algorithms
+
+http://scikit-learn.org/stable/tutorial/machine_learning_map/
+
+
 ## Business Rules vs Trained Models
 
 Learn about AI:
