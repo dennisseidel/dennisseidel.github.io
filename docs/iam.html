@@ -23,85 +23,24 @@
             });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">IAM</h1></header><article><div><span><p>To secure your app and mange user identities you can either build your own secuirty (which is bad practice unless you are a security startup that sees it advantage in build novel and better security), use a existing solution like keycloak and integrate it into your application or use a SaaS solution that provides you Identitymanagement.</p>
 <h2><a class="anchor" aria-hidden="true" id="products"></a><a href="#products" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Products</h2>
+<p>There are multiple SaaS products <a href="https://aws.amazon.com/de/cognito/">AWS Cognito</a>, <a href="https://auth0.com/">Auth0</a>, <a href="https://www.bitium.com/">Bitium</a> but all of them are expensive at scale especially when integration with &quot;enterprise features&quot; like an LDAP or another OpenID Connect Provider. Further this is a central component that is hard to change later on therefore I use an open source component: <a href="http://www.keycloak.org">Keycloak</a></p>
+<h2><a class="anchor" aria-hidden="true" id="install-keycloak-devops-setup"></a><a href="#install-keycloak-devops-setup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install Keycloak &amp; DevOps Setup</h2>
 <ul>
-<li>Host your own:
-<ul>
-<li><a href="http://www.keycloak.org">Keycloak</a></li>
-<li><a href="https://backstage.forgerock.com/docs/am">Forgerock</a></li>
-</ul></li>
-<li>SaaS
-<ul>
-<li><a href="https://aws.amazon.com/de/cognito/">AWS Cognito</a>: AWS specific, not good for multi cloud</li>
-<li><a href="https://auth0.com/">Auth0</a>: large community</li>
-<li><a href="https://www.bitium.com/">Bitium</a>: Bought by google</li>
-</ul></li>
+<li>Docker &amp; Kubernets</li>
+<li>Helm</li>
 </ul>
-<p>Tasks to build a MVP that shows you the different Aspects of building an Identity Plattform:</p>
+<h2><a class="anchor" aria-hidden="true" id="setup"></a><a href="#setup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup</h2>
 <ul>
-<li>Register with IAMaaS</li>
-<li>Build Sample App that authenticated via SSO with your IaaS</li>
-<li>Configure the provider so it integrates with your domain - so that it looks like your own webpage</li>
-<li>Create Backend API and protect it with IAM</li>
-<li>Integrate API Gateway with IAM</li>
-<li>Expose API on API Gateway</li>
-<li>Build Developer Portal and Integrate it with IAM for Signup, Management of Clients and Signup of APIs</li>
+<li>Accounts</li>
+<li>Self Services / Developer Portal</li>
+<li>Login Page (Customization -&gt; Templates)</li>
 </ul>
-<p>Eigene APIs ? In CISL?</p>
-<p>Architecture diagram: multicloud ... what security (IP ranges ... as Apigee what they suggest)</p>
-<p>As Auth0 is currently most established in the community and AWS Cognito is AWS specific: Auth0 is currently the best option - Bitium is currently integrated into the Google Platform and it will be interesting to see i which direction Google will go.</p>
-<h2><a class="anchor" aria-hidden="true" id="cognito"></a><a href="#cognito" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cognito</h2>
-<ol>
-<li>Create User Pool in Cognito with <em>Pool name</em> ```notes-user-pool``  and choose username attributes and select email adress or phone numbers and allow email addresses. Finish and <em>note the Pool ID and Pool ARN</em>.</li>
-<li>Create App clients in the Cognito User Pool with <em>App client name</em> <code>notes-app</code> and <em>refresh token expiration</em> <code>30</code> and <em>Generate client secret</em> <code>deselected</code> and  <em>Enable sign-in API server-based authentication</em> <code>selected</code>. Finish and <em>note the App client id</em>.</li>
-</ol>
-<pre><code class="hljs css languages- text"><span class="hljs-comment"># create user</span>
-<span class="hljs-string">aws </span><span class="hljs-string">cognito-idp </span><span class="hljs-string">sign-up </span><span class="hljs-built_in">--region</span> <span class="hljs-string">eu-central-</span>1 <span class="hljs-built_in">--client-id</span> <span class="hljs-string">YOUR_CLIENTID </span><span class="hljs-built_in">--username</span> <span class="hljs-string">admin@</span><span class="hljs-string">yourmail.</span><span class="hljs-string">com </span><span class="hljs-built_in">--password</span> <span class="hljs-string">passw0rD
-</span><span class="hljs-comment"># verfiy user</span>
-<span class="hljs-string">aws </span><span class="hljs-string">cognito-idp </span><span class="hljs-string">admin-confirm-</span><span class="hljs-string">sign-up </span><span class="hljs-built_in">--region</span> <span class="hljs-string">eu-central-</span>1 <span class="hljs-built_in">--user-pool-id</span> <span class="hljs-string">YOUR_USERPOOL_ID </span><span class="hljs-built_in">--username</span> <span class="hljs-string">admin@</span><span class="hljs-string">yourmail.</span><span class="hljs-string">com
-</span></code></pre>
-<h3><a class="anchor" aria-hidden="true" id="register-with-iamaas"></a><a href="#register-with-iamaas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Register with IAMaaS</h3>
-<ol>
-<li><p>Signup with <a href="https://auth0.com/signup">Auth0</a></p>
-<p><img src="/img/signup-auth0-1.png" alt=""><img src="/img/signup-auth0-2.png" alt=""></p></li>
-</ol>
-<h3><a class="anchor" aria-hidden="true" id="build-sample-app-that-authenticated-via-sso-with-your-iaas"></a><a href="#build-sample-app-that-authenticated-via-sso-with-your-iaas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build Sample App that authenticated via SSO with your IaaS</h3>
-<p>Instead of building your own login page - we will redirect to a Auth0 Login Page, then readirect back to our app with an id token attached that included the identity of the user. This token is stored on the local storage of the device and our application will use this token to sign the user in otherwise redirect him to the login page.</p>
-<p>Tutorials:</p>
+<h2><a class="anchor" aria-hidden="true" id="usage-sample-app"></a><a href="#usage-sample-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage / Sample App</h2>
 <ul>
-<li><a href="https://github.com/auth0-samples/auth0-react-samples">https://github.com/auth0-samples/auth0-react-samples</a></li>
-<li><a href="https://auth0.com/blog/build-a-chat-app-with-react/">https://auth0.com/blog/build-a-chat-app-with-react/</a></li>
-<li><a href="https://github.com/auth0-blog/reactjs-authentication-tutorial">https://github.com/auth0-blog/reactjs-authentication-tutorial</a></li>
-<li><a href="https://auth0.com/blog/reactjs-authentication-tutorial/?utm_source=medium&amp;utm_medium=sc&amp;utm_campaign=reactjs_authentication">https://auth0.com/blog/reactjs-authentication-tutorial/?utm_source=medium&amp;utm_medium=sc&amp;utm_campaign=reactjs_authentication</a></li>
-<li><a href="https://www.udemy.com/complete-react-js-course/">https://www.udemy.com/complete-react-js-course/</a></li>
-</ul>
-<p>Test With Postmen - Bearer Token: <a href="https://stackoverflow.com/questions/24709944/jwt-token-in-postman-header">https://stackoverflow.com/questions/24709944/jwt-token-in-postman-header</a></p>
-<p>Developer Portal:</p>
-<ul>
-<li>Management API:
-<ul>
-<li><a href="https://auth0.com/docs/api/management/v2/tokens">https://auth0.com/docs/api/management/v2/tokens</a></li>
-<li><a href="https://auth0.com/docs/api/management/v2#!/Client_Grants/post_client_grants">https://auth0.com/docs/api/management/v2#!/Client_Grants/post_client_grants</a></li>
-</ul></li>
-</ul>
-<p>Integrate Auth0 with AWS: <a href="https://aws.amazon.com/blogs/apn/how-to-integrate-rest-apis-with-single-page-apps-and-secure-them-using-auth0-part-1/">https://aws.amazon.com/blogs/apn/how-to-integrate-rest-apis-with-single-page-apps-and-secure-them-using-auth0-part-1/</a></p>
-<p>Secure the API:</p>
-<ul>
-<li><a href="https://auth0.com/docs/architecture-scenarios/application/spa-api">https://auth0.com/docs/architecture-scenarios/application/spa-api</a></li>
-</ul>
-<p>Integrate API Gateway with Auth0:</p>
-<ul>
-<li><a href="https://github.com/swilliams11/apigee-auth0-external-authorization">https://github.com/swilliams11/apigee-auth0-external-authorization</a></li>
-<li><a href="https://community.apigee.com/articles/43082/auth0-with-apigee-external-authorization.html">https://community.apigee.com/articles/43082/auth0-with-apigee-external-authorization.html</a></li>
-<li><a href="https://community.apigee.com/articles/42269/auth0-with-apigee.html">https://community.apigee.com/articles/42269/auth0-with-apigee.html</a></li>
-<li><a href="https://community.apigee.com/questions/32498/how-to-register-a-third-party-access-token-obtaine.html">https://community.apigee.com/questions/32498/how-to-register-a-third-party-access-token-obtaine.html</a></li>
-</ul>
-<p>Delegated Access Control and Multiple APIs &quot;Audiances&quot;:</p>
-<ul>
-<li><a href="https://community.auth0.com/questions/4420/webauth-audience-multiple-apis-and-scopes">https://community.auth0.com/questions/4420/webauth-audience-multiple-apis-and-scopes</a></li>
-<li><a href="https://community.auth0.com/questions/7539/how-to-handle-multiple-apis-using-audience-token">https://community.auth0.com/questions/7539/how-to-handle-multiple-apis-using-audience-token</a></li>
-<li><a href="https://auth0.com/docs/api-auth/tutorials/represent-multiple-apis">https://auth0.com/docs/api-auth/tutorials/represent-multiple-apis</a></li>
-<li><a href="https://community.auth0.com/questions/4907/token-exchange-multiple-audiences">https://community.auth0.com/questions/4907/token-exchange-multiple-audiences</a></li>
-<li>Google Sample
+<li><p>Management API - how to manage keycloak through an api</p></li>
+<li><p>Secure an API Backend:</p></li>
+<li><p>Integrate with API Gateway:</p></li>
+<li><p>Google Sample</p>
 <ul>
 <li>Playground: <a href="https://developers.google.com/oauthplayground/?error=access_denied#">https://developers.google.com/oauthplayground/?error=access_denied#</a></li>
 <li><a href="https://stackoverflow.com/questions/359472/how-can-i-verify-a-google-authentication-api-access-token">https://stackoverflow.com/questions/359472/how-can-i-verify-a-google-authentication-api-access-token</a></li>
@@ -117,10 +56,6 @@
 }
 </code></pre>
 <p>access control sollte fühest möglich in der kette statt finden daher neuer token für jeden call</p>
-<p>React Tutorial: <a href="https://auth0.com/docs/quickstart/spa/react/01-login">https://auth0.com/docs/quickstart/spa/react/01-login</a></p>
-<pre><code class="hljs css languages- text">npm <span class="hljs-keyword">install </span>--save auth0-<span class="hljs-keyword">js
-</span></code></pre>
-<p>Configure a hosted page with auth0: <a href="https://auth0.com/docs/quickstart/spa/react/01-login#add-authentication-with-auth0">https://auth0.com/docs/quickstart/spa/react/01-login#add-authentication-with-auth0</a></p>
 <h3><a class="anchor" aria-hidden="true" id="jwt-vs-opaque-tokens"></a><a href="#jwt-vs-opaque-tokens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JWT vs opaque tokens</h3>
 <ul>
 <li>JWT: <a href="https://jobs.zalando.com/tech/blog/the-purpose-of-jwt-stateless-authentication/">https://jobs.zalando.com/tech/blog/the-purpose-of-jwt-stateless-authentication/</a></li>
@@ -145,4 +80,4 @@
 <li>role, group, permission, delegation:</li>
 </ul></li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/plattform.html">← Service Mesh Setup</a><a class="docs-next button" href="/docs/events.html">Events →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#products">Products</a></li><li><a href="#cognito">Cognito</a><ul class="toc-headings"><li><a href="#register-with-iamaas">Register with IAMaaS</a></li><li><a href="#build-sample-app-that-authenticated-via-sso-with-your-iaas">Build Sample App that authenticated via SSO with your IaaS</a></li><li><a href="#jwt-vs-opaque-tokens">JWT vs opaque tokens</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Knowledge Base</a><a href="/docs/en/blog">News</a><a href="/docs/en/doc4.html">ADRs</a></div><div><h5>Let&#x27;s build a a community</h5><a href="https://twitter.com/search?l=&amp;q=%23d10l%20since%3A2018-07-07&amp;src=typd" target="_blank" rel="noreferrer noopener">Disucss using #d10l</a><a href="https://twitter.com/denseidel" target="_blank" rel="noreferrer noopener">Contact me @denseidel</a></div><div><h5>More</h5><a href="https://github.com/denseidel">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Dennis Seidel</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/plattform.html">← Service Mesh Setup</a><a class="docs-next button" href="/docs/events.html">Events →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#products">Products</a></li><li><a href="#install-keycloak-devops-setup">Install Keycloak &amp; DevOps Setup</a></li><li><a href="#setup">Setup</a></li><li><a href="#usage-sample-app">Usage / Sample App</a><ul class="toc-headings"><li><a href="#jwt-vs-opaque-tokens">JWT vs opaque tokens</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Knowledge Base</a><a href="/docs/en/blog">News</a><a href="/docs/en/doc4.html">ADRs</a></div><div><h5>Let&#x27;s build a a community</h5><a href="https://twitter.com/search?l=&amp;q=%23d10l%20since%3A2018-07-07&amp;src=typd" target="_blank" rel="noreferrer noopener">Disucss using #d10l</a><a href="https://twitter.com/denseidel" target="_blank" rel="noreferrer noopener">Contact me @denseidel</a></div><div><h5>More</h5><a href="https://github.com/denseidel">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Dennis Seidel</section></footer></div></body></html>
