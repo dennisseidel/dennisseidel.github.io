@@ -2,23 +2,29 @@
 id: bootstrap
 title: Bootstraping
 ---
-To get started fast ask yourself the following questions: 
-* **How strategic (value generating) is what i build?**
-* **How much need for change exists?** 
 
-![](/img/serverless-vs-containers.png)
+First Clarify [architecture requirements](architecture.md). E.g. use of containers vs saas, testing ...
+
+## Plattform
+
+Use [plattform starter](https://github.com/denseidel/service-mesh-config-starter) to setup your local and remote plattform. Details in the README.
 
 ## Backend / APIs:
 
-* When I have a small _on demand_ \(I don't expect at least 1 user per hour on average\) function I use serverless: [Serverless Starter](bootstraping.md) 
-* When I have _always on_ \(e.g. polling function or expect more then 1 user per hour\) then I use docker: [docker-starter](https://github.com/denseidel/docker-starter) 
-* When I expect to have applications that require more then 2 nodes \(e.g. 6+ applications\) then I use the kubernetes/istio with [service-mesh-starter](https://github.com/denseidel/cloud-setup)
+Use the [service template](https://github.com/d10l/api-template). Details in the README. In the future the platform will offer an UI to manage your APIs.
 
 ## Frontend:
 
-* Setup a Frontend \(including auth and my component library\): [spa-starter](https://github.com/denseidel/spa-starter)
+To setup a Frontend \(including auth and my component library\) use: 
+1. [react-boilerplate]()
+2. configure
+3. add a nodejs based bff approach to the repo (e.g. https://github.com/kriasoft/nodejs-api-starter)
+-> CMS: https://github.com/strapi/strapi/ / https://keystonejs.com/guides / https://github.com/relax/relax
+https://github.com/feathersjs/feathers / https://eggjs.org/en/tutorials/restful.html
+https://snipcart.com/blog/node-js-react-strapi-tutorial
+
 
 ## Analytics Pipeline:
 
-* Setup a Data Architecture \(Object Store + Training Pipeline + Models as a Service\): [Analytics Starter](bootstraping.md)
+* Setup a Data Architecture \(Object Store + Training Pipeline + Models as a Service\): [Analytics Starter](#)
 

@@ -7,33 +7,21 @@ title: Setup
 
 follow this [mac setup guide](http://sourabhbajaj.com/mac-setup/).
 
-## Serverless Development Environment for Python, Javascript/React and Node Developers \(on OSX\):
+## Development Environment for Python, Javascript/React and Node Developers \(on OSX\):
 
-Install Prerequesits Package Manger Homebrew and CLI Tools:
-
-```text
+```bash
+#Install Prerequesits Package Manger Homebrew and CLI Tools:
 xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
 
-Install Runtime for Javascript and Python:
-
-```text
+#Install Runtime for Javascript and Python:
 brew install node python3
-```
 
-Install Python and Javascript packages / Dependencies:
-
-```text
+#Install Python and Javascript packages / Dependencies:
 pip3 install virtualenv
 npm install -g serverless create-react-app
-```
 
-Source: [http://sourabhbajaj.com/mac-setup/Python/virtualenv.html](http://sourabhbajaj.com/mac-setup/Python/virtualenv.html)
-
-Additional tools to improve the developer experience:
-
-```text
+#Additional tools to improve the developer experience:
 brew cask install google-chrome
 brew cask install visual-studio-code
 brew cask install iterm2

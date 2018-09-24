@@ -11,7 +11,7 @@ It follows the [evolutionary architecture principles](architecture.md) and the d
 
 ## Topics
 
-![https://embed.coggle.it/diagram/Wog4AgWJuAAB-ba-/d6269da9c39644334c504c9bffac35b287e64983792a5ec69204183aa3ad8b1f](/img/overview.png)
+[![picture of the overview of the topics](/img/overview.png)](https://embed.coggle.it/diagram/Wog4AgWJuAAB-ba-/d6269da9c39644334c504c9bffac35b287e64983792a5ec69204183aa3ad8b1f)
 
 
 ## Who is the target audience?
@@ -26,4 +26,4 @@ It follows the [evolutionary architecture principles](architecture.md) and the d
 
 ## How I document here? 
 
-When ever I work on something I create a sample repo - then I create a documentation in this notebook describing the topic and linking to the sample. 
+Whenever I work on something I create a folder in my [notebook-examples repo](https://github.com/denseidel/notebook-examples) - then I create a documentation in this notebook describing the topic and linking to the sample. 

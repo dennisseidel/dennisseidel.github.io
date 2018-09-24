@@ -33,6 +33,62 @@ After you defined the business functionality - expressed most clearly by the API
 * Native:
   * _React Native_
 
+### Select a framework
+
+* Look at the alibaba ecosystem when I am read: https://ant.design/docs/react/i18n / dva
+* https://github.com/websemantics/awesome-ant-design
+
+* Overview: https://gather.engineering/react-ui-frameworks-compared-dd631eb5c982 / popular https://www.npmtrends.com/office-ui-fabric-react-vs-@blueprintjs/core-vs-antd 
+
+https://dvajs.com/guide/#%E4%BB%96%E6%98%AF%E6%80%8E%E4%B9%88%E6%9D%A5%E7%9A%84%EF%BC%9F
+
+### Architecture
+
+[MVVM](https://medium.cobeisfresh.com/level-up-your-react-architecture-with-mvvm-a471979e3f21) vs Redux
+
+https://levelup.gitconnected.com/structure-your-react-redux-project-for-scalability-and-maintainability-618ad82e32b7
+https://redux.js.org/faq/codestructure
+https://medium.freecodecamp.org/scaling-your-redux-app-with-ducks-6115955638be
+https://github.com/alexnm/re-ducks
+https://github.com/erikras/ducks-modular-redux
+https://github.com/erikras/react-redux-universal-hot-example#redux-modules-what-the-duck
+
+/components
+/views - container
+/ducks - vm + controller?
+
+
+
+### redux 
+* Tutorial Basics: https://learn.freecodecamp.org/front-end-libraries/redux
+* Docs !: https://redux.js.org/basics/usagewithreact#implementing-components
+* Redux - Ducks: https://github.com/erikras/ducks-modular-redux
+* Redux - Saga: https://github.com/redux-saga/redux-saga / https://flaviocopes.com/redux-saga/
+
+
+* Efficient Testing: 
+ https://medium.com/@darioghilardi/end-to-end-testing-on-a-react-redux-app-10f5a26f2f61
+
+-> test what is important : see below
+UI -> end 2 end (integration) [[cypress](https://www.cypress.io/how-it-works/), [howto](https://medium.com/@darioghilardi/end-to-end-testing-on-a-react-redux-app-10f5a26f2f61)]
+libs -> unit 
+backends -> unit / end 2 end (integration)
+
+
+
+https://jobs.zalando.com/tech/blog/economic-perspective-testing/ /
+An economic point of view helps to reconsider the Return on Investment of unit tests. Consider the confidence a test provides. Integration tests provide the best balance between cost, speed and confidence. Be careful about code coverage as too high aspirations there are likely counter-productive. Be skeptical about the code-quality improving powers of making code unit-testable.
+
+To make it clear, I do not advocate to never write unit tests. I hope that I provided a fresh perspective on testing. As a future article, I plan to present how to concretely implement a good integration test for both a frontend and backend project.
+
+If you desire clear, albeit unnuanced, instructions, here is what you should do: Use a typed language. Focus on integration and end-to-end tests. Use unit tests only where they make sense (e.g. pure algorithmic code with complex corner cases). Be economic. Be lean.
+
+
+### landing page
+
+https://www.thinkific.com/blog/landing-page-design-elements/
+
+
 ### Rapid Prototyping {#rapid-prototyping}
 
 To get feedback fast create a first prototype:
