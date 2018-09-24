@@ -28,52 +28,12 @@
 <li>Plattform (Automation) - Get your Plattform setup</li>
 <li>Dev Tool Development</li>
 </ul>
+<h2><a class="anchor" aria-hidden="true" id="use-gitops"></a><a href="#use-gitops" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use GitOps</h2>
+<h2><a class="anchor" aria-hidden="true" id="scripting"></a><a href="#scripting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scripting</h2>
 <ol>
-<li>Use GitOps</li>
 <li>Code your scripts in python (<a href="https://srcco.de/posts/writing-python-command-line-scripts.html">BestPractices</a>).</li>
 <li>Code Guidelines by <a href="https://google.github.io/styleguide/shell.xml">google</a> including when to use shell and when to use python (e.g. more then 100 lines!) <a href="https://github.com/google/styleguide/blob/gh-pages/pyguide.md">https://github.com/google/styleguide/blob/gh-pages/pyguide.md</a></li>
 </ol>
-<pre><code class="hljs css languages- python"><span class="hljs-comment">#!/usr/bin/env python3</span>
-<span class="hljs-comment"># -*- coding: utf-8 -*-</span>
-
-<span class="hljs-string">'''
-Stupid script to demonstrate how to write Python command line scripts.
-This script will overwrite given files with the string "FOOBAR"!
-'''</span>
-
-<span class="hljs-keyword">import</span> logging
-<span class="hljs-keyword">from</span> argparse <span class="hljs-keyword">import</span> ArgumentParser
-
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">(args)</span>:</span>
-    logging.basicConfig(level=args.loglevel <span class="hljs-keyword">or</span> logging.INFO)
-
-    logging.debug(<span class="hljs-string">'Will write to following files: %s'</span>, <span class="hljs-string">', '</span>.join(args.file))
-
-    <span class="hljs-keyword">for</span> fname <span class="hljs-keyword">in</span> args.file:
-        <span class="hljs-keyword">if</span> args.dry_run:
-            logging.info(<span class="hljs-string">'** DRY-RUN ** would overwrite %s'</span>, fname)
-        <span class="hljs-keyword">else</span>:
-            logging.info(<span class="hljs-string">'Trying to overwrite %s..'</span>, fname)
-            <span class="hljs-keyword">try</span>:
-                <span class="hljs-keyword">with</span> open(fname, <span class="hljs-string">'w'</span>) <span class="hljs-keyword">as</span> fd:
-                    fd.write(<span class="hljs-string">'FOOBAR'</span>)
-            <span class="hljs-keyword">except</span>:
-                logging.exception(<span class="hljs-string">'Failed to write to %s'</span>, fname)
-
-
-<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:
-    parser = ArgumentParser(description=__doc__)
-    group = parser.add_mutually_exclusive_group()
-    group.add_argument(<span class="hljs-string">'-v'</span>, <span class="hljs-string">'--verbose'</span>, help=<span class="hljs-string">'Verbose (debug) logging'</span>, action=<span class="hljs-string">'store_const'</span>, const=logging.DEBUG,
-                       dest=<span class="hljs-string">'loglevel'</span>)
-    group.add_argument(<span class="hljs-string">'-q'</span>, <span class="hljs-string">'--quiet'</span>, help=<span class="hljs-string">'Silent mode, only log warnings'</span>, action=<span class="hljs-string">'store_const'</span>,
-                       const=logging.WARN, dest=<span class="hljs-string">'loglevel'</span>)
-    parser.add_argument(<span class="hljs-string">'--dry-run'</span>, help=<span class="hljs-string">'Noop, do not write anything'</span>, action=<span class="hljs-string">'store_true'</span>)
-    parser.add_argument(<span class="hljs-string">'file'</span>, nargs=<span class="hljs-string">'+'</span>, help=<span class="hljs-string">'Files to overwrite with FOOBAR'</span>)
-    args = parser.parse_args()
-    main(args)
-</code></pre>
-<h1><a class="anchor" aria-hidden="true" id="infrastructure-automation-with-terraform"></a><a href="#infrastructure-automation-with-terraform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Infrastructure Automation - with Terraform</h1>
+<h2><a class="anchor" aria-hidden="true" id="infrastructure-automation-with-terraform"></a><a href="#infrastructure-automation-with-terraform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Infrastructure Automation - with Terraform</h2>
 <p><a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html">Best Pracrtices</a></p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/bootstrap.html">← Bootstraping</a><a class="docs-next button" href="/docs/developmentenvironment.html">Setup →</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Knowledge Base</a><a href="/docs/en/blog">News</a><a href="/docs/en/doc4.html">ADRs</a></div><div><h5>Let&#x27;s build a a community</h5><a href="https://twitter.com/search?l=&amp;q=%23d10l%20since%3A2018-07-07&amp;src=typd" target="_blank" rel="noreferrer noopener">Disucss using #d10l</a><a href="https://twitter.com/denseidel" target="_blank" rel="noreferrer noopener">Contact me @denseidel</a></div><div><h5>More</h5><a href="https://github.com/denseidel">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Dennis Seidel</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/bootstrap.html">← Bootstraping</a><a class="docs-next button" href="/docs/developmentenvironment.html">Setup →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#use-gitops">Use GitOps</a></li><li><a href="#scripting">Scripting</a></li><li><a href="#infrastructure-automation-with-terraform">Infrastructure Automation - with Terraform</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Knowledge Base</a><a href="/docs/en/blog">News</a><a href="/docs/en/doc4.html">ADRs</a></div><div><h5>Let&#x27;s build a a community</h5><a href="https://twitter.com/search?l=&amp;q=%23d10l%20since%3A2018-07-07&amp;src=typd" target="_blank" rel="noreferrer noopener">Disucss using #d10l</a><a href="https://twitter.com/denseidel" target="_blank" rel="noreferrer noopener">Contact me @denseidel</a></div><div><h5>More</h5><a href="https://github.com/denseidel">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Dennis Seidel</section></footer></div></body></html>
