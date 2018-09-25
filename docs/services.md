@@ -2,41 +2,22 @@
 id: services
 title: Design
 ---
-The core business functions are develop in services either using microservices or event driven actors. The [Platform ](../plattform.md) provides the infrastructure for a fast and portable implementation. Start by defining your [software architecture](architecture.md) - or not but make a concious decision about this. The platform inceases your speed by making some basic architectural choices for you and providing tools to help you. Next tart with the software design.
+The core business functions are develop in services either using microservices or event driven actors. The [Platform ](../plattform.md) provides the infrastructure for a fast and portable implementation. Start by defining your [software architecture](architecture.md) - or not but make a concious decision about this. The platform inceases your speed by making some basic architectural choices for you and providing tools to help you. Next select the correct [boostrap toolkit](bootstrap.md) and start with the software design. 
 
 ### **Architectural Decisions**
 
 1. [ADR-0009](adr/adr9.html) - Implement services in Python 
-1. Languages: 
-   1. Python as we want to build data driven application and in this domain python is the standard
-   2. Exception: BFF that only orchestrate calls from data apis / function \(lambdas\). There the improved performance of Node as well as the familiarity of the frontend team with Javascript matters more.
 
 ## Software architecture and domain 
-
 [Create a lean diagram](../architecture/) with a domain diagram \(events, commands, actors, aggregates\), interaction diagram and a first deployment diagram, \(squnce diagram? not at this stage right?\).
 
 ## Sofware Design: 
+The software design includes how a component is implemented, the interface and api, sequence of actions and exception handling.
+1. Start by designing the API
+2. Map out the business process([activities](http://plantuml.com/activity-diagram-beta)) & [sequences](http://plantuml.com/sequence-diagram) of actions with 
+3. Next model the **[state - data architecture](http://plantuml.com/state-diagram)** of the components e.g. the service or the application (redux & views).
 
-* API?
-* Next model the **[state - data architecture](http://plantuml.com/state-diagram)** of the components e.g. the service or the application (redux & views).
-* to map out the business process / [activities](http://plantuml.com/activity-diagram-beta)
-
-## Decide if you go serverless or container and setup the project 
-
-If it is a [strategic component](https://den.gitbook.io/developerplaybook/~/edit/primary/bootstraping) use _containers_ else use _serverless. Depending on your evaluation use the correct Bootstrap template to setup you project._
-
-## Principles for API Development 
-
-Principle of Good API Development vs Bad API Development
-
-* Bad API Developers start by write code and tackle the technical challanges. Good API designer enable fast feedback by designing the interfaces showing it to the \(API\) customer and itterate on that. 
-* Bad API Developer design for days and weeks until "perfection". Good API Developers find the the point of minimal agreement with the customer and then write the code, find new challanges based on the technology and itterated again with the customer over the best solution. 
-* Bad API Developer on initial implementation speed, Good API Developer focus on reduced cycle times \(with api customers and technology\).
-  * [https://www.youtube.com/watch?v=SEQeovx5z\_A](https://www.youtube.com/watch?v=SEQeovx5z_A)
-  * Use API First Frameworks: [https://github.com/swagger-api/swagger-codegen/wiki/server-stub-generator-howto](https://github.com/swagger-api/swagger-codegen/wiki/server-stub-generator-howto)
-
-## Design the API / Events in Swagger
-
+### Design the API / Events in Swagger
 First we start designing the API with Swagger. The best tool to do this is the [swagger editor](https://github.com/swagger-api/swagger-editor). I suggest adding the swagger editor to the docker-compose file in your project:
 
 ```text
@@ -48,4 +29,3 @@ services:
 ```
 
 Create your swagger file: [basic swagger file structure](https://swagger.io/docs/specification/2-0/basic-structure/)
-
