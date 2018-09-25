@@ -3,6 +3,9 @@ id: softwareengineering
 title: Software Engineering
 ---
 
+
+Kannst ja bescheid sagen wenn du zu Hause bist will was ausprobieren :) 
+
 * Clean Code 
 * [System Design](https://github.com/donnemartin/system-design-primer/blob/master/README.md)
 * Google - 3 flaws of software design

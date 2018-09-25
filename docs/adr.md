@@ -22,7 +22,11 @@ npm i -g adr-log
 ```bash
 adr new Implement as Unix shell scripts
 ```
+This has to be done in the `/` root folder of the repository. To add it to the adr page it has to added to `/website/sidebars.json` next the adr needs to be added to the correct section by adding:
 
+```2. [ADR-0008](adr/adr8.html) - Use Istio as the plattform over serverless```
+
+this can be found in the adr markdown file as well as on the website url.
 
 ### Replace an ADR
 ```bash

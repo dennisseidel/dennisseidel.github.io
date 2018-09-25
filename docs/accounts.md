@@ -24,8 +24,6 @@ Create a group with the permissions for api gateway, aws lambda and deploy
 
 ![](/img/create-iam-role-3.png)
 
-#### 
-
 ![Overview of the permissions of the user:](/img/serverless-admin-iam-rights.png)
 
 ![Create user \(with group serverless-admin\)](/img/create-iam-role-4%20%281%29.png)
@@ -169,6 +167,15 @@ export AWS_PROFILE=serverless-admin
 Source: [https://docs.aws.amazon.com/cli/latest/userguide/cli-multiple-profiles.html](https://docs.aws.amazon.com/cli/latest/userguide/cli-multiple-profiles.html)
 
 
+## GCP
+
+* [Setup Google Cloud](https://serverless.com/framework/docs/providers/google/guide/credentials/):
+  * Create a Google Cloud Billing Account
+  * Create a new Google Cloud Project
+  * Enable the necessary APIs
+  * Get credentials
+  * For serverless: Update the `provider` config in `serverless.yml`
+
 
 ## Securely store your keys and secrets in your rsh file
 
@@ -198,15 +205,6 @@ Just create a secret note within lastpass:
 export AWS_ACCESS_KEY_ID=$(lpass show aws-serverless-devops --username)
 export AWS_SECRET_ACCESS_KEY=$(lpass show aws-serverless-devops --password)
 ```
-
-## Getting started with GCP
-
-* [Setup Google Cloud Functions for Serverless](https://serverless.com/framework/docs/providers/google/guide/credentials/):
-  * Create a Google Cloud Billing Account
-  * Create a new Google Cloud Project
-  * Enable the necessary APIs
-  * Get credentials
-  * For serverless: Update the `provider` config in `serverless.yml`
 
 
 

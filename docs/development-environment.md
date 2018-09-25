@@ -5,7 +5,7 @@ title: Setup
 
 ## Mac Setup 
 
-follow this [mac setup guide](http://sourabhbajaj.com/mac-setup/).
+Follow the [mac setup guide](http://sourabhbajaj.com/mac-setup/).
 
 ## Development Environment for Python, Javascript/React and Node Developers \(on OSX\):
 
@@ -24,7 +24,6 @@ npm install -g serverless create-react-app
 #Additional tools to improve the developer experience:
 brew cask install google-chrome
 brew cask install visual-studio-code
-brew cask install iterm2
 brew cask install postman
 brew install git
 git config --global credential.helper osxkeychain

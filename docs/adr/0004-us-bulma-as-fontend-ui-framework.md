@@ -1,6 +1,6 @@
 ---
 id: adr4
-title: 4. _Frontend Framework vs Ui Framework_ 
+title: 4. Frontend Framework vs Ui Framework
 ---
 * Status: accepted 
 * Date: 2018-05-31

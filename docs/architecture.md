@@ -3,6 +3,8 @@ id: architecture
 title: Architecture
 ---
 
+> Definition: Software architecture identifies the modules and their responsibilities, releationships between modules, patterns, technologies and system wide NFRs choices like security, scalability and fault tolerance.
+
 I apply the Principles of an [Evolutionary Architecture - watch for more details -](https://www.youtube.com/watch?v=8bEsNT7jdC4&t=112s&index=57&list=WL) to handle *Change*: 
 
 > An evolutionary architecture supports **incremental**, **guided change** as a first principle along **multiple dimensions**
@@ -46,9 +48,10 @@ An example from [Netflix](https://www.slideshare.net/SuudhanRangarajan/netflix-p
 
 ## Design
 
-Start by modeling the **[domain(s) diagram](https://docs.google.com/drawings/d/1kwtMhXe-3YLrqlLa-MoE84U-lDr-k5Z6qtlWgCuvHkk/edit)**. Next model the **[state - data architecture](http://plantuml.com/state-diagram)** of the components e.g. the service or the application (redux & views). Further options are: 
-* to map out the solution \([process](http://plantuml.com/sequence-diagram) & [component](http://plantuml.com/component-diagram)\)
-* to map out the business process / [activities](http://plantuml.com/activity-diagram-beta)
+Start by modeling the **[domain(s) diagram](https://docs.google.com/drawings/d/1kwtMhXe-3YLrqlLa-MoE84U-lDr-k5Z6qtlWgCuvHkk/edit)**. Then map out the solution & [component](http://plantuml.com/component-diagram)\) and add notes on the 
+* NFRs
+* Patterns
+* Technologies (see the [tech radar](techradar.md))
 
 ## Tech Radars
 

@@ -2,17 +2,24 @@
 id: services
 title: Design
 ---
-The core business functions are develop in services either using microservices or event driven actors.These can be implemented on the [platform ](../plattform.md)either as _serverless_ or _containers_.
+The core business functions are develop in services either using microservices or event driven actors. The [Platform ](../plattform.md) provides the infrastructure for a fast and portable implementation. Start by defining your [software architecture](architecture.md) - or not but make a concious decision about this. The platform inceases your speed by making some basic architectural choices for you and providing tools to help you. Next tart with the software design.
 
 ### **Architectural Decisions**
 
+1. [ADR-0009](adr/adr9.html) - Implement services in Python 
 1. Languages: 
    1. Python as we want to build data driven application and in this domain python is the standard
    2. Exception: BFF that only orchestrate calls from data apis / function \(lambdas\). There the improved performance of Node as well as the familiarity of the frontend team with Javascript matters more.
 
-## Understand the domain 
+## Software architecture and domain 
 
 [Create a lean diagram](../architecture/) with a domain diagram \(events, commands, actors, aggregates\), interaction diagram and a first deployment diagram, \(squnce diagram? not at this stage right?\).
+
+## Sofware Design: 
+
+* API?
+* Next model the **[state - data architecture](http://plantuml.com/state-diagram)** of the components e.g. the service or the application (redux & views).
+* to map out the business process / [activities](http://plantuml.com/activity-diagram-beta)
 
 ## Decide if you go serverless or container and setup the project 
 
