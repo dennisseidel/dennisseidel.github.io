@@ -3,6 +3,13 @@ id: developmentenvironment
 title: Setup
 ---
 
+
+
+### Architectural Decisons
+1. [ADR-0007](adr/adr7.html) - ~~Use Docusaurus for Documentation~~
+2. [ADR-0010](adr/adr10.html) - Document with README.md and Docusaurus
+
+
 ## Mac Setup 
 
 Follow the [mac setup guide](http://sourabhbajaj.com/mac-setup/).
@@ -131,7 +138,9 @@ Code: [https://github.com/denseidel/apis-api/commit/ecc27aaf1f7a714938d99f1b5d65
 
 ## Documentation
 
-Use [Docusaurus](https://docusaurus.io/docs/en/installation).
+The most important part for a project is the `README.md` therefore document all relevant details there and only reference from other documentation to this file. Use the [new-project template](https://github.com/zalando-incubator/new-project). 
+
+For further documentation use [Docusaurus](https://docusaurus.io/docs/en/installation).
 
 ## Git Knowledge
 

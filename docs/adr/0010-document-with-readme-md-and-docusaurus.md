@@ -1,10 +1,10 @@
 ---
-id: adr7
-title: 7. Use Docusaurus for Documentation 
+id: adr10
+title: 10. Document with README.md and Docusaurus 
 ---
 
-* Status: superseeded by [ADR-0010](0010-document-with-readme-md-and-docusaurus.md) 
-* Date: 2018-07-13 
+* Status: accepted
+* Date: 2018-09-26 <!-- optional -->
 
 ## Context and Problem Statement
 
@@ -23,10 +23,11 @@ Projects should have a documentation with minimal overhead and in SCM/Github. Gi
 * VuePress
 * Docusaurus
 * Getsby
+* README.md
 
 ## Decision Outcome
 
-Chosen option: "Docusaurus", because it was the simplest tool to setup and still fits with the current toolstack (uses markdown and react) further it is supported by Facebook.
+Chosen option: "Docusaurus" and "README.md", because they were simple to setup and fits with the current toolstack (uses markdown and react) further it is supported by Facebook. Further README.md has been added as it is important to document all relevent components as near to the code as possibile.
 
 Positive Consequences: 
 * I can host my blog and all my documentation in one page. 
@@ -71,3 +72,12 @@ Negative consequences:
 * Good, because it has a large community
 * Bad, because it has not very good templates and therefore requires an UI implementation with some effort
 
+### [README.md](https://github.com/zalando-incubator/new-project)
+* Good, because it is close to the code. 
+* Good, because it is the most important piece of documentation for GitProjects.
+* Good, can be integrated with other documentation options.
+* Bad, because it does not fit non code situation
+
+## Links <!-- optional -->
+
+* [Zalando new-project template](https://github.com/zalando-incubator/new-project)
