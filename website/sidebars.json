@@ -10,6 +10,6 @@
   },
   "docs-other": {
     "Introduction": ["adr"],
-    "ADRs": ["adr/adr1", "adr/adr2", "adr/adr3", "adr/adr4", "adr/adr5", "adr/adr6", "adr/adr7", "adr/adr8", "adr/adr9", "adr/adr10"]
+    "ADRs": ["adr/adr1", "adr/adr2", "adr/adr3", "adr/adr4", "adr/adr5", "adr/adr6", "adr/adr7", "adr/adr8", "adr/adr9", "adr/adr10", "adr/adr11"]
   }
 }

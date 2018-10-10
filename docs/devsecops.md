@@ -10,6 +10,9 @@ DevSecOps consists of different Layers:
 * Plattform (Automation) - Get your Plattform setup 
 * Dev Tool Development
 
+### Architectural Decisions
+
+1. [ADR-0011](adr/adr11.html) - Generate CLIs with Cement
 
 ## Use GitOps
 
@@ -20,3 +23,18 @@ DevSecOps consists of different Layers:
 ## Infrastructure Automation - with Terraform
 
 [Best Pracrtices](https://www.terraform.io/docs/providers/aws/r/route53_record.html)
+
+
+## Developer Tooling
+
+### CLIs 
+
+Implement a CLI for the most important task. Use [Cement](https://docs.builtoncement.com/getting-started/beginner-tutorial/part-1-creating-your-first-project) to create CLIs. An sample application can be found [here](#) and support [here](https://github.com/datafolklabs/cement#more-information).
+
+```bash
+# install
+pip3 install cement
+# generate project
+cement generate project ./cli
+
+```

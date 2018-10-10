@@ -53,9 +53,12 @@ Start by modeling the **[domain(s) diagram](https://docs.google.com/drawings/d/1
 * Patterns
 * Technologies (see the [tech radar](techradar.md))
 
-## Tech Radars
+### Technology Selection
 
 The [technology radar](techradar.md) allows you to stand on the shoulders of giants which reduce the tool search time and we don't make mistakes multiple times. 
 
 * [https://zalando.github.io/tech-radar/](https://zalando.github.io/tech-radar/)
 * [https://www.thoughtworks.com/de/radar](https://www.thoughtworks.com/de/radar)
+* [CNCF Landscape](https://landscape.cncf.io/grouping=landscape)
+
+Heuristic to do technology selection beyond the tech radars: Go to Github and do a simple search for the keyword e.g. CMS and sort by stars. Further you can filter the result for a specific language (e.g. JavaScript)
