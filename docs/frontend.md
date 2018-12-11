@@ -20,6 +20,13 @@ After you defined the business functionality - expressed most clearly by the API
 5. Decide if you deploy the application serverless or use docker containers \(vendor independent\)
    1. [Dockerize a react application](./#dockerize-a-react-app)
 
+
+### Frontend Types & Guidelines
+
+#### Landing Page
+
+[Examples and Tips to build good landing pages.](https://www.cortes.design/post/best-saas-landing-page-examples-inspiration)
+
 ### Technology Stack {#technology-stack}
 
 * Build Setup: _ES6, webpack, babel, npm_

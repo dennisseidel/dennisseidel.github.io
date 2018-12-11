@@ -10,6 +10,47 @@ title: Data Science (AI)
 * [ADR-0003](adr/adr3.html) - For Machine learning select a vendor specific stack of a general stack
 * [ADR-0006](adr/adr6.html) - I use AWS for ML and Event Driven Architecture
 
+## Setup 
+
+### Install Jupyter Notebook 
+
+http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/execute.html
+http://jupyter.org/install
+
+```bash
+pip3 install --upgrade pip
+pip3 install jupyter
+```
+https://www.datacamp.com/community/tutorials/installing-anaconda-mac-os-x
+https://flinhong.com/2018/01/27/get-anaconda-ready-with-brew/
+
+```bash
+brew cask install anaconda
+# add to .zshrc
+export PATH=/usr/local/anaconda3/bin:"$PATH"
+```
+
+conda 
+
+https://conda.io/docs/user-guide/tasks/manage-environments.html
+
+
+### install anaconda 
+https://www.anaconda.com/download/#macos
+
+
+### Download from Jupyter Notebook
+
+https://www.linux.com/blog/split-and-join-targz-file-Linux 
+https://stackoverflow.com/questions/43042793/download-all-files-in-a-path-on-jupyter-notebook-server
+
+!tar chvfz notebook.tar.gz *
+!split --bytes=1MB notebook.tar.gz vid
+
+### Install Package in Anaconda 
+https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/
+https://stackoverflow.com/questions/40075637/anaconda-and-package-installation-pydicom
+
 ## Software Development
 
 Software Development is changing because of AI the actual "logic coding" is done by optimization - the algorithm itself. The new process looks like

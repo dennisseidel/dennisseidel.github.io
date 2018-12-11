@@ -29,7 +29,24 @@ DevSecOps consists of different Layers:
 
 ### CLIs 
 
-Implement a CLI for the most important task. Use [Cement](https://docs.builtoncement.com/getting-started/beginner-tutorial/part-1-creating-your-first-project) to create CLIs. An sample application can be found [here](#) and support [here](https://github.com/datafolklabs/cement#more-information).
+Use a CLI to abstract from complex scripts and simplify repetetive tasks. [Cement](https://docs.builtoncement.com/getting-started/beginner-tutorial/part-1-creating-your-first-project) is a framework to create CLIs. An sample application can be found [here](#) and support [here](https://github.com/datafolklabs/cement#more-information).
+
+Getting Started:
+
+#### Design
+A good general guideline can be found by heroku - [12 Factor CLI Apps](https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46). e.g. using flags. Important questions are: 
+
+- Do you have a nested CLI? I propose to have no more then one level of nesting. e.g. `{yourcliname} {nestedobject} --fag=somesting (poly service --action=create)` 
+- Which objects? `service` `web` `platform`
+- Which flags per object? e.g. `--action="create"` `-a="deploy"` `-a=update`
+
+
+
+1. Prerequisits & install
+2. Implementation
+3. Packaging 
+
+A longer getting started is provided by the Clement Page. 
 
 ```bash
 # install

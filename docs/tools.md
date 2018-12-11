@@ -9,3 +9,14 @@ title: Code Tooling (Editor, Git)
 ## VIM Basics
 
 [Delete from cursor to end of line on VI](https://unix.stackexchange.com/questions/4415/delete-from-cursor-to-end-of-line-on-vi)
+
+
+## Paring with Visual Studio Live Share
+
+* More Info: https://code.visualstudio.com/blogs/2017/11/15/live-share
+* Security: https://docs.microsoft.com/en-us/visualstudio/liveshare/reference/security
+
+Add this to your config: 
+```
+"liveshare.guestApprovalRequired": true
+```
