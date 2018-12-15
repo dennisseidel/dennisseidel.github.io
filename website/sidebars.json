@@ -7,7 +7,7 @@
     "Frontend": ["frontend"],
     "Automation": ["datascience", "backend/chatbots"],
     "Learning": ["techstack"],
-    "Business": ["sales"]
+    "Business": ["business/sales", "business/distribution"]
   },
   "docs-other": {
     "Introduction": ["adr"],
