@@ -60,5 +60,6 @@ The [technology radar](techradar.md) allows you to stand on the shoulders of gia
 * [https://zalando.github.io/tech-radar/](https://zalando.github.io/tech-radar/)
 * [https://www.thoughtworks.com/de/radar](https://www.thoughtworks.com/de/radar)
 * [CNCF Landscape](https://landscape.cncf.io/grouping=landscape)
+* [LFDF Landscape](https://landscape.lfdl.io/)
 
 Heuristic to do technology selection beyond the tech radars: Go to Github and do a simple search for the keyword e.g. CMS and sort by stars. Further you can filter the result for a specific language (e.g. JavaScript)
