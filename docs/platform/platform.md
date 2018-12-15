@@ -1,5 +1,5 @@
 ---
-id: plattform
+id: platform
 title: Service Mesh Setup
 ---
 

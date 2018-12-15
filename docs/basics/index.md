@@ -1,5 +1,5 @@
 ---
-id: support
+id: index
 title: Get Started
 ---
 

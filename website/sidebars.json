@@ -1,11 +1,10 @@
 {
   "docs": {
-    "Basics": ["support", "architecture", "softwareengineering", "bootstrap", "devsecops"],
-    "Development Environment": ["developmentenvironment", "account", "tools"],
-    "Plattform": ["plattform", "iam", "events", "backend/persistance", "ai"],
-    "Services": ["services", "backend/containers", "backend/python", "backend/testing"],
-    "Frontend": ["frontend"],
-    "Automation": ["datascience", "backend/chatbots"],
+    "Basics": ["basics/index", "basics/architecture", "basics/softwareengineering", "basics/bootstrap", "basics/devsecops"],
+    "Development Environment": ["development-environment/developmentenvironment", "development-environment/account", "development-environment/tools"],
+    "Plattform": ["platform/platform", "platform/cidcd", "platform/iam", "platform/events", "platform/persistance", "platform/ai"],
+    "Services": ["services/services", "services/containers", "services/python", "services/testing", "services/datascience", "services/chatbots"],
+    "Frontend": ["frontend/frontend"],
     "Learning": ["techstack"],
     "Business": ["business/sales", "business/distribution"]
   },

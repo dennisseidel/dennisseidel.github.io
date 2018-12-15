@@ -10,6 +10,14 @@ title: Data Science (AI)
 * [ADR-0003](adr/adr3.html) - For Machine learning select a vendor specific stack of a general stack
 * [ADR-0006](adr/adr6.html) - I use AWS for ML and Event Driven Architecture
 
+
+
+## Basics
+
+* https://github.com/jeongyoonlee/data-science-process-management
+* https://github.com/GokuMohandas/practicalAI
+
+
 ## Setup 
 
 ### Install Jupyter Notebook 

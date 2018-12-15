@@ -11,6 +11,13 @@ After you defined the business functionality - expressed most clearly by the API
 1. [I use a basic css framework Bulma, because more powerful frameworks cost to much time understanding without understanding the basics.](https://github.com/denseidel/developer-playbook/blob/master/adr/2018-02-24%20Fontend%20Ui%20Framework.md)
 2. \*TODO: Create ADR\* I stick with React up to the point that the others are at least on the same functional level: Native and Frontend.
 
+
+## Basics
+
+* [Javascript](https://www.freecodecamp.org/news/beaucarnes/learn-javascript-full-course--j4Va5cR1p)
+* [Penetration-Testing](https://www.freecodecamp.org/news/beaucarnes/web-app-penetration-testing-full-course--pena5cR1p)
+
+
 ### Development Process
 
 1. [Design and Develop API Mock](../services-api/)

@@ -3,6 +3,38 @@ id: python
 title: Python
 ---
 
+
+## Implement Services in Python
+
+### Create virtual env local, activate and deactivate
+
+```text
+#http://sourabhbajaj.com/mac-setup/Python/virtualenv.html
+virtualenv venv
+source venv/bin/activate
+deactivate
+```
+
+### Install python dependencies:
+
+```python
+pip install boto3 google-api-python-client requests
+```
+
+### Store a reference to my dependencies:
+
+```python
+pip freeze > requirements.txt
+```
+
+Optional: Re-install the dependencies from the `requirements.txt`:
+
+```python
+pip install -r requirements.txt
+```
+
+## Other stuff
+
 Use `Make` for automation in service development https://medium.com/@xobb/help-you-devops-use-make-aebedd33c40f
 
 
@@ -52,6 +84,13 @@ Modules: [https://www.tutorialspoint.com/python/python\_modules.htm](https://www
 ### Testing
 
 {% embed data="{\"url\":\"https://davidallenfox.wordpress.com/2017/06/15/getting-started-with-serverless-framework-and-python-part-2/\",\"type\":\"link\",\"title\":\"Getting started with Serverless Framework and Python \(Part 2\)\",\"description\":\"Radio tower at Stax Museum of American Soul Music This is a continuation of my previous post, which offered some tips for setting up Serverless Framework and concluded with generating a template se…\",\"icon\":{\"type\":\"icon\",\"url\":\"https://s1.wp.com/i/favicon.ico\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://davidallenfox.files.wordpress.com/2017/06/img\_20170322\_141738-e1497459511874.jpg?w=225\",\"width\":225,\"height\":300,\"aspectRatio\":1.3333333333333333}}" %}
+
+Run the unit tests
+
+```python
+python -m unittest discover -s tests
+```
+
 
 ### [Accessing value inside nested dictionaries](https://stackoverflow.com/questions/10399614/accessing-value-inside-nested-dictionaries)
 
