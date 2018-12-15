@@ -12,3 +12,4 @@ For digital assets there are multiple marketplace and even the fullfilment throu
 
 https://www.literaturcafe.de/praxistest-das-eigene-kindle-e-book-bei-amazon-verkaufen/
 https://kdp.amazon.com/de_DE
+https://kdp.amazon.com/de_DE/help/topic/G200645680
