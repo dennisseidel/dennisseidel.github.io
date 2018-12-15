@@ -56,6 +56,7 @@ const siteConfig = {
   },
 
   algolia: {
+    appId: 'MNTDAAG1S6',
     apiKey: '94c14595278911923b5766722cb68e39',
     indexName: 'CONTENT',
     algoliaOptions: {} // Optional, if provided by Algolia
