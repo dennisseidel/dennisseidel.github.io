@@ -1,6 +1,6 @@
 ---
-id: events
-title: Events
+id: cicd
+title: CI/CD (Platform)
 ---
 
 ## CICD (local jenkins)
