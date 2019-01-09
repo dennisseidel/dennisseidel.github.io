@@ -2,7 +2,7 @@
 id: adr4
 title: 4. Frontend Framework vs Ui Framework
 ---
-* Status: accepted 
+* Status: superseeded by [ADR-0012](0012-use-ant-design-as-a-ui-framework.md) 
 * Date: 2018-05-31
 
 ## Context and Problem Statement

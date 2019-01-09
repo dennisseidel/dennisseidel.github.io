@@ -4,57 +4,48 @@ title: Frontend
 ---
 ## Frontend
 
-After you defined the business functionality - expressed most clearly by the APIs of a domain - by creating your API mocks, you start building your UI.
+Start by [understand the tech stack](./#technology-stack) & the [architectural decisions](./#architectural-decisions).
 
-**Architectural Decisions**
+### Architectural Decisions
 
 1. [I use a basic css framework Bulma, because more powerful frameworks cost to much time understanding without understanding the basics.](https://github.com/denseidel/developer-playbook/blob/master/adr/2018-02-24%20Fontend%20Ui%20Framework.md)
 2. \*TODO: Create ADR\* I stick with React up to the point that the others are at least on the same functional level: Native and Frontend.
 
-
-## Basics
-
-* [Javascript](https://www.freecodecamp.org/news/beaucarnes/learn-javascript-full-course--j4Va5cR1p)
-* [Penetration-Testing](https://www.freecodecamp.org/news/beaucarnes/web-app-penetration-testing-full-course--pena5cR1p)
-
-
-### Development Process
-
-1. [Design and Develop API Mock](../services-api/)
-2. [Understand the tech stack](./#technology-stack)
-3. [Rapid Prototyping](./#rapid-prototyping)
-4. [Build an app with component based development](./#build-an-app)
-5. Decide if you deploy the application serverless or use docker containers \(vendor independent\)
-   1. [Dockerize a react application](./#dockerize-a-react-app)
-
-
-### Frontend Types & Guidelines
-
-#### Landing Page
-
-[Examples and Tips to build good landing pages.](https://www.cortes.design/post/best-saas-landing-page-examples-inspiration)
-
-### Technology Stack {#technology-stack}
+### Technology Stack
 
 * Build Setup: _ES6, webpack, babel, npm_
 * Frontend Framework: _React \(_[_ecosystem overview_](https://github.com/enaqx/awesome-react) _/_ [_course_](https://www.udemy.com/react-the-complete-guide-incl-redux/)_\) - JSX, State, Life Cycle Methods_
 * State Management: _Redux + Redux Saga_
 * Web/Desktop:
   * _React  with Create-React-App_
-  * _CSS Framework - Bulma /_ [_blueprintjs_](http://blueprintjs.com/)
+  * _CSS Framework - Bulma /_ [Ant Design](https://ant.design)
 * Web/Mobile:
-  * _CSS Framework - Bulma_
+  * _CSS Framework - [Ant Design Mobile](https://mobile.ant.design/docs/react/introduce)
 * Native:
   * _React Native_
 
-### Select a framework
+## Design the UI (Webdesign)
 
-* Look at the alibaba ecosystem when I am read: https://ant.design/docs/react/i18n / dva
-* https://github.com/websemantics/awesome-ant-design
+Check out the course on [CSS3, Flexbox, and CSS grid](https://www.freecodecamp.org/news/full-css-course-flexbox-grid/).
 
-* Overview: https://gather.engineering/react-ui-frameworks-compared-dd631eb5c982 / popular https://www.npmtrends.com/office-ui-fabric-react-vs-@blueprintjs/core-vs-antd 
+## Develop the frontend 
+* [Javascript](https://www.freecodecamp.org/news/beaucarnes/learn-javascript-full-course--j4Va5cR1p)
+* [Penetration-Testing](https://www.freecodecamp.org/news/beaucarnes/web-app-penetration-testing-full-course--pena5cR1p)
 
-https://dvajs.com/guide/#%E4%BB%96%E6%98%AF%E6%80%8E%E4%B9%88%E6%9D%A5%E7%9A%84%EF%BC%9F
+### Landing Page
+
+[Examples and Tips to build good landing pages.](https://www.cortes.design/post/best-saas-landing-page-examples-inspiration)
+
+### Rapid Prototype
+[Rapid Prototyping](./#rapid-prototyping)
+
+
+### Web App (using component based development)
+
+[Build an app with component based development](./#build-an-app) and decide if you deploy the application serverless or use docker containers \(vendor independent\): [Dockerize a react application](./#dockerize-a-react-app)
+
+https://github.com/websemantics/awesome-ant-design
+* Overview: https://gather.engineering/react-ui-frameworks-compared-dd631eb5c982  https://www.npmtrends.com/office-ui-fabric-react-vs-@blueprintjs/core-vs-antd
 
 ### Architecture
 

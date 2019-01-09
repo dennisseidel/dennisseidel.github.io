@@ -55,3 +55,8 @@ pip3 install cement
 cement generate project ./cli
 
 ```
+
+
+## Pipeline as Code
+
+https://jenkins.io/doc/book/pipeline-as-code/

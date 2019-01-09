@@ -21,64 +21,6 @@ brew tap jenkins-x/jx
 brew install jx 
 ```
 
-Prerequesits: https://github.com/gopasspw/gopass/blob/master/docs/setup.md
-
-```bash
-brew install gopass
-gpg --list-keys
-git config --global gpg.program gpg
-git config --global commit.gpgsign true
-git config --global user.signingkey 04D6DA3C77D9CF3E6C7F900BF98FECE5AD76DA11
-gopass list
-gopass binary cp README.md d10l/README.md / gopass binary mv README.md d10l/README.md
-```
-
-gopass private repo either on github or public
-
-
-gopass                                                                                                                                 f
-Failed to initialize mount d10lteam (gpgcli-gitcli-fs+file:///Users/den/.password-store-d10lteam). Ignoring: failed to init sub store: password store d10lteam is not initialized. Try gopass init --store d10lteam --path gpgcli-gitcli-fs+file:///Users/den/.password-store-d10lteam
-It seems you are new to gopass. Do you want to run the onboarding wizard? [Y/n/q]: y
-[init] Creating a new team ...
-[init] [local] Initializing your local store ...
-Please select a private key for encrypting secrets:
-[0] gpg - 0xF98FECE5AD76DA11 - Dennis A. Seidel <den.seidel@gmail.com>
-Please enter the number of a key (0-0, [q]uit) [0]: 0
-Use Dennis A. Seidel (den.seidel@gmail.com) for password store git config? [Y/n/q]: y
-[init] [local]  -> OK
-[init] [local] Configuring your local store ...
-[init] [local] Do you want to add a git remote? [y/N/q]: https://gitlab.com/denseidel/secret.git
-[init] [local] Do you want to always confirm recipients when encrypting? [y/N/q]: N
-[init] [local]  -> OK
-[init] Please enter the name of your team (may contain slashes) []: d10lteam
-[init] [d10lteam] Initializing your shared store ...
-Please select a private key for encrypting secrets:
-[0] gpg - 0xF98FECE5AD76DA11 - Dennis A. Seidel <den.seidel@gmail.com>
-Please enter the number of a key (0-0, [q]uit) [0]: 0
-Use Dennis A. Seidel (den.seidel@gmail.com) for password store git config? [Y/n/q]: Y
-[init] [d10lteam]  -> OK
-[init] [d10lteam] Configuring the git remote ...
-Please enter the git remote for your shared store []: https://gitlab.com/d10l/secret.git
-[init] [d10lteam]  -> OK
-[init] [d10lteam] Created Team 'd10lteam'
-
-
-https://github.com/gopasspw/gopass/blob/master/docs/config.md
-
-gopass config autosync true --store d10lteam 
-
-### Terraform Gopass Integration
-
-https://github.com/camptocamp/terraform-provider-pass
-
-```bash
-go get github.com/camptocamp/terraform-provider-pass
-cd $GOPATH/src/github.com/camptocamp/terraform-provider-pass
-dep ensure
-make build
-# https://www.terraform.io/docs/configuration/providers.html#third-party-plugins
-```
-
 
 ## Infrastructure setup
 
