@@ -1,6 +1,6 @@
 {
   "docs": {
-    "Basics": ["index", "basics/architecture", "basics/softwareengineering", "basics/bootstrap", "basics/devsecops"],
+    "Basics": ["index", "basics/architecture", "basics/softwareengineering", "basics/devsecops"],
     "Development Environment": ["development-environment/developmentenvironment", "development-environment/account", "development-environment/tools"],
     "Plattform": ["platform/platform", "platform/cicd", "platform/iam", "platform/events", "platform/persistance", "platform/ai"],
     "Services": ["services/services", "services/containers", "services/python", "services/testing", "services/datascience", "services/chatbots"],
