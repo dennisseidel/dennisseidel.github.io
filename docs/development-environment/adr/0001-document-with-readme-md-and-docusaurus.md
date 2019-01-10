@@ -1,7 +1,4 @@
----
-id: adr10
-title: 10. Document with README.md and Docusaurus 
----
+# 1. Document with README.md and Docusaurus 
 
 * Status: accepted
 * Date: 2018-09-26 <!-- optional -->

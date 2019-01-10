@@ -11,7 +11,7 @@ Software Engineering is craftsmanship - that applies independent of context: Goo
 * [Not making the code easy to change](https://www.youtube.com/watch?v=eCg_VoFW46s)
 * [Being to generic](https://www.youtube.com/watch?v=0wxyOng0-14)
 * [Incremental Development & Design](https://www.youtube.com/watch?v=fjpkPe6-580)
-* [Any time you find yourself stopping to think, something is wrong.](https://www.codesimplicity.com/post/the-secret-of-fast-programming-stop-thinking/) E.g. The most common reason developers stop to think is that they did not fully understand some word or symbol.
+* [Any time you find yourself stopping to think, something is wrong.](https://www.codesimplicity.com/post/the-secret-of-fast-programming-stop-thinking/) E.g. The most common reason developers stop to think is that they did not fully understand some word or symbol. **What ever I do, focus on reaching the goal, and check if it is something I want to learn - then deep dive and learn it while doing (less frameworks more foundations).** 
 
 ## [System Design](https://github.com/donnemartin/system-design-primer/blob/master/README.md)
 
