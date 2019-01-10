@@ -2,39 +2,29 @@
 id: frontend
 title: Frontend
 ---
-## Frontend
 
 Start by [understand the tech stack](./#technology-stack) & the [architectural decisions](./#architectural-decisions).
 
-### Architectural Decisions
+## Decisions
 
-1. [I use a basic css framework Bulma, because more powerful frameworks cost to much time understanding without understanding the basics.](https://github.com/denseidel/developer-playbook/blob/master/adr/2018-02-24%20Fontend%20Ui%20Framework.md)
-2. \*TODO: Create ADR\* I stick with React up to the point that the others are at least on the same functional level: Native and Frontend.
+<!-- adrlog -->
 
-### Technology Stack
+- [ADR-0001](adr/0001-use-ant-design-as-a-ui-framework) - Use Ant Design as a UI framework
+- [ADR-0002](adr/0002-use-react-for-desktop-and-mobile) - Use React for Desktop and Mobile
 
-* Build Setup: _ES6, webpack, babel, npm_
-* Frontend Framework: _React \(_[_ecosystem overview_](https://github.com/enaqx/awesome-react) _/_ [_course_](https://www.udemy.com/react-the-complete-guide-incl-redux/)_\) - JSX, State, Life Cycle Methods_
-* State Management: _Redux + Redux Saga_
-* Web/Desktop:
-  * _React  with Create-React-App_
-  * _CSS Framework - Bulma /_ [Ant Design](https://ant.design)
-* Web/Mobile:
-  * _CSS Framework - [Ant Design Mobile](https://mobile.ant.design/docs/react/introduce)
-* Native:
-  * _React Native_
+<!-- adrlogstop -->
 
 ## Design the UI (Webdesign)
 
-Check out the course on [CSS3, Flexbox, and CSS grid](https://www.freecodecamp.org/news/full-css-course-flexbox-grid/).
+The foundations of UI design is [CSS3, Flexbox, and CSS grid](https://www.freecodecamp.org/news/full-css-course-flexbox-grid/). Suplement this with **Ant Design** as a UI Framework for * [Desktop](https://ant.design) and [Mobile](https://mobile.ant.design/docs/react/introduce).
 
 ## Develop the frontend 
-* [Javascript](https://www.freecodecamp.org/news/beaucarnes/learn-javascript-full-course--j4Va5cR1p)
-* [Penetration-Testing](https://www.freecodecamp.org/news/beaucarnes/web-app-penetration-testing-full-course--pena5cR1p)
+
+The frontend is developed using [Javascript](https://www.freecodecamp.org/news/beaucarnes/learn-javascript-full-course--j4Va5cR1p)/[Penetration-Testing](https://www.freecodecamp.org/news/beaucarnes/web-app-penetration-testing-full-course--pena5cR1p) using the Framework with the largest mature ecosystem [React](https://github.com/enaqx/awesome-react)([Course](https://www.udemy.com/react-the-complete-guide-incl-redux/)).
 
 ### Landing Page
 
-[Examples and Tips to build good landing pages.](https://www.cortes.design/post/best-saas-landing-page-examples-inspiration)
+Before developing the complete application test your app with a mock or a landing page. Check the steps and details in the sample [repo](https://github.com/denseidel/nosmoke.ai).
 
 ### Rapid Prototype
 [Rapid Prototyping](./#rapid-prototyping)
@@ -43,6 +33,7 @@ Check out the course on [CSS3, Flexbox, and CSS grid](https://www.freecodecamp.o
 ### Web App (using component based development)
 
 [Build an app with component based development](./#build-an-app) and decide if you deploy the application serverless or use docker containers \(vendor independent\): [Dockerize a react application](./#dockerize-a-react-app)
+[React](https://medium.freecodecamp.org/the-react-handbook-b71c27b0a795)
 
 https://github.com/websemantics/awesome-ant-design
 * Overview: https://gather.engineering/react-ui-frameworks-compared-dd631eb5c982  https://www.npmtrends.com/office-ui-fabric-react-vs-@blueprintjs/core-vs-antd

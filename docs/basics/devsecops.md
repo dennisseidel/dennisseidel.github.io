@@ -11,7 +11,7 @@ title: DevSecOps
 
 ## Decisions
 
-1. How to generate clis? reuse existing, nodejs, python, go 
+- [ADR-0004](adr/0004-generate-clis-with-cement) - Generate CLIs with Cement
 
 ## Script - everything you do twice
 1. Code your scripts in python ([BestPractices](https://srcco.de/posts/writing-python-command-line-scripts.html)).

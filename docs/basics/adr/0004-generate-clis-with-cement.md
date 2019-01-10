@@ -1,7 +1,4 @@
----
-id: adr11
-title: 11. Generate CLIs with Cement 
----
+# 4. Generate CLIs with Cement
 
 * Status: accepted
 * Date: 2018-09-26 <!-- optional -->

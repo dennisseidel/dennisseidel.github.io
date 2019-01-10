@@ -1,7 +1,4 @@
----
-id: adr12
-title: 12. Use Ant Design as a UI framework 
----
+# 1. Use Ant Design as a UI framework 
 
 * Status: accepted
 * Date: 2019-01-09
@@ -46,3 +43,5 @@ Chosen option: "Ant Design", because it comes out best see below. Further it has
 ## Links <!-- optional -->
 
 * [NPM Popularity](https://www.npmtrends.com/office-ui-fabric-react-vs-@blueprintjs/core-vs-antd-vs-bulma)
+* [Ant Design](https://ant.design)
+* [Ant Design Mobile](https://mobile.ant.design/docs/react/introduce)

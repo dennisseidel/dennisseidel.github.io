@@ -9,9 +9,9 @@ This section describes [what is software architecture](#software-architecture). 
 
 <!-- adrlog -->
 
-- [ADR-0001](0001-record-architecture-decisions.md) - Record architecture decisions
-- [ADR-0002](0002-use-docusaurus-for-documentation.md) - Use Docusaurus for Documentation
-- [ADR-0003](0003-one-adr-for-each-repository-topic.md) - One ADR for each Repository/Topic
+- [ADR-0001](adr/0001-record-architecture-decisions) - Record architecture decisions
+- [ADR-0002](adr/0002-use-docusaurus-for-documentation) - Use Docusaurus for Documentation
+- [ADR-0003](adr/0003-one-adr-for-each-repository-topic) - One ADR for each Repository/Topic
 
 <!-- adrlogstop -->
 
