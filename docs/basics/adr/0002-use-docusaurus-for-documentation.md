@@ -1,9 +1,6 @@
----
-id: adr7
-title: 7. Use Docusaurus for Documentation 
----
+# 2. Use Docusaurus for Documentation 
 
-* Status: superseeded by [ADR-0010](0010-document-with-readme-md-and-docusaurus.md) 
+* Status: accepted
 * Date: 2018-07-13 
 
 ## Context and Problem Statement
