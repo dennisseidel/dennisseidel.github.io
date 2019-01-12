@@ -6,7 +6,7 @@
     "Services": ["services/services", "services/containers", "services/python", "services/testing", "services/datascience", "services/chatbots"],
     "Frontend": ["frontend/frontend"],
     "Learning": ["techstack"],
-    "Business": ["business/sales", "business/distribution"]
+    "Business": ["business/index", "business/sales", "business/distribution"]
   },
   "docs-other": {
     "Introduction": ["adr"],

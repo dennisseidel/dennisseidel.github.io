@@ -6,8 +6,8 @@ title: DevSecOps
 * Add the summary of foundation books about:
   * Continous Delivery
   * Accelarate
-  * State of DevOps Report (https://cloudplatformonline.com/rs/248-TPC-286/images/DORA-State%20of%20DevOps.pdf)
-  * Security?
+  * [State of DevOps Report](https://cloudplatformonline.com/rs/248-TPC-286/images/DORA-State%20of%20DevOps.pdf)
+  * Security
 
 ## Decisions
 

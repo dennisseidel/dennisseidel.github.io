@@ -1,4 +1,4 @@
-# 4. Generate CLIs with Cement
+# 4. Generate CLIs with [oclif](https://oclif.io/docs/introduction)
 
 * Status: accepted
 * Date: 2018-09-26 <!-- optional -->
@@ -10,6 +10,7 @@ CLI make the developer experience much better and make some features even easier
 ## Decision Drivers <!-- optional -->
 
 * Fit with toolstack and goals of getting more into automation and machine learning
+* Fits with the decision to focus (js is the most universal)
 * Features - it should allow to implement relevant features (e.g. cli, templating ...) with a good development speed
 * Community - it should have a good adoption in the community
 
@@ -17,14 +18,14 @@ CLI make the developer experience much better and make some features even easier
 
 * Cement Framework
 * Yeoman
-* Caporal.js (NodeJS)
+* oclif (NodeJS)
 * python + argparse
 * bash
 * Go
 
 ## Decision Outcome
 
-Chosen option: "Cement", because it fits my toolstack and offers enough features.
+Chosen option: "oclif", very mature and fits with my goal focus on one universal language.
 
 ## Pros and Cons of the Options <!-- optional -->
 
@@ -35,18 +36,23 @@ Chosen option: "Cement", because it fits my toolstack and offers enough features
 * Good, because it is used by others e.g. AWS
 * Bad, because it is a seperate CLI and does not have a commuity around it like Yeoman
 
+### oclif
+
+* Good, because it has features for the full cli scope.
+* Good, because it is widly adopted (2500+ stars on github)
+* Good, because it has a nice performance
+* Good, because it has the backing of Salesforce & Heroku.
+* Good, because it fits with my focus on one universal language (JS).
+* Good, because it can be distributed as a binary.
+* Bad, because Python has a better integration into devops tools.  
+* Bad, because it does not fit my tech stack towards automation & Machine Learning. 
+
 ### Yeoman
 
 * Good, because it as an existing large community and ecosystem around it. 
 * Good, because it is used by others like Microsoft & IBM.
 * Bad, because it is focused on scaffolding.
 * Bad, beacuse it does not fit my tech stack towards automation & Machine Learning. 
-
-### Caporal.JS
-
-* Good, because it has features for the full cli scope. 
-* Bad, because it does not fit my tech stack towards automation & Machine Learning. 
-* Bad, because it is not as widely adopted. 
 
 ### Python + argepars
 
