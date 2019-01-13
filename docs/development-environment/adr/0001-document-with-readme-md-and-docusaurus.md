@@ -69,7 +69,7 @@ Negative consequences:
 * Good, because it has a large community
 * Bad, because it has not very good templates and therefore requires an UI implementation with some effort
 
-### [README.md](https://github.com/zalando-incubator/new-project)
+### [README.md](https://github.com/d10l/new-project)
 * Good, because it is close to the code. 
 * Good, because it is the most important piece of documentation for GitProjects.
 * Good, can be integrated with other documentation options.
@@ -77,4 +77,4 @@ Negative consequences:
 
 ## Links <!-- optional -->
 
-* [Zalando new-project template](https://github.com/zalando-incubator/new-project)
+* [Zalando new-project template](https://github.com/d10l/new-project)

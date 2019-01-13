@@ -90,6 +90,6 @@ Look at the **Frontend** or **Service** section.
 
 ## Document projects
 
-The most important part for a project is the `README.md` therefore document all relevant details there and only reference from other documentation to this file. Use the [new-project template](https://github.com/zalando-incubator/new-project). 
+The most important part for a project is the `README.md` therefore document all relevant details there and only reference from other documentation to this file. Use the [new-project template](https://github.com/denseidel/new-project). 
 
 For further documentation use [Docusaurus](https://docusaurus.io/docs/en/installation).
