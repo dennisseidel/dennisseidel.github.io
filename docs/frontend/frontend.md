@@ -16,18 +16,45 @@ Start by [understand the tech stack](./#technology-stack) & the [architectural d
 
 ## Design the UI (Webdesign)
 
-The foundations of UI design is [CSS3, Flexbox, and CSS grid](https://www.freecodecamp.org/news/full-css-course-flexbox-grid/). Suplement this with **Ant Design** as a UI Framework for * [Desktop](https://ant.design) and [Mobile](https://mobile.ant.design/docs/react/introduce).
+The foundations of UI design is [CSS3, Flexbox, and CSS grid]() extended by [React Best Practices and Patterns](https://www.sitepoint.com/react-architecture-best-practices/) :
+
+- styled components
+- render prop 
+
+
+ Suplement this with **Ant Design** as a UI Framework for * [Desktop](https://ant.design) and [Mobile](https://mobile.ant.design/docs/react/introduce).
 
 ## Develop the frontend 
 
-The frontend is developed using [Javascript](https://www.freecodecamp.org/news/beaucarnes/learn-javascript-full-course--j4Va5cR1p)/[Penetration-Testing](https://www.freecodecamp.org/news/beaucarnes/web-app-penetration-testing-full-course--pena5cR1p) using the Framework with the largest mature ecosystem [React](https://github.com/enaqx/awesome-react)([Course](https://www.udemy.com/react-the-complete-guide-incl-redux/)).
+The frontend is developed using [Javascript](https://www.freecodecamp.org/news/beaucarnes/learn-javascript-full-course--j4Va5cR1p)/[Penetration-Testing](https://www.freecodecamp.org/news/beaucarnes/web-app-penetration-testing-full-course--pena5cR1p) using the Framework with the largest mature ecosystem [React](https://github.com/enaqx/awesome-react)([Course](https://www.udemy.com/react-the-complete-guide-incl-redux/)) and [React Best Practices](https://www.zerrtech.com/blog/react-design-best-practices).
 
 ### Landing Page
 
 Before developing the complete application test your app with a mock or a landing page. Check the steps and details in the sample [repo](https://github.com/denseidel/nosmoke.ai).
 
 ### Rapid Prototype
-[Rapid Prototyping](./#rapid-prototyping)
+
+* Prototypes should be thrown away afterwards to ensure you make it cheap, fast, little.
+* Focus on the end goal: user test or video for VC.
+* Target Users: Low Fidality (Intenal & Social Circle (biase!) - talk with them, SMEs (know the market but outside) - use email, twitter and phone)  vs High Fidality (customer of the market, customer of customers - [Guerrilla Prototype](https://uxplanet.org/guerrilla-testing-with-your-prototypes-1f28536b64bc)) 
+
+Status: 
+
+#### Questions that are useful for each stage of prototyping:
+
+**Low-fidelity:**
+- Is each main function of the app easily accessible to users?
+- Do users easily identify what the functionality of the app is?
+- What is getting in the way of their use of that functionality?
+- What expectations do they have of potential supplemental functionality for the app?
+**Med-fidelity:**
+- For each screen, does the design of the screen work to guide users to the right functions?
+- Does the user easily navigate through the app to find supplemental functionality?
+- Do users easily find the interaction points we intend them to?
+**Hi-fidelity:**
+- Does the animation between each screen delight users?
+- Does our use of color work to make their experience compelling?
+- Do users like how the app reacts to touch gestures?
 
 
 ### Web App (using component based development)

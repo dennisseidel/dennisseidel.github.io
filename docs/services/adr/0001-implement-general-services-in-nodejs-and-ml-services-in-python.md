@@ -1,7 +1,4 @@
----
-id: adr9
-title: 9. Implement services in Python 
----
+# 1. Implement general services in NodeJS and ML services in Python
 
 * Status: accepted
 * Date: 2018-09-25 <!-- optional -->
@@ -27,7 +24,7 @@ There are many option to implement backends Java, NodeJS, Python, Scala/Akka and
 
 ## Decision Outcome
 
-Chosen option: "Python", because it fits my goal of focusing on automtion & intelligence best as well as the general pros and cons.
+Chosen option: "NodeJS", because it fits with my approach to focus on one language. For ML services use "Python" because it has the best integration with ML Frameworks.
 
 ## Pros and Cons of the Options <!-- optional -->
 

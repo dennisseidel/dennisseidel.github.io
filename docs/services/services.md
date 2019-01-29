@@ -6,7 +6,11 @@ The core business functions are develop in services either using microservices o
 
 ### **Architectural Decisions**
 
-1. [ADR-0009](adr/adr9.html) - Implement services in Python 
+<!-- adrlog -->
+
+- [ADR-0001](adr/0001-implement-general-services-in-nodejs-and-ml-services-in-python) - Implement general services in NodeJS and ML services in Python
+
+<!-- adrlogstop -->
 
 ## Software architecture and domain 
 [Create a lean diagram](../architecture/) with a domain diagram \(events, commands, actors, aggregates\), interaction diagram and a first deployment diagram, \(squnce diagram? not at this stage right?\).

@@ -88,6 +88,13 @@ If you want to go “all in” and ensure that every repo has the proper hooks, 
 
 Look at the **Frontend** or **Service** section. 
 
+Create Repository with [hub](tools.md):
+
+```
+hub init your-repo-name
+hub create
+```
+
 ## Document projects
 
 The most important part for a project is the `README.md` therefore document all relevant details there and only reference from other documentation to this file. Use the [new-project template](https://github.com/denseidel/new-project). 
