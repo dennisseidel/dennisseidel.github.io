@@ -37,4 +37,47 @@
 <p>Add this to your config:</p>
 <pre><code class="hljs"><span class="hljs-string">"liveshare.guestApprovalRequired"</span>: <span class="hljs-literal">true</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/development-environment/account.html">← Cloud Accounts</a><a class="docs-next button" href="/docs/platform/platform.html">Service Mesh Setup →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#tools">Tools</a></li><li><a href="#vim-basics">VIM Basics</a></li><li><a href="#paring-with-visual-studio-live-share">Paring with Visual Studio Live Share</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Knowledge Base</a><a href="/docs/en/blog">News</a><a href="/docs/en/doc4.html">ADRs</a></div><div><h5>Let&#x27;s build a a community</h5><a href="https://twitter.com/search?l=&amp;q=%23d10l%20since%3A2018-07-07&amp;src=typd" target="_blank" rel="noreferrer noopener">Disucss using #d10l</a><a href="https://twitter.com/denseidel" target="_blank" rel="noreferrer noopener">Contact me @denseidel</a></div><div><h5>More</h5><a href="https://github.com/denseidel">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Dennis Seidel</section></footer></div></body></html>
+<h2><a class="anchor" aria-hidden="true" id="git"></a><a href="#git" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GIT</h2>
+<p>Read <a href="https://medium.com/learn-git-today/single-branch-development-with-git-f72a052446cf">Single Branch Development with Git</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="github-cli-https-hubgithubcom"></a><a href="#github-cli-https-hubgithubcom" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://hub.github.com/">Github CLI</a></h3>
+<p>Install:</p>
+<pre><code class="hljs">brew install hub
+<span class="hljs-comment"># https://hub.github.com/hub.1.html</span>
+git<span class="hljs-built_in"> config </span>--global hub.protocol https
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="add-zappr-https-zappropensourcezalando-config"></a><a href="#add-zappr-https-zappropensourcezalando-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add <a href="https://zappr.opensource.zalan.do">Zappr</a> Config</h3>
+<p>Add a <code>.zappr.yaml</code> (<a href="https://zappr.readthedocs.io/en/latest/setup/#zappr-features-and-their-configuration-options">Documentation</a>) in the top-level of the repository:</p>
+<pre><code class="hljs css languages- yaml"><span class="hljs-attr">autobranch:</span>
+<span class="hljs-attr">  pattern:</span> <span class="hljs-string">'{number}-{title}'</span>
+<span class="hljs-attr">  length:</span> <span class="hljs-number">60</span>
+<span class="hljs-attr">commit:</span>
+<span class="hljs-attr">  message:</span>
+<span class="hljs-attr">    patterns:</span>
+<span class="hljs-bullet">      -</span> <span class="hljs-string">'#[0-9]+'</span>
+<span class="hljs-attr">approvals:</span>
+<span class="hljs-attr">  minimum:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">  ignore:</span> <span class="hljs-string">none</span>
+<span class="hljs-attr">  pattern:</span> <span class="hljs-string">"^(:\\+1:|👍)$"</span>
+<span class="hljs-attr">  veto:</span>
+<span class="hljs-attr">    pattern:</span> <span class="hljs-string">"^(:\\-1:|👎)$"</span>
+<span class="hljs-attr">specification:</span>
+<span class="hljs-attr">  title:</span>
+<span class="hljs-attr">    minimum-length:</span>
+<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">      length:</span> <span class="hljs-number">8</span>
+<span class="hljs-attr">  body:</span>
+<span class="hljs-attr">    minimum-length:</span>
+<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">      length:</span> <span class="hljs-number">8</span>
+<span class="hljs-attr">    contains-url:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    contains-issue-number:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">  template:</span>
+<span class="hljs-attr">    differs-from-body:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">pull-request:</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    additional:</span> <span class="hljs-literal">true</span>
+</code></pre>
+<blockquote>
+<p>CLI: <code>dcli repo addzappr</code> (should provide a <a href="https://github.com/jondot/hygen">template</a> repo for a zappr config)</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/development-environment/account.html">← Cloud Accounts</a><a class="docs-next button" href="/docs/platform/platform.html">Service Mesh Setup →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#tools">Tools</a></li><li><a href="#vim-basics">VIM Basics</a></li><li><a href="#paring-with-visual-studio-live-share">Paring with Visual Studio Live Share</a></li><li><a href="#git">GIT</a><ul class="toc-headings"><li><a href="#github-cli-https-hubgithubcom">Github CLI</a></li><li><a href="#add-zappr-https-zappropensourcezalando-config">Add <a href="https://zappr.opensource.zalan.do">Zappr</a> Config</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Knowledge Base</a><a href="/docs/en/blog">News</a><a href="/docs/en/doc4.html">ADRs</a></div><div><h5>Let&#x27;s build a a community</h5><a href="https://twitter.com/search?l=&amp;q=%23d10l%20since%3A2018-07-07&amp;src=typd" target="_blank" rel="noreferrer noopener">Disucss using #d10l</a><a href="https://twitter.com/denseidel" target="_blank" rel="noreferrer noopener">Contact me @denseidel</a></div><div><h5>More</h5><a href="https://github.com/denseidel">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Dennis Seidel</section></footer></div></body></html>
