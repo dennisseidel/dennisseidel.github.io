@@ -71,12 +71,11 @@ Start by modeling the **[domain(s) diagram](https://docs.google.com/drawings/d/1
 
 The [technology radar](techradar.md) allows you to stand on the shoulders of giants which reduce the tool search time and we don't make mistakes multiple times. 
 
-* [https://zalando.github.io/tech-radar/](https://zalando.github.io/tech-radar/)
-* [https://www.thoughtworks.com/de/radar](https://www.thoughtworks.com/de/radar)
-* [CNCF Landscape](https://landscape.cncf.io/grouping=landscape)
-* [LFDF Landscape](https://landscape.lfdl.io/)
-
 Heuristic to do technology selection beyond the tech radars: Go to Github and do a simple search for the keyword e.g. CMS and sort by stars. Further you can filter the result for a specific language (e.g. JavaScript)
+
+#### Create your own technology radar
+
+Follow the instructions on the [Thoughtworks Website](https://www.thoughtworks.com/radar/how-to-byor). If your GoogleSheets Url does not work use csv file as a workaround by adding `/gviz/tq?tqx=out:csv` to the end of your Google Sheet url e.g. `https://docs.google.com/spreadsheets/d/1Z8G8PW6HLjmA4fbqhe1hxlQgEVN7802t7Nen8HjVHFY/gviz/tq?tqx=out:csv`.
 
 ## Documentation / ADRs
 

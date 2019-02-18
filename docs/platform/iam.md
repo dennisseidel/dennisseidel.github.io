@@ -4,20 +4,8 @@ title: IAM
 ---
 To secure your app and mange user identities you can either build your own secuirty \(which is bad practice unless you are a security startup that sees it advantage in build novel and better security\), use a existing solution like keycloak and integrate it into your application or use a SaaS solution that provides you Identitymanagement.
 
-## Products
-
-There are multiple SaaS products [AWS Cognito](https://aws.amazon.com/de/cognito/), [Auth0](https://auth0.com/), [Bitium](https://www.bitium.com/) but all of them are expensive at scale especially when integration with "enterprise features" like an LDAP or another OpenID Connect Provider. Further this is a central component that is hard to change later on therefore I use an open source component: [Keycloak](http://www.keycloak.org)
-
-## Install Keycloak & DevOps Setup
-
-- Docker & Kubernets 
-- Helm 
-
-## Setup
-
-- Accounts
-- Self Services / Developer Portal
-- Login Page (Customization -> Templates)
+**Architectural Decisons**
+- Use AWS Amplify with Cognito
 
 ## Usage / Sample App
 

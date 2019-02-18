@@ -19,15 +19,12 @@ You can follow the [mac setup guide](http://sourabhbajaj.com/mac-setup/) to setu
 - [XCode](http://sourabhbajaj.com/mac-setup/Xcode/)
 - [Package Manager](http://sourabhbajaj.com/mac-setup/Homebrew/)
 - [Terminal/Zsh](http://sourabhbajaj.com/mac-setup/iTerm/zsh.html)
-  - [Bash Completion](http://sourabhbajaj.com/mac-setup/BashCompletion/)
+- [Bash Completion](http://sourabhbajaj.com/mac-setup/BashCompletion/)
 - [Git](http://sourabhbajaj.com/mac-setup/Git/)
 - [Visual Studio Code](tbd)
 - [Python](http://sourabhbajaj.com/mac-setup/Python/)
 - [NodeJS](http://sourabhbajaj.com/mac-setup/Node.js/)
-  - React + Serverless: `npm install -g create-react-app serverless`
 - [Docker](http://sourabhbajaj.com/mac-setup/Docker/)
-
-[Automated script setup](#)
 
 ### Setup a template for git to prevent checking in credentials
 
@@ -91,8 +88,19 @@ Look at the **Frontend** or **Service** section.
 Create Repository with [hub](tools.md):
 
 ```
+# initalize the repo
 hub init your-repo-name
+# install aws amplify + the extension
+npm install -g @aws-amplify/cli
+tbd
+# add README basics
+tbd
+# add zappr agent
+tbd
+# create the repo on github
 hub create
+# sync
+tbd
 ```
 
 ## Document projects

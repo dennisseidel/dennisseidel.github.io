@@ -1,33 +1,26 @@
----
-id: adr8
-title: 8. Use Istio as the plattform over serverless 
----
+# 2. Use hosted services over containers, but document (tested) abstractions and migration strategies
 
-* Status: accepted
-* Date: 2018-08-16 <!-- optional -->
+Date: 2019-02-18
 
-## Context and Problem Statement
+## Status
 
-To run the applications I need to decide which platform to chose.
+Accepted
 
-## Decision Drivers <!-- optional -->
+## Context
 
-* That there is a large ecosystem.
-* That I can use it at work. 
-* That the companies I want to work for need this skill.
+While building and learning how to build cloud solutions on a cloud platform I have to decide to go with a portable containers setup or with native services.
 
-## Considered Options
+## Decision
 
-* Serverless (GCF, AWS Lambda)
-* Kubernetes / Istio
+I will use hosted services over containers, but document (tested) abstractions and migration strategies.
 
-## Decision Outcome
+## Consequences
 
-Chosen option: "Kubernetes/Istio", because it evolved into a viable option that has less lockin into one cloud provider and the interest in the market is big.
+This will allow me to get started with my project more quickly and reduce initial cost. I will have to make sure that I document how this can be migrated to a more portable setup to show that this can also be used for more relevant components to evolution.
 
 ## Pros and Cons of the Options <!-- optional -->
 
-### Serverless (GCF, AWS Lambda)
+### Serverless & hosted services (GCF, AWS Lambda)
 
 * Good, because it has lower cost for bootstrapping private projects
 * Good, because it is tightly integrated with AWS
@@ -38,7 +31,7 @@ Chosen option: "Kubernetes/Istio", because it evolved into a viable option that 
 * Bad, because it is not very "evolutionary"
 * Bad, because it misses some logging and routing features like Istio 
 
-### Istio / Kubernetes
+### Containers / Istio / Kubernetes
 
 * Good, because it makes me less dependent on one cloud provider for future jobs. 
 * Good, because the interest on my videos and from colleagues is large therefor a great opportunity to make myself a name.
@@ -46,4 +39,4 @@ Chosen option: "Kubernetes/Istio", because it evolved into a viable option that 
 * Good, because it integrates with the other Google ecosystem (AI, Serverless Kubernetes)
 * Good, because it is the tech stack of bio tech companies like Synthego and Syapse
 * Good, because I can use plain Docker and have a faster local development time
-* Bad, because it is more expensive for private projects
+* Bad, because it is more expensive for private p

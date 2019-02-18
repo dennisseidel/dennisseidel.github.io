@@ -1,6 +1,6 @@
 ---
 id: cicd
-title: CI/CD (Platform)
+title: CI/CD Service
 ---
 
 ## Development Pipeline:
@@ -17,15 +17,3 @@ Link to config.yml file
 
 * for containers
 * for serverless
-
-
-
-## CICD (local jenkins)
-
-Check out the repository and follow the readme to start your local jenkins and integrated it with github. 
-
-https://github.com/denseidel/cicd-local
-
-
-## CICD (Cloud Platform)
-

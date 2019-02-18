@@ -12,6 +12,7 @@ title: DevSecOps
 ## Decisions
 
 - [ADR-0004](adr/0004-generate-clis-with-cement) - Generate CLIs with [oclif](https://oclif.io/docs/introduction)
+- [ADR-0005](adr/0005-use-aws-amplify-plugins-when-possible-over-own-cli) - Use AWS Amplify Plugins when possible over own cli
 
 ## Script - everything you do twice
 1. Code your scripts in python ([BestPractices](https://srcco.de/posts/writing-python-command-line-scripts.html)).
@@ -26,3 +27,8 @@ A good general guideline can be found by heroku - [12 Factor CLI Apps](https://m
 - Do you have a nested CLI? I propose to have no more then one level of nesting. e.g. `{yourcliname} {nestedobject} --fag=somesting (poly service --action=create)` 
 - Which objects? `service` `web` `platform`
 - Which flags per object? e.g. `--action="create"` `-a="deploy"` `-a=update`
+
+### Build Plugins for AWS Amplify
+
+When ever possible I want to use AWS Amplify and therefor add my own feature into it [Documentation](https://aws-amplify.github.io/docs/cli/plugins?sdk=js). You can find a sample project [here](https://github.com/denseidel/amplify-repo-boilerplate).
+
