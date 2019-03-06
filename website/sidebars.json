@@ -3,7 +3,7 @@
     "Basics": ["index", "basics/architecture", "basics/softwareengineering", "basics/devsecops"],
     "Development Environment": ["development-environment/developmentenvironment", "development-environment/account", "development-environment/tools"],
     "Plattform": ["platform/setup", "platform/cicd", "platform/iam", "platform/runtime", "platform/persistance", "platform/events", "platform/ai"],
-    "Services": ["services/services", "services/containers", "services/python", "services/testing", "services/datascience", "services/chatbots"],
+    "Services": ["services/services", "services/containers", "services/python", "services/nodejs", "services/testing", "services/datascience", "services/chatbots"],
     "Frontend": ["frontend/frontend"],
     "Learning": ["techstack"],
     "Business": ["business/index", "business/sales", "business/distribution"]

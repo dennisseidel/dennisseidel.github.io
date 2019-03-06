@@ -92,15 +92,19 @@ Create Repository with [hub](tools.md):
 hub init your-repo-name
 # install aws amplify + the extension
 npm install -g @aws-amplify/cli
-tbd
-# add README basics
-tbd
-# add zappr agent
-tbd
+npm install -g amplify-repo-boilerplate
 # create the repo on github
 hub create
-# sync
-tbd
+# add README basics
+amplify repo add-boilerplate
+git add .
+git commit -am "add boilerplates"
+# add zappr agent
+amplify repo add-guideline-agent
+git add .
+git commit -am "add zappr agent"
+# sync & pull request
+git push --set-upstream origin master
 ```
 
 ## Document projects

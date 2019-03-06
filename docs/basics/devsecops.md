@@ -4,10 +4,11 @@ title: DevSecOps
 ---
 
 * Add the summary of foundation books about:
-  * Continous Delivery
-  * Accelarate
+  * [Continous Delivery](https://martinfowler.com/books/continuousDelivery.html)
+  * [Accelarate](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339)
   * [State of DevOps Report](https://cloudplatformonline.com/rs/248-TPC-286/images/DORA-State%20of%20DevOps.pdf)
   * Security
+  * [Site Reliability Engineering](https://landing.google.com/sre/sre-book/toc/): [Summary](https://github.com/shibumi/SRE-cheat-sheet)
 
 ## Decisions
 
