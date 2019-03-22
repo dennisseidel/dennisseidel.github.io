@@ -3,7 +3,7 @@ id: saas
 title: SaaS
 ---
 
-SaaS is important tool for [commodity functionality of your business as well as a default principle for implementing services & frontends](architecture.md).
+SaaS is important tool for [commodity functionality of your business as well as a default principle for implementing services & frontends](basics/architecture.md).
 
 ### **Architectural Decisions**
 
