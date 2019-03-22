@@ -40,3 +40,8 @@ This will allow me to get started with my project more quickly and reduce initia
 * Good, because it is the tech stack of bio tech companies like Synthego and Syapse
 * Good, because I can use plain Docker and have a faster local development time
 * Bad, because it is more expensive for private p
+
+
+## Links
+* [Overview of hosted services](https://medium.com/@dabit3/full-stack-development-in-the-era-of-serverless-computing-c1e49bba8580)
+* [Overview of serverless frameworks and services](https://geekflare.com/serverless-apps-frameworks/)

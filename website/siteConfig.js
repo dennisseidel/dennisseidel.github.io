@@ -21,8 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Dennis\' Notebook' /* title for your website */,
-  tagline: 'My lessons building application in the healthcare & insurance domain',
+  title: 'Cloud Solution Architect Notes' /* title for your website */,
+  tagline: 'Lessons learned building platforms in regulated industiries.',
   url: 'https://denseidel.github.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:

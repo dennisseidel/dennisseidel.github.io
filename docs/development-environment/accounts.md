@@ -2,6 +2,54 @@
 id: account
 title: Cloud Accounts
 ---
+
+
+## Securely store your keys and secrets
+
+You don't want to store your secrets in plain text in a file like `.rshrc`  therefore you can use lpass cli \[[github](https://github.com/lastpass/lastpass-cli) / [documentation](https://helpdesk.lastpass.com/lastpass-command-line-application/)\] and store your secrets in your osx keychain and access them only by reference.
+
+#### Installation
+
+```bash
+brew install lastpass-cli --with-pinentry
+```
+
+#### Set variables in lastpass
+
+Just create a secret note within lastpass:
+
+<img src="/img/add-secret-to-lastpass.png" width="58%">
+
+#### Login to lpass in the command line
+
+```bash
+# login to lastpass# check first if I am allready loggedin and finded the "access-token" folder if [[ $(lpass ls) != *"access-token"* ]]; thenlpass login your@email.comfi
+```
+
+#### Set environment variable \(e.g. key\_id \(username\) and secret\(password\)
+
+```bash
+export AWS_ACCESS_KEY_ID=$(lpass show aws-serverless-devops --username)
+export AWS_SECRET_ACCESS_KEY=$(lpass show aws-serverless-devops --password)
+```
+
+
+
+### Accessing files in lpass
+
+```text
+lpass show xxx-dev-gcp --attach att-7942806310206912061-56085
+```
+
+### Setup an ecrypted folder and sync with google drive
+
+```text
+/Users/den/Desktop/secret/xxx/key.json
+lock-secret-files
+unlock-secret-files
+```
+
+
 ## AWS
 
 ### Signup for an [AWS](https://aws.amazon.com) account
@@ -53,52 +101,3 @@ export AWS_PROFILE=serverless-admin
 * Enable the necessary APIs
 * Get credentials
 * For serverless: Update the `provider` config in `serverless.yml`
-
-
-## Securely store your keys and secrets
-
-You don't want to store your secrets in plain text in a file like `.rshrc`  therefore you can use lpass cli \[[github](https://github.com/lastpass/lastpass-cli) / [documentation](https://helpdesk.lastpass.com/lastpass-command-line-application/)\] and store your secrets in your osx keychain and access them only by reference.
-
-#### Installation
-
-```bash
-brew install lastpass-cli --with-pinentry
-```
-
-#### Set variables in lastpass
-
-Just create a secret note within lastpass:
-
-![](/img/add-secret-to-lastpass.png)
-
-#### Login to lpass in the command line
-
-```bash
-# login to lastpass# check first if I am allready loggedin and finded the "access-token" folder if [[ $(lpass ls) != *"access-token"* ]]; thenlpass login your@email.comfi
-```
-
-#### Set environment variable \(e.g. key\_id \(username\) and secret\(password\)
-
-```bash
-export AWS_ACCESS_KEY_ID=$(lpass show aws-serverless-devops --username)
-export AWS_SECRET_ACCESS_KEY=$(lpass show aws-serverless-devops --password)
-```
-
-
-
-### Accessing files in lpass
-
-```text
-lpass show xxx-dev-gcp --attach att-7942806310206912061-56085
-```
-
-### Setup an ecrypted folder and sync with google drive
-
-```text
-/Users/den/Desktop/secret/xxx/key.json
-lock-secret-files
-unlock-secret-files
-```
-
-
-

@@ -3,36 +3,24 @@ id: tools
 title: Code Tooling (Editor, Git)
 ---
 
-## VIM Basics
+## "Hacker Tools"
 
-[Delete from cursor to end of line on VI](https://unix.stackexchange.com/questions/4415/delete-from-cursor-to-end-of-line-on-vi)
+Check out the MIT lecture on hackertools including Terminal, VMs, Containers [here](https://hacker-tools.github.io/lectures/).
 
+### VIM Basics
+
+* [Delete from cursor to end of line on VI](https://unix.stackexchange.com/questions/4415/delete-from-cursor-to-end-of-line-on-vi)
 
 ## Paring with Visual Studio Live Share
 
 * More Info: https://code.visualstudio.com/blogs/2017/11/15/live-share
 * Security: https://docs.microsoft.com/en-us/visualstudio/liveshare/reference/security
 
-Add this to your config: 
-```
+Add this to your config:
+
+```json
 "liveshare.guestApprovalRequired": true
 ```
-
-## GIT
-
-Read [Single Branch Development with Git](https://medium.com/learn-git-today/single-branch-development-with-git-f72a052446cf).
-
-### [Github CLI](https://hub.github.com/)
-
-Install:
-```
-brew install hub
-# https://hub.github.com/hub.1.html
-git config --global hub.protocol https
-```
-
-
-
 
 ### Add [Zappr](https://zappr.opensource.zalan.do) Config
 
@@ -70,9 +58,7 @@ pull-request:
     additional: true
 ```
 
-> CLI: `dcli repo addzappr` (should provide a [template](https://github.com/jondot/hygen) repo for a zappr config)
-
-
+> CLI: `amplify repo add-guideline-agent`
 
 ## Other Tools (List)
 

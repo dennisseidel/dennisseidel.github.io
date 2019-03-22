@@ -79,10 +79,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href="#knowledge">Knowledge</Button>
-            <Button href="#news">News</Button>
-            <Button href="#courses">Courses</Button>
-            <Button href="https://twitter.com/search?l=&q=%23d10l%20since%3A2018-07-07&src=typd">Q&A under #d10l</Button>
+            <Button href="docs/index.html">Get started</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -156,6 +153,28 @@ const News = props => (
   </a>
 );
 
+const Description = props => (
+  <Block id="description" background="light">
+   {[{
+     title: "Simlicity",
+     content: "Building a solution starts with focusing on a simple product and process, and then ensuring that this simplicity manifist in your code."
+    },
+    {
+      title: "Bootstrap & Evolution",
+      content: "Use existing solutions to gain speed but allow your critical components to be evolable."
+     },
+     {
+       title: "Platform & developer experience.",
+       content: "Build your own platform and developer experience, start with a CLI that might wrap an existing cloud platform (be transparent to the developer)."
+     },
+     { 
+       title: "Security: Make it easy with tooling & Limit your bast radius & remember it is a business decision",
+       content: "Apply Industry best pratices & mandatory requirements, but make this easy by providing tooling and sevices to your developers. But keep in mind security is not a goal itself but part of the business evaluation of each decision - and keep applying simplcity."
+    }
+   ]}
+  </Block>
+)
+
 class Index extends React.Component {
   render() {
     let language = this.props.language || '';
@@ -163,10 +182,8 @@ class Index extends React.Component {
     return (
       <div>
         <HomeSplash language={language} />
-        <div className="mainContainer">
-          <KnowledgeBox />
-          <News />
-          <Courses />
+        <div className="mainContainer" style={{backgroundColor: "#F7F7F7"}}>
+          <Description />
         </div>
       </div>
     );

@@ -3,6 +3,10 @@ id: python
 title: Python
 ---
 
+Adr- Use Python for ML and NodeJS for everything else: 
+
+[Python Cheatsheet](https://gto76.github.io/python-cheatsheet/)
+
 
 ## Implement Services in Python
 

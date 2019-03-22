@@ -23,3 +23,22 @@ Summaries of various system design topics, including pros and cons. Everything i
 
 TODO: Read the book and sumarize (find a [summary](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29) I will adapt).
 
+# Testing
+
+Be efficient and test the interfaces that a customer (can be another developer) uses. 
+
+| Component |  Testing   |                                                                                                                                        Resources |
+| --------- | :--------: | -----------------------------------------------------------------------------------------------------------------------------------------------: |
+| UI        | end 2 end  | [cypress](https://www.cypress.io/how-it-works/), [howto](https://medium.com/@darioghilardi/end-to-end-testing-on-a-react-redux-app-10f5a26f2f61) |
+| Lib       |    unit    |                                                                                                                                                  |
+| Backend   | unit / e2e |                                                                                                                                                  |
+
+## Algorithms
+
+[Basics e.g. Complexity in python](https://www.youtube.com/watch?v=p65AHm9MX80)
+
+
+
+## Resilient Software Design
+
+* https://jaxenter.de/unkaputtbar-einfuehrung-resilient-software-design-15119

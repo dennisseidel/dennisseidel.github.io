@@ -3,7 +3,7 @@ id: index
 title: Get Started
 ---
 
-This includes my notes on building healthcare and insurance applications currently using a **javascript** and **python** based stack.
+I document here how I build platform and solution (in regulated industries) as a Solution Architect. This includes topics involved in building solutions overall all parts of the regulated industry domain: like infrastructure, devops, frontend, algorithms and data science / data driven development e.g. analytics, machine learning.  Most of the code currently is in **javascript** and **python**.
 
 ## Topics
 
@@ -23,3 +23,8 @@ This includes my notes on building healthcare and insurance applications current
 ## How I document here? 
 
 The **context** of a topic maps to the folder name, the **topic** maps to a seperated markdown file. This markdown file **describes** the topic and the **decisions** and links to a dedicated **sample code repo** per topic.
+
+### Style
+
+* [Style](https://istio.io/about/contribute/style-guide/)
+* [Writing a new topic](https://istio.io/about/contribute/writing-a-new-topic/)

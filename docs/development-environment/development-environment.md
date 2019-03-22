@@ -81,6 +81,35 @@ OR
 
 If you want to go “all in” and ensure that every repo has the proper hooks, here’s a [script](https://gist.github.com/iAmNathanJ/0ae03dcb08ba222d36346b138e83bfdf) that will recursively walk a directory, such as `~/Projects` and run `git secrets --install` in all repos.
 
+## CLI: AWS Amplify + plugins
+
+As described in the DevSecOps section I decided to use AWS as my platform. To increase my developer speed I selected AWS Amplify as my CLI and add my own feature through plugins. To install this do: 
+
+```bash
+# install aws amplify + the extension
+npm install -g @aws-amplify/cli
+# includes add-boilerplate and add-guideline-agent command
+npm install -g amplify-repo-boilerplate
+# add README basics
+amplify repo add-boilerplate
+# add zappr agent
+amplify repo add-guideline-agent
+```
+
+## GIT
+
+Read [Single Branch Development with Git](https://medium.com/learn-git-today/single-branch-development-with-git-f72a052446cf).
+
+### [Github CLI](https://hub.github.com/)
+
+Install:
+
+```bash
+brew install hub
+# https://hub.github.com/hub.1.html
+git config --global hub.protocol https
+```
+
 ## Setup projects
 
 Look at the **Frontend** or **Service** section. 

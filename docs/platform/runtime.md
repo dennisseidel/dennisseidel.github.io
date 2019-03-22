@@ -2,10 +2,21 @@
 id: runtime
 title: Runtime Service
 ---
-## Runtime
 
+Choosing your runtime is most of the time a trade of between responisibility and therefore bootstraping speed and [architecture evolution](../) and portability/lock in. 
 
-**Architectural Decisions**
+TODO: Stack Responsiblility (from AWS) also in govcloud
 
-- I will use what AWS amplify offers, to gain speed.
-  - REST(Serverless/Lambda)/GraphQL: https://aws-amplify.github.io/docs/js/api
+## REST & GraphQL
+
+### Serverless
+
+Implement the serverless service in pulumi.  
+
+### Container Runtime (Kubernetes)
+
+...
+
+## StepFunctions
+ 
+and why and when uber uses cadence

@@ -23,6 +23,8 @@ The solution should "not" be extended for 3rd parties - as this find your niche 
 
 ### General Features of SaaS
 
+* Source: [Best Practices](https://www.youtube.com/watch?v=O3L-dSyqA7g), [Deconstructing](https://www.youtube.com/watch?v=mwQ5lipGTBI), [Serverless](https://www.youtube.com/watch?v=d6zcVFNskwQ)
+
 * Internationalization
 * Scalability
 * Multi tenancy Concept: APIs + How would a central orchestraction component look

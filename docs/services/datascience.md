@@ -16,6 +16,7 @@ title: Data Science (AI)
 
 * https://github.com/jeongyoonlee/data-science-process-management
 * https://github.com/GokuMohandas/practicalAI
+* https://aws.amazon.com/training/learning-paths/machine-learning/
 
 
 ## Setup 

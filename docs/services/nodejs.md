@@ -19,4 +19,5 @@ https://github.com/i0natan/nodebestpractices
 
 ### Questions
 
-* [Check if a file or directory exists](https://stackabuse.com/python-check-if-a-file-or-directory-exists/)
+* [How to use async/await](https://javascript.info/async-await)
+* [Javascript ‘this’ Keyword, How it works?](https://medium.com/tech-tajawal/javascript-this-4-rules-7354abdb274c)
