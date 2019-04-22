@@ -44,3 +44,7 @@ and why and when uber uses cadence
 <img src="/img/stepfunctions-example-foodpanda.png" width="90%">
 
 https://de.slideshare.net/AmazonWebServices/building-business-workflows-with-aws-step-functions
+
+## API Gateway & Developer Portal
+
+To manage your API you can use the [AWS Developer Portal](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-developer-portal.html). 

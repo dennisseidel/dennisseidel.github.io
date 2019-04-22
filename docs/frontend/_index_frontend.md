@@ -16,26 +16,36 @@ The frontend is developed using [Javascript](https://www.freecodecamp.org/news/b
 
 <!-- adrlogstop -->
 
-## Foundations
+## PLAN: Product Requirement Documentation, User Stories
 
-### Create content structure & components
+Create a 1 pager for the [product requirement documentation - including the user interaction and design](https://web.archive.org/web/20190422164155/https://www.atlassian.com/agile/product-management/requirements) - [TEMPLATE](https://docs.google.com/document/d/1-kKH6L1eHzGRNX_59DEK1D-u7TPns79OVBOkbtdZvsA/edit#). For the User Interaction & Design [create content structure & components](https://developers.google.com/web/fundamentals/codelabs/your-first-multi-screen-site/#create_your_content_and_structure).
 
-More info [here](https://developers.google.com/web/fundamentals/codelabs/your-first-multi-screen-site/#create_your_content_and_structure).
-
-### Style the frontend
+## DO: Design & Style the frontend
 
 The foundations of UI design is [CSS3, Flexbox, and CSS grid](https://developer.mozilla.org/en-US/docs/Web/Guide) extended by [React Best Practices and Patterns](https://www.sitepoint.com/react-architecture-best-practices/). Suplement this with **Ant Design** as a UI Framework for [Desktop](https://ant.design) and [Mobile](https://mobile.ant.design/docs/react/introduce). Some Samples can be found [here](https://github.com/ant-design/ant-design/issues/477).
 
-* [7 Practical Tips for Cheating at Design](https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886)
+- [7 Practical Tips for Cheating at Design](https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886) 
+
+[58 bytes of css to look great nearly everywhere](https://jrl.ninja/etc/1/)
+
+```css
+main {
+  max-width: 38rem;
+  padding: 2rem;
+  margin: auto;
+}
+```
+
+## DO: Prepare the codebase
 
 ### Architecture
 
-* Application: [MVVM](https://medium.cobeisfresh.com/level-up-your-react-architecture-with-mvvm-a471979e3f21) vs Redux 
-* Code: [Redux General](https://redux.js.org/faq/codestructure), [ducks](https://medium.freecodecamp.org/scaling-your-redux-app-with-ducks-6115955638be)
-  * Tutorial Basics: https://learn.freecodecamp.org/front-end-libraries/redux
-  * Docs !: https://redux.js.org/basics/usagewithreact#implementing-components
-  * Redux - Ducks: https://github.com/erikras/ducks-modular-redux
-  * Redux - Saga: https://github.com/redux-saga/redux-saga / https://flaviocopes.com/redux-saga/
+- Application: [MVVM](https://medium.cobeisfresh.com/level-up-your-react-architecture-with-mvvm-a471979e3f21) vs Redux 
+- Code: [Redux General](https://redux.js.org/faq/codestructure), [ducks](https://medium.freecodecamp.org/scaling-your-redux-app-with-ducks-6115955638be)
+  - Tutorial Basics: https://learn.freecodecamp.org/front-end-libraries/redux
+  - Docs !: https://redux.js.org/basics/usagewithreact#implementing-components
+  - Redux - Ducks: https://github.com/erikras/ducks-modular-redux
+  - Redux - Saga: https://github.com/redux-saga/redux-saga / https://flaviocopes.com/redux-saga/
 
 #### Project Structure
 
@@ -65,7 +75,7 @@ src
     └── productsApi.js
 ```
 
-## Build Our Frontend
+## DO: Build Our Frontend
 
 Use [create-react-app with antd](https://ant.design/docs/react/use-with-create-react-app)
 
@@ -181,7 +191,7 @@ steps:
 1. [http://mherman.org/blog/2017/12/07/dockerizing-a-react-app/](http://mherman.org/blog/2017/12/07/dockerizing-a-react-app/)
 2. [https://www.peterbe.com/plog/how-to-create-react-app-with-docker](https://www.peterbe.com/plog/how-to-create-react-app-with-docker)
 
-## Frontend Testing
+## DO: Frontend Testing
 
 Use [Efficient Testing](https://medium.com/@darioghilardi/end-to-end-testing-on-a-react-redux-app-10f5a26f2f61) and be [economical](https://jobs.zalando.com/tech/blog/economic-perspective-testing/). Whenever your code base changes signifficantly you have to adapt your unit test. Therefore: Use a typed language. Focus on integration and end-to-end tests. Use unit tests only where they make sense (e.g. pure algorithmic code with complex corner cases). Be economic. Be lean.
 

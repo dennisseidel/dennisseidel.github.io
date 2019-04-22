@@ -1,6 +1,6 @@
 ---
 id: serverless
-title: Serverless
+title: DO: Serverless (NodeJS)
 ---
 
 Using serverless allows for great scalability and low cost of bootstraping while leading to some lock in. I use serverless for components in the "innovation phase". Currently I use AWS Lambda.
@@ -31,6 +31,11 @@ pulumi stack select denseidel/tenent-management/dev
 pulumi up
 
 ```
+
+## Deploy API on API Gateway
+
+- Add Request Validation to your OpenAPI Spec [AWS API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-validation-sample-api-swagger.html).
+
 
 ### Compile non-pure Python modules \(e.g. C?\)
 
@@ -111,6 +116,11 @@ python -m unittest discover -s tests
 ### Examples
 
 {% embed data="{\"url\":\"https://github.com/serverless/examples\",\"type\":\"link\",\"title\":\"serverless/examples\",\"description\":\"Serverless Examples – A collection of boilerplates and examples of serverless architectures built with the Serverless Framework and AWS Lambda\",\"icon\":{\"type\":\"icon\",\"url\":\"https://github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://avatars3.githubusercontent.com/u/13742415?s=400&v=4\",\"width\":400,\"height\":400,\"aspectRatio\":1}}" %}
+
+## Testing
+
+* [GCP Best Practices for serverless](https://cloud.google.com/functions/docs/bestpractices/testing)
+
 
 ## Deployment
 

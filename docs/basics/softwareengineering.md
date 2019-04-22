@@ -16,8 +16,6 @@ Software Engineering is craftsmanship - that applies independent of context: Goo
 * [Being to generic](https://www.youtube.com/watch?v=0wxyOng0-14)
 * [Incremental Development & Design](https://www.youtube.com/watch?v=fjpkPe6-580)
 * [Any time you find yourself stopping to think, something is wrong.](https://www.codesimplicity.com/post/the-secret-of-fast-programming-stop-thinking/) E.g. The most common reason developers stop to think is that they did not fully understand some word or symbol. **What ever I do, focus on reaching the goal, and check if it is something I want to learn - then deep dive and learn it while doing (less frameworks more foundations).** 
-
-
 * Ecapsulation/Isolation of components by design services for specific transactional boundaries/context (orderService with all data about orders, customerService with all data about customer, shippingServices with all data relevant to shipping including customerId, orderId it does not need about all customer and order data, but only about the location and the product weight and as a result it creates an event "shiped" with orderId, customerId, shippingId and the relevant info for this event like shippingdate, shippingadress) and not sharing business data but only ids with an EDA [Link](https://www.youtube.com/watch?v=0TYbHVc2yWI)
 
 ## [System Design](https://github.com/donnemartin/system-design-primer/blob/master/README.md)
@@ -47,7 +45,7 @@ Be efficient and test the interfaces that a customer (can be another developer) 
 
 Algorithms are an important part of a program. While often clean code is more important than the selection of the algorithm, problem like scaling make algorithms essential. As a n intro I suggest [Basics e.g. Complexity in python](https://www.youtube.com/watch?v=p65AHm9MX80) or taking the [Intro to Data Structures and Algorithms](https://eu.udacity.com/course/data-structures-and-algorithms-in-python--ud513) course by Google.
 
-
+TODO: https://todoist.com/app?lang=en#task%2F3160384487
 
 ## Resilient Software Design
 
