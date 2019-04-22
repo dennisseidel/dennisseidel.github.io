@@ -3,22 +3,33 @@ id: serverless
 title: Serverless
 ---
 
-To be as portable as possible, even with severless, we use [serverless framework](https://serverless.com/framework/docs/). It allows us to deploy our functions across multiple clouds like AWS, GCP, Azure and IBM OpenWisk. 
+Using serverless allows for great scalability and low cost of bootstraping while leading to some lock in. I use serverless for components in the "innovation phase". Currently I use AWS Lambda.
 
-## Setup  & Installation
+<!-- adrlog -->
 
-Make sure you have your [Developer Environment Setup](../development-environment/) 
+- [ADR-0002](adr/0002-use-pulumi-localstack-over-aws-sam-as-serverless-deployment.md) - Use pulumi+localstack over AWS SAM as serverless deployment
+
+<!-- adrlogstop -->
+
+## Setup & Installation
+
+Make sure you have your [Developer Environment Setup](../development-environment/). Then you are required to setup your [service runtime](../platform/runtime.md). Next start the [design of your service](_index_design.md) and the first and then start with [implementing your first functions](https://blog.pulumi.com/serverless-on-aws-with-pulumi-simple-event-based-functions).
 
 ```bash
-npm install serverless -g
-```
+# In your respository create a services folder
+mkdir services && cd services
+# In your services folder you create your pulumi deployment including your infrastructure DB, API Gateway (keep in mind to include the API definition of the service from the design phase), functions ...
+# Follow the project initialization: https://pulumi.io/quickstart/aws/tutorial-rest-api.html
+pulumi new hello-aws-javascript --dir ahoy-pulumi
+cd ahoy-pulumi
+code swagger.yaml
+# I suggest your seperate each function into a seperate xxx.function.js file
 
-In your repo create your **serverless template for Python**
+# Deploy
+pulumi login
+pulumi stack select denseidel/tenent-management/dev
+pulumi up
 
-```text
-mkdir notes-app-api
-cd notes-app-api
-sls create --template aws-python3
 ```
 
 ### Compile non-pure Python modules \(e.g. C?\)

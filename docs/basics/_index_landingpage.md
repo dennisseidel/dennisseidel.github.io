@@ -9,7 +9,6 @@ I document here how I build platform and solution (in regulated industries) as a
 
 [![picture of the overview of the topics](/img/overview.png)](https://embed.coggle.it/diagram/Wog4AgWJuAAB-ba-/d6269da9c39644334c504c9bffac35b287e64983792a5ec69204183aa3ad8b1f)
 
-
 ## Who is the target audience?
 
 * Developers how wants to learn how to bootstrap/build production application fast and low cost in the healthcare and insurance domain.
