@@ -98,7 +98,7 @@ amplify repo add-guideline-agent
 
 ## GIT
 
-Read [Single Branch Development with Git](https://medium.com/learn-git-today/single-branch-development-with-git-f72a052446cf).
+Read [Single Branch Development with Git](https://medium.com/learn-git-today/single-branch-development-with-git-f72a052446cf) and [global commit messages](https://eidson.info/post/using-conventional-commit-messages-globally) following the [angular commit message guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-guidelines).
 
 ### [Github CLI](https://hub.github.com/)
 
