@@ -3,7 +3,7 @@ id: index
 title: Get Started
 ---
 
-I document here how I build platform and solution (in regulated industries) as a Solution Architect. This includes topics involved in building solutions overall all parts of the regulated industry domain: like infrastructure, devops, frontend, algorithms and data science / data driven development e.g. analytics, machine learning.  Most of the code currently is in **javascript** and **python**.
+I document here how I build platform and solution (in regulated industries) as a Solution Architect. This includes topics involved in building solutions overall all parts of the regulated industry domain: like infrastructure, devops, frontend, algorithms and data science / data driven development e.g. analytics, machine learning.  Most of the code currently is in **javascript [now moving to typescript]** and **python**.
 
 ## Topics
 
