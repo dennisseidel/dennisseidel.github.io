@@ -1,25 +1,23 @@
 ---
-id: cicd
-title: CI/CD Service
+id: setupautomation
+title: PLAN: Setup CI/CD
 ---
 
-**Architecture Decisons** 
+After setting up your repisitory for your "self contained system" setup the pipeline. This includes building all components for 1 version, testing the components (especially the interfaces APIs/UIs) and the deploying it.
 
-<!-- adrlog -->
+## Sample Pipelines
 
-- [ADR-0005](adr/0005-use-azure-pipeline-for-cicd.md) - Use Azure Pipeline for CICD
+* [API Lambda/ DB + Component](#LinkToSampleInGithub) -> CLI command: `amplify repo serverless-scs pipeline` (default without pipeline generates the full repo assess including sample and more)
 
-<!-- adrlogstop -->
-
-## Setup Azure Pipelines
+## Background Info on Azure Pipelines
 
 Create your first pipeline based on your github repository [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started-yaml?view=azure-devops).
 
-## Important Use Cases
+### Important Use Cases
 
 * [Ignoring path, files or branches for the pipeline trigger](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=yaml)
 
-## [Sample](https://github.com/denseidel/saas-platform-template/blob/master/devops/frontend-preview/azure-pipelines.yaml)
+### [Sample](https://github.com/denseidel/saas-platform-template/blob/master/devops/frontend-preview/azure-pipelines.yaml)
 
 ```yaml
 # https://github.com/denseidel/saas-platform-template/blob/master/devops/frontend-preview/azure-pipelines.yaml
@@ -84,3 +82,12 @@ steps:
       AWS_SECRET_ACCESS_KEY: $(aws.master.accesssecret)
   displayName: 'Setup Infrastucture & Deploy to preview environment'
 ```
+
+## Decisons
+
+<!-- adrlog -->
+
+* [ADR-0005](adr/0005-use-azure-pipeline-for-cicd.md) - Use Azure Pipeline for CICD
+* [ADR-0006](0006-implement-a-terraform-deployment-for-each-scs-not-one-general-infrastructure-stack-for-all-components.md) - Implement a (terraform) deployment for each SCS, not one general infrastructure stack for all components
+
+<!-- adrlogstop -->

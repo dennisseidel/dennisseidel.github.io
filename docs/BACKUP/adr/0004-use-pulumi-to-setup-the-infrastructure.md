@@ -4,7 +4,7 @@ Date: 2019-03-10
 
 ## Status
 
-Accepted
+Superceded by [6. Use terraform to setup infrastructure](0006-use-terraform-to-setup-infrastructure.md)
 
 ## Context
 

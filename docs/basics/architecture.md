@@ -67,6 +67,8 @@ Start by modeling the **[domain(s) diagram](https://docs.google.com/drawings/d/1
 * Patterns
 * Technologies (see the [tech radar](techradar.md))
 
+Design the use case flow with a sequence diagram.
+
 ### Technology Selection
 
 The [technology radar](techradar.md) allows you to stand on the shoulders of giants which reduce the tool search time and we don't make mistakes multiple times. 

@@ -1,4 +1,4 @@
-# 1. Document with README.md and Docusaurus 
+# 4. Document with README.md and Docusaurus
 
 * Status: accepted
 * Date: 2018-09-26 <!-- optional -->
@@ -7,7 +7,7 @@
 
 Projects should have a documentation with minimal overhead and in SCM/Github. Gitbook is now close source for the new features, what should replace this as the standard documentation tool. 
 
-## Decision Drivers 
+## Decision Drivers
 
 * Usage Simplicity
 * Can be manged in SCM
@@ -27,6 +27,7 @@ Projects should have a documentation with minimal overhead and in SCM/Github. Gi
 Chosen option: "Docusaurus" and "README.md", because they were simple to setup and fits with the current toolstack (uses markdown and react) further it is supported by Facebook. Further README.md has been added as it is important to document all relevent components as near to the code as possibile.
 
 Positive Consequences: 
+
 * I can host my blog and all my documentation in one page. 
 * I can extend the tool if needed because it used my current Toolstack (React)
 * Updates are as simple as writing and commiting a markdown file.

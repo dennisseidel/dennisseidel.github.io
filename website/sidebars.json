@@ -1,15 +1,28 @@
 {
   "docs": {
-    "Basics": ["basics/index", "basics/architecture", "basics/softwareengineering", "basics/devsecops"],
-    "Development Environment": ["development-environment/developmentenvironment", "development-environment/account", "development-environment/tools"],
-    "Plattform": ["platform/setup", "platform/cicd", "platform/iam", "platform/staticfiles", "platform/runtime", "platform/persistance", "platform/events", "platform/ai"],
-    "Services": ["services/services", "services/serverless", "services/python", "services/nodejs", "services/datascience", "services/chatbots"],
-    "Frontend": ["frontend/frontend", "frontend/prototyping"],
-    "Learning": ["techstack"],
-    "Business": ["business/index", "business/sales", "business/distribution"]
-  },
-  "docs-other": {
-    "Introduction": ["adr"],
-    "ADRs": ["adr/adr1", "adr/adr5"]
+    "Basics": [
+      "basics/index",
+      "basics/architecture",
+      "basics/softwareengineering",
+      "basics/devsecops"
+    ],
+    "Startup Engineering & Product Requirements": [
+      "business/index",
+      "business/sales",
+      "business/distribution"
+    ],
+    "Plattform": [
+      "platform/aws"
+    ],
+    "Build": [
+      "build/solutionarchitecture",
+      "build/softwaredesign",
+      "build/setuptools",
+      "build/setuprepo",
+      "build/setupautomation",
+      "build/buildapi",
+      "build/buildfrontend",
+      "build/buildiam"
+    ]
   }
 }
