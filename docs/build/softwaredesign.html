@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>PLAN: Software Design · Cloud Solution Architect Notes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;strong&gt;Input&lt;/strong&gt;: Technical Solution Design &amp;amp; Architecture Belt (Architectural Practices)&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="PLAN: Software Design · Cloud Solution Architect Notes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://denseidel.github.io/index.html"/><meta property="og:description" content="&lt;p&gt;&lt;strong&gt;Input&lt;/strong&gt;: Technical Solution Design &amp;amp; Architecture Belt (Architectural Practices)&lt;/p&gt;
+"/><meta property="og:image" content="https://denseidel.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://denseidel.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://denseidel.github.io/blog/atom.xml" title="Cloud Solution Architect Notes Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://denseidel.github.io/blog/feed.xml" title="Cloud Solution Architect Notes Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">Cloud Solution Architect Notes</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/basics/index.html" target="_self">Knowledge Base</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="/docs/techradar.html" target="_self">My Tech Radar</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Build</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Basics</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/basics/index.html">Get Started</a></li><li class="navListItem"><a class="navItem" href="/docs/basics/architecture.html">Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/basics/softwareengineering.html">Software Engineering</a></li><li class="navListItem"><a class="navItem" href="/docs/basics/devsecops.html">DevSecOps</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Startup Engineering &amp; Product Requirements</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/business/index.html">Startup Engineering</a></li><li class="navListItem"><a class="navItem" href="/docs/business/sales.html">Sales &amp; Marketing</a></li><li class="navListItem"><a class="navItem" href="/docs/business/distribution.html">Distribution</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Plattform</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/platform/aws.html">AWS &amp; Azure</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Build</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/build/solutionarchitecture.html">PLAN: Solution Architecture</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/build/softwaredesign.html">PLAN: Software Design</a></li><li class="navListItem"><a class="navItem" href="/docs/build/setuptools.html">PLAN: Setup my tools</a></li><li class="navListItem"><a class="navItem" href="/docs/build/setuprepo.html">PLAN: Setup Repository</a></li><li class="navListItem"><a class="navItem" href="/docs/build/setupautomation.html">PLAN: Setup CI/CD</a></li><li class="navListItem"><a class="navItem" href="/docs/build/buildapi.html">DO: Build the API</a></li><li class="navListItem"><a class="navItem" href="/docs/build/buildfrontend.html">DO: Build Frontend Component</a></li><li class="navListItem"><a class="navItem" href="/docs/build/buildiam.html">DO: Build the IAM</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">PLAN: Software Design</h1></header><article><div><span><p><strong>Input</strong>: Technical Solution Design &amp; Architecture Belt (Architectural Practices)</p>
+<p>After I designed and identified</p>
+<ol>
+<li>the general technical solution map: defined self contained system workloads, relationships between the components, deployment &amp; technologies</li>
+<li>the relevant architectural practices &amp; fitness functions for the architecure belt of this solution</li>
+</ol>
+<p>for each workload. I design each of the components included in the workload within the boundaries of the technical solution (that utlizes the platform) and the architecture belt.</p>
+<h2><a class="anchor" aria-hidden="true" id="product-requirement-documentation-user-stories"></a><a href="#product-requirement-documentation-user-stories" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Product Requirement Documentation, User Stories</h2>
+<p>Create a 1 pager for the <a href="https://web.archive.org/web/20190422164155/https://www.atlassian.com/agile/product-management/requirements">product requirement documentation - including the user interaction and design</a> - <a href="https://docs.google.com/document/d/1-kKH6L1eHzGRNX_59DEK1D-u7TPns79OVBOkbtdZvsA/edit#">TEMPLATE</a>. Including writing the <a href="https://medium.freecodecamp.org/how-and-why-to-write-great-user-stories-f5a110668246">User Stories</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="software-architecture-and-domain"></a><a href="#software-architecture-and-domain" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Software architecture and domain</h2>
+<p>The software design includes how a component is implemented, the interface and api, sequence of actions and exception handling.</p>
+<h3><a class="anchor" aria-hidden="true" id="design-the-api-events-in-openapi"></a><a href="#design-the-api-events-in-openapi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Design the API / Events in OpenAPI</h3>
+<p>First we start designing the API with Swagger. The best tool to do this is the <a href="https://github.com/swagger-api/swagger-editor">swagger editor</a> or using <a href="https://marketplace.visualstudio.com/items?itemName=mermade.openapi-lint">Visual Studio Code with the openapi-lint extension</a>.</p>
+<p>To understand <em>OpenAPI</em> you should read the basics in this <a href="https://idratherbewriting.com/learnapidoc/pubapis_openapi_tutorial_overview">tutorial</a> and <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-quick-start-import-export.html">how to document it on aws api gateway</a>.</p>
+<p>While designing your API keep in mind idenpotency and transactionality - and opt for a simple solution otherwise you have to think a lot about Resilience (see below). This is part of following the API design best practices of:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/de-de/azure/architecture/best-practices/api-design">Microsoft</a></li>
+<li><a href="https://opensource.zalando.com/restful-api-guidelines/">Zalando</a></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="validate-for-api-guidelines"></a><a href="#validate-for-api-guidelines" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Validate for API Guidelines</h4>
+<p>Setup <a href="https://github.com/zalando/zally">Zally</a> for api validation.</p>
+<h4><a class="anchor" aria-hidden="true" id="create-your-spec"></a><a href="#create-your-spec" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create your spec</h4>
+<pre><code class="hljs css language-bash"><span class="hljs-comment"># create file</span>
+code openapi.yaml
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="design-your-clode-according-to-software-best-practices"></a><a href="#design-your-clode-according-to-software-best-practices" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Design your clode according to software best practices</h3>
+<ul>
+<li>Architecture: <a href="https://medium.com/the-software-architecture-chronicles/ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together-f2590c0aa7f6">https://medium.com/the-software-architecture-chronicles/ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together-f2590c0aa7f6</a> / <a href="https://herbertograca.com/tag/software-architecture/page/2/">https://herbertograca.com/tag/software-architecture/page/2/</a></li>
+<li>Code Design Best Practices <a href="https://herbertograca.com/dev-theory-articles-listing/">https://herbertograca.com/dev-theory-articles-listing/</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="design-it-resilience"></a><a href="#design-it-resilience" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Design it Resilience</h3>
+<ul>
+<li><p>Recilience requirements in the cloud due to retries and network availability. Google suggest the following <a href="https://cloud.google.com/functions/docs/bestpractices/retries">best pratices on retries</a>and <a href="https://cloud.google.com/functions/docs/bestpractices/tips">general tips</a>:</p>
+<ul>
+<li>Use retry to handle transient errors</li>
+<li>Set an end condition to avoid infinite retry loops</li>
+<li>Distinguish between retriable and fatal errors</li>
+<li>Write idempotent functions (Especially make retryable background functions idempotent)</li>
+<li>Ensure HTTP functions send an HTTP response</li>
+<li>Do not start background activities</li>
+<li>Always delete temporary files</li>
+<li>Use dependencies wisely</li>
+<li>Use global variables to reuse objects in future invocations</li>
+<li>Do lazy initialization of global variables</li>
+</ul></li>
+<li><p>AWS lambda tips for idempotency <a href="https://cloudonaut.io/your-lambda-function-might-execute-twice-deal-with-it/">here</a></p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="architectural-decisions"></a><a href="#architectural-decisions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Architectural Decisions</h2>
+<!-- adrlog -->
+<ul>
+<li><a href="/docs/build/adr/0001-implement-general-services-in-nodejs-and-ml-services-in-python.html">ADR-0001</a> - Implement general services in NodeJS and ML services in Python</li>
+<li><a href="/docs/build/adr/0002-use-pulumi-localstack-over-aws-sam-as-serverless-deployment.html">ADR-0002</a> - Use pulumi+localstack over AWS SAM as serverless deployment</li>
+<li><a href="/docs/build/adr/0003-use-typescript-over-javascript-when-possible.html">ADR-0003</a> - Use Typescript over Javascript when possible</li>
+</ul>
+<!-- adrlogstop --></span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/build/solutionarchitecture.html"><span class="arrow-prev">← </span><span>PLAN: Solution Architecture</span></a><a class="docs-next button" href="/docs/build/setuptools.html"><span>PLAN: Setup my tools</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#product-requirement-documentation-user-stories">Product Requirement Documentation, User Stories</a></li><li><a href="#software-architecture-and-domain">Software architecture and domain</a><ul class="toc-headings"><li><a href="#design-the-api-events-in-openapi">Design the API / Events in OpenAPI</a></li><li><a href="#design-your-clode-according-to-software-best-practices">Design your clode according to software best practices</a></li><li><a href="#design-it-resilience">Design it Resilience</a></li></ul></li><li><a href="#architectural-decisions">Architectural Decisions</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Knowledge Base</a><a href="/docs/en/blog">News</a><a href="/docs/en/doc4.html">ADRs</a></div><div><h5>Let&#x27;s build a a community</h5><a href="https://twitter.com/search?l=&amp;q=%23d10l%20since%3A2018-07-07&amp;src=typd" target="_blank" rel="noreferrer noopener">Disucss using #d10l</a><a href="https://twitter.com/denseidel" target="_blank" rel="noreferrer noopener">Contact me @denseidel</a></div><div><h5>More</h5><a href="https://github.com/denseidel">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Dennis Seidel</section></footer></div></body></html>

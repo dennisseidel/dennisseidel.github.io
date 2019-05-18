@@ -4,7 +4,7 @@
         <title>Cloud Solution Architect Notes Blog</title>
         <link>https://denseidel.github.io/blog</link>
         <description>The best place to stay up-to-date with the latest Cloud Solution Architect Notes news and events.</description>
-        <lastBuildDate>Thu, 27 Dec 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 08 May 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,20 @@
             <link>https://denseidel.github.io/blog</link>
         </image>
         <copyright>Copyright © 2019 Dennis Seidel</copyright>
+        <item>
+            <title><![CDATA[Software as a Service - How to use it and how to build it.]]></title>
+            <link>https://denseidel.github.io/blog/2019/05/08/SaaS.html</link>
+            <guid>https://denseidel.github.io/blog/2019/05/08/SaaS.html</guid>
+            <pubDate>Wed, 08 May 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>SaaS is important tool for commodity functionality of your business as well as a default principle for implementing services &amp; frontends.</p> <h3><a class="anchor" aria-hidden="true" id="architectural-decisions"></a><a href="#architectural-decisions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Architectural Decisions</h3> <p>tbd</p> <h2><a class="anchor" aria-hidden="true" id="using-saas"></a><a href="#using-saas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Using SaaS</h2> <ul> <li>Make sure it is not a high business value functionality? What happen...</li></ul>]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Improve Softskills - Never Split the Difference: Negotiating as if Your Life Depended on It]]></title>
+            <link>https://denseidel.github.io/blog/2019/05/05/Negotition.html</link>
+            <guid>https://denseidel.github.io/blog/2019/05/05/Negotition.html</guid>
+            <pubDate>Sun, 05 May 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>In the last month there were intense discussion about the system architecture at work. And while we invested a lot of time nothing moved forward. This made me feel like I wasted a lot of time. But after I watch the Keynote about <a href="https://www.youtube.com/watch?v=iLS6NXMXtLI">TechLeads</a> I realized ...</p>]]></description>
+        </item>
         <item>
             <title><![CDATA[Product Design - Idea & Testing (for my healthcare project)]]></title>
             <link>https://denseidel.github.io/blog/2018/12/27/ab-testing.html</link>
@@ -124,14 +138,6 @@
             <guid>https://denseidel.github.io/blog/2017/11/24/create-rest-api-with-spring-boot.html</guid>
             <pubDate>Fri, 24 Nov 2017 06:00:00 GMT</pubDate>
             <description><![CDATA[<p><strong>TL;DR:</strong> I getting started with Spring Boot by building a REST API and look into the RESTful Principles.</p>
-]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Setup a Blog on Github Pages]]></title>
-            <link>https://denseidel.github.io/blog/2017/11/24/blog-on-github-pages.html</link>
-            <guid>https://denseidel.github.io/blog/2017/11/24/blog-on-github-pages.html</guid>
-            <pubDate>Fri, 24 Nov 2017 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p><strong>TL;DR:</strong> I experiement with setting up my blog on github pages because of simplicity and code is a first class citizen.</p>
 ]]></description>
         </item>
     </channel>
