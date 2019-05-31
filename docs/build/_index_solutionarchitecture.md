@@ -5,12 +5,19 @@ title: PLAN: Solution Architecture
 
 __Input:__ Requirements & Hypothesis from a Business Model Canvas
 
-[Solution Architect](https://www.youtube.com/watch?v=zB9WuYE1REI) / [Lead Engineer](https://www.youtube.com/watch?v=iLS6NXMXtLI) maps the [requirements and business hypothesis for the MVP](#seeTheDocumentFromTheBusinessSection) to the technology (from the platform) keeping the long term goal (e.g. scalability, enterpise tech stack - tech radar) in mind. Further tasks include building a team that owns the solution, communicating the solution ([workload on p.2](https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf)) to the team.  The goal is to increase the solution quality  (measured by the customer satisfaction) by 1.) chosing the right technologies and architecture implementing the hypothesis and 2.) increase the speed of the solution/workload team (short and long term) as well as the enterprise speed overall. This includes 3 important KPIs:
+[Solution Architect](https://www.youtube.com/watch?v=zB9WuYE1REI) / [Lead Engineer](https://www.youtube.com/watch?v=iLS6NXMXtLI) maps the [requirements and business hypothesis for the MVP](#seeTheDocumentFromTheBusinessSection) to the technology (from the platform) keeping the long term goal (e.g. scalability, enterpise tech stack - tech radar) in mind. Further tasks include building a team that owns the solution, communicating the solution ([workload on p.2](https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf)) to the team.  The goal is to increase the solution quality  (measured by the customer satisfaction) by:
+
+1. chosing the right technologies and architecture implementing the hypothesis and
+2. increase the speed of the solution/workload team (short and long term) as well as the enterprise speed overall. 
+
+This includes 3 important KPIs:
 
 - Functional(ity) Requirements: Can the technology and architecture perform the required functionality?
 - Non-Functional Requirements: Those should be specified in fitness functionals two important ones are:
-  - Autonomy: How autonomous are the teams and their services and the components end 2 end. This has a major impact on long term speed of the enterprise and individual team.
+  - Autonomy: How autonomous are the teams and their services and the components in the end to end process/fuctionality from the interface (api/ui) to the database. This has a major impact on long term speed of the enterprise and individual team.
   - Complexity & Evolability: Intercomponent vs Intracomponent complexity
+
+> Document the progress of the solution architecture in the MS Teams channel `startup engineering`.
 
 ## Decompose Hypothesis & Business model into Service / Encapsulation
 

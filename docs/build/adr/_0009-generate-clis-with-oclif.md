@@ -1,11 +1,11 @@
-# 4. Generate CLIs with [oclif](https://oclif.io/docs/introduction)
+# 9. Generate CLIs with [oclif](https://oclif.io/docs/introduction)
 
 * Status: accepted
 * Date: 2018-09-26 <!-- optional -->
 
 ## Context and Problem Statement
 
-CLI make the developer experience much better and make some features even easier to implement. There are many options from Python to NodeJS.
+CLI make the developer experience much better and make some features even easier to implement. There are many options from Python to NodeJS. Previously I decided to use aws amplify. Amplify is coupled with cloud formation, therefore I use it only in code and don't generate the code with it. Heroku [tested](https://blog.heroku.com/evolution-of-heroku-cli-2008-2017#go-node-cli-v5) multiple languages including Go and NodeJS and chose NodeJS.
 
 ## Decision Drivers <!-- optional -->
 
@@ -72,7 +72,7 @@ Chosen option: "oclif", very mature and fits with my goal focus on one universal
 ### Go
 
 * Good, because of it offers compiled binaries and this leads to a better user experience
-* Good, because it is a typed language. 
-* Good, because it offers great performance. 
+* Good, because it is a typed language.
+* Good, because it offers great performance.
 * Good, because it integrates well with the Kubernetes Ecosystem.
 * Bad, because it does not fit my learning goals.

@@ -1,10 +1,10 @@
-# 5. Use AWS Amplify Plugins when possible over own cli
+# [Superceded by 9.] 8. Use AWS Amplify Plugins when possible over own cli
 
 Date: 2019-02-18
 
 ## Status
 
-Accepted
+Superceded by [9. Generate CLIs with [oclif](https://oclif.io/docs/introduction)](0009-generate-clis-with-oclif-https-oclif-io-docs-introduction.md)
 
 ## Context
 

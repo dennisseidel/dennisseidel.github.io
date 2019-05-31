@@ -6,6 +6,8 @@ Date: 2019-05-10
 
 Accepted
 
+Supercedes [2. Use pulumi+localstack over AWS SAM as serverless deployment](0002-use-pulumi-localstack-over-aws-sam-as-serverless-deployment.md)
+
 ## Context
 
 Infrastructure is a central part of the application, at the same time it should not be to coupled. One can make a seperate infrastructure repo that setups the infrastrucutre e.g. DBs for a system an then only deploy the different applications into this infrastrucutre or one seperates the infrastructure by applcation.

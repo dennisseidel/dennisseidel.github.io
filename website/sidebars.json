@@ -22,7 +22,8 @@
       "build/setupautomation",
       "build/buildapi",
       "build/buildfrontend",
-      "build/buildiam"
+      "build/buildiam",
+      "build/adr/adrlog"
     ]
   }
 }

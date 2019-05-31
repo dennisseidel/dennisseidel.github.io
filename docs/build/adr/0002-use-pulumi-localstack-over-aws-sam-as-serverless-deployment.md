@@ -1,10 +1,10 @@
-# 2. Use pulumi+localstack over AWS SAM as serverless deployment
+# [Superceded by 6.] 2. Use pulumi+localstack over AWS SAM as serverless deployment
 
 Date: 2019-04-07
 
 ## Status
 
-Accepted
+Superceded by [6. Implement a (terraform) deployment for each SCS, not one general infrastructure stack for all components](0006-implement-a-terraform-deployment-for-each-scs-not-one-general-infrastructure-stack-for-all-components.md)
 
 ## Context
 

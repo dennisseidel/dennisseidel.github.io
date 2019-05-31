@@ -1,13 +1,13 @@
-# 2. Use Docusaurus for Documentation 
+# 2. Use Docusaurus for Documentation
 
 * Status: accepted
-* Date: 2018-07-13 
+* Date: 2018-07-13
 
 ## Context and Problem Statement
 
-Projects should have a documentation with minimal overhead and in SCM/Github. Gitbook is now close source for the new features, what should replace this as the standard documentation tool. 
+Projects should have a documentation with minimal overhead and in SCM/Github. Gitbook is now close source for the new features, what should replace this as the standard documentation tool.
 
-## Decision Drivers 
+## Decision Drivers
 
 * Usage Simplicity
 * Can be manged in SCM

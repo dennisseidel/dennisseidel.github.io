@@ -22,19 +22,19 @@ You can follow the [mac setup guide](https://d10l.github.io/mac-setup/) to setup
 - [NodeJS](https://d10l.github.io/mac-setup/Node.js/)
 - [Docker](https://d10l.github.io/mac-setup/Docker/)
 - [Terraform](https://d10l.github.io/mac-setup/Terraform/)
+- [Kubernetes](ttps://d10l.github.io/mac-setup/Kubernetes/)
 
-### CLI (AWS Amplify + plugins)
+## Assets
 
-As described in the DevSecOps section I decided to use AWS as my platform. To increase my developer speed I selected AWS Amplify as my CLI and add my own feature through plugins. To install this do:
+All Assets can be found under the [d10l](https://github.com/d10l) github organization. Including the [cli](https://github.com/d10l/cli) code, [templates](https://github.com/d10l/templates) as well as coding best pratices [typescript](https://github.com/d10l/clean-code-typescript) and [python](https://github.com/d10l/clean-code-python) and [toolsetup](https://github.com/d10l/mac-setup).
+
+## CLI
+
+As described in the DevSecOps section I decided to use AWS as my platform. To increase my developer speed I selected AWS Amplify as my CLI for this pattform and combine it with my own CLI. To install this do:
 
 ```bash
-# install aws amplify + the extension
-npm install -g @aws-amplify/cli
+# installing my own cli
+npm install -g dencli
 ```
 
-Currently I have the following cli extensions:
-
-- Repo Initial Boilerplate: [plugin](https://github.com/denseidel/amplify-repo-boilerplate/blob/master/commands/repo/add-boilerplate.js) | [template](https://github.com/d10l/new-project/tree/master/new)
-- Add Zappr Agent: [plugin](https://github.com/denseidel/amplify-repo-boilerplate/blob/master/commands/repo/add-guideline-agent.js) | [template](https://github.com/d10l/new-project/tree/master/agent)
-
-those template could also be used directly with [hygen](http://www.hygen.io/templates/) by cloning the folders into the `_templates` folder and execute hygen.
+For more info please checkout the CLI [README](https://github.com/d10l/cli) some features are: `initializing a git repo`, `add a git guideline agent` and `add a aws service`.
