@@ -16,15 +16,14 @@ hub create
 
 ## Document projects
 
-The most important part for a project is the `README.md` therefore document all relevant details there and only reference from other documentation to this file. Use the [new-project template](https://github.com/denseidel/new-project).
+The most important part for a project is the `README.md` therefore document all relevant details there and only reference from other documentation to this file. Use the [new-project template](https://github.com/d10l/templates/tree/master/git-repo/create).
 
 For further documentation use [Docusaurus](https://docusaurus.io/docs/en/installation).
 
 ```sh
-# install aws amplify extension
-npm install -g amplify-repo-boilerplate
+npm install -g dencli
 # add README basics
-amplify repo add-boilerplate
+den repo:addboilerplate
 ```
 
 ## Add [Zappr](https://zappr.opensource.zalan.do) Config
@@ -64,16 +63,7 @@ pull-request:
 ```
 
 ```sh
-# install aws amplify extension
-npm install -g amplify-repo-boilerplate
+npm install -g dencli
 # add zappr agent
-amplify repo add-guideline-agent
+den repo:addguidelineagent
 ```
-
-## Decisons
-
-<!-- adrlog -->
-
-- [ADR-0001](adr/0004-document-with-readme-md-and-docusaurus.md) - Document with README.md and Docusaurus
-
-<!-- adrlogstop -->
