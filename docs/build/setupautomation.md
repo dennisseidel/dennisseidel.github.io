@@ -11,7 +11,7 @@ After setting up your repisitory for your "self contained system" setup the pipe
 
 ## Background Info on Azure Pipelines
 
-Create your first pipeline based on your github repository [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started-yaml?view=azure-devops).
+Create your first pipeline based on your github repository [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/?view=azure-devops).
 
 ### Important Use Cases
 

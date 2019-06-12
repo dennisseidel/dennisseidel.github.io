@@ -12,3 +12,4 @@ title: ADR - Decisions
 * [7. Use hygen as the templating engine for my developer tools](0007-use-hygen-as-the-templating-engine-for-my-developer-tools.md)
 * [[Superceded by 9.] 8. Use AWS Amplify Plugins when possible over own cli](0008-use-aws-amplify-plugins-when-possible-over-own-cli.md)
 * [9. Generate CLIs with [oclif](https://oclif.io/docs/introduction)](0009-generate-clis-with-oclif-https-oclif-io-docs-introduction.md)
+* [10. Use multirepos over monorepos and integrate them using meta](0010-use-multirepos-over-monorepos.md)

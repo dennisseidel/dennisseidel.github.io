@@ -7,12 +7,33 @@ After installing your tools in the section before (especially the CLI), initiali
 
 ## Initialize Project
 
+Initialize the [meta](https://github.com/mateodelnorte/meta) repo if multiple repos are used: 
+
+```bash
+# create a new directory for your meta project and initialize a new git repository in your new dir:
+hub init my-meta-repo & cd my-my-meta-repo
+# initialize your new repository as a meta repo:
+meta init
+```
+
+Create the repos with hub: 
+
 ```sh
 # initalize the repo
 hub init your-repo-name
 # create the repo on github
-hub create
+cd your-repo-name & hub create
 ```
+
+Add repos: to meta repo:
+
+```bash
+# to add new projects, use
+meta project import [your-repo-name] [repo url from hub create]
+# clone meta repo and all its projects
+meta git clone
+```
+
 
 ## Document projects
 
