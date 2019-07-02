@@ -17,3 +17,7 @@ I use a SQL datastore as a default as it is more flexibile, when performance and
 ## Consequences
 
 I will to continously check if the access pattern is the services is based on key as well as how the scalability requirements of the data base is. If need I then migrate to a nosql store.
+
+## Links
+
+- https://blog.codebarrel.io/why-we-switched-from-dynamodb-back-to-rds-before-we-even-released-3c2ee092120c
