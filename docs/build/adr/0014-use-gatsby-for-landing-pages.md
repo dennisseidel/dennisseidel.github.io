@@ -1,4 +1,4 @@
-# 3. Use Gatsby for Landing Pages
+# 14. Use Gatsby for Landing Pages
 
 Date: 2019-01-17
 

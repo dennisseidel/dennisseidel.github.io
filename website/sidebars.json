@@ -4,7 +4,8 @@
       "basics/index",
       "basics/architecture",
       "basics/softwareengineering",
-      "basics/devsecops"
+      "basics/devsecops",
+      "basics/adr/adrlog"
     ],
     "Startup Engineering & Product Requirements": [
       "business/index",

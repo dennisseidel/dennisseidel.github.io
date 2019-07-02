@@ -5,17 +5,6 @@ title: DO: Build Frontend Component
 
 The frontend is developed using [Javascript](https://www.freecodecamp.org/news/beaucarnes/learn-javascript-full-course--j4Va5cR1p)/[Penetration-Testing](https://www.freecodecamp.org/news/beaucarnes/web-app-penetration-testing-full-course--pena5cR1p) using the Framework with the largest mature ecosystem [React](https://github.com/enaqx/awesome-react)([Course](https://www.udemy.com/react-the-complete-guide-incl-redux/)) and [React Best Practices](https://www.zerrtech.com/blog/react-design-best-practices).
 
-## Decisions
-
-<!-- adrlog -->
-
-- [ADR-0001](adr/0001-use-ant-design-as-a-ui-framework.md) - Use Ant Design as a UI framework
-- [ADR-0002](adr/0002-use-react-for-desktop-and-mobile.md) - Use React for Desktop and Mobile
-- [ADR-0003](adr/0003-use-gatsby-for-landing-pages.md) - Use Gatsby for Landing Pages
-- [ADR-0004](adr/0004-use-web-over-native-for-uis.md) - Use web over native for UIs
-
-<!-- adrlogstop -->
-
 ## PLAN: Product Requirement Documentation, User Stories
 
 Create a one pager for the [product requirement documentation - including the user interaction and design](https://web.archive.org/web/20190422164155/https://www.atlassian.com/agile/product-management/requirements) - [TEMPLATE](https://docs.google.com/document/d/1-kKH6L1eHzGRNX_59DEK1D-u7TPns79OVBOkbtdZvsA/edit#). For the User Interaction & Design [create content structure & components](https://developers.google.com/web/fundamentals/codelabs/your-first-multi-screen-site/#create_your_content_and_structure).
@@ -189,7 +178,7 @@ Start building your [components](https://www.learnstorybook.com/react/en/simple-
 
 ### [Bit](https://docs.bit.dev/docs/quick-start.html)
 
-To share the components we use [bit](https://docs.bit.dev/docs/quick-start.html).
+To share the components we use [bit](https://docs.bit.dev/docs/quick-start.html). You can find a [step instructure here](https://web.archive.org/web/20190622100226/https://medium.com/javascript-in-plain-english/how-to-share-and-reuse-react-components-to-build-apps-faster-4b3b0b542798).
 
 ```bash
 # Install bit
@@ -279,12 +268,11 @@ src
 
 ## DO: Build Our Frontend
 
+### Install antd https://ant.design/docs/react/use-in-typescript
+
 Use [create-react-app with antd](https://ant.design/docs/react/use-with-create-react-app)
 
 ```bash
-# initialize app
-npm create react-app antd-demo
-cd antd-demo
 # add antd
 npm install antd
 # configure the build to work with scss https://ant.design/docs/react/use-with-create-react-app#Advanced-Guides (required for antd)

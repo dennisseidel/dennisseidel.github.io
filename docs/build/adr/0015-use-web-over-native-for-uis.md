@@ -1,4 +1,4 @@
-# 4. Use web over native for UIs
+# 15. Use web over native for UIs
 
 Date: 2019-03-10
 
@@ -16,4 +16,4 @@ We use progressive web apps for our UI given the don't profit significantly form
 
 ## Consequences
 
-This allows us to build once and run everywhere as well as make the [app searchable through the internet instead of depending on the app store which is most of the time hard to promote](https://www.atrium.co/blog/founders-should-build-website-not-mobile-app/). 
+This allows us to build once and run everywhere as well as make the [app searchable through the internet instead of depending on the app store which is most of the time hard to promote](https://www.atrium.co/blog/founders-should-build-website-not-mobile-app/).

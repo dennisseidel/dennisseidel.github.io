@@ -1,6 +1,6 @@
 ---
 id: adrlog
-title: ADR - Decisions
+title: ADR
 ---
 
 - [1. Implement general services in NodeJS and ML services in Python](0001-implement-general-services-in-nodejs-and-ml-services-in-python.md)
@@ -14,3 +14,7 @@ title: ADR - Decisions
 - [9. Generate CLIs with [oclif](https://oclif.io/docs/introduction)](0009-generate-clis-with-oclif-https-oclif-io-docs-introduction.md)
 - [10. Use multirepos over monorepos and integrate them using meta](0010-use-multirepos-over-monorepos.md)
 - [11. Use a RDS over NoSql unless I know my queries and can access the data through one key](0011-use-a-rds-over-nosql-unless-i-know-my-queries-and-can-access-the-data-through-one-key.md)
+- [12. Use Ant Design as a UI framework](0012-use-ant-design-as-a-ui-framework.md)
+- [13. Use React for Desktop and Mobile](0013-use-react-for-desktop-and-mobile.md)
+- [14. Use Gatsby for Landing Pages](0014-use-gatsby-for-landing-pages.md)
+- [15. Use web over native for UIs](0015-use-web-over-native-for-uis.md)

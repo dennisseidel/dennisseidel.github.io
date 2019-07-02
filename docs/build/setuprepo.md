@@ -7,7 +7,7 @@ After installing your tools in the section before (especially the CLI), initiali
 
 ## Initialize Project
 
-Initialize the [meta](https://github.com/mateodelnorte/meta) repo if multiple repos are used: 
+Initialize the [meta](https://github.com/mateodelnorte/meta) repo if multiple repos are used:
 
 ```bash
 # create a new directory for your meta project and initialize a new git repository in your new dir:
@@ -16,7 +16,7 @@ hub init my-meta-repo & cd my-my-meta-repo
 meta init
 ```
 
-Create the repos with hub: 
+Create the repos with hub:
 
 ```sh
 # initalize the repo
@@ -34,6 +34,7 @@ meta project import [your-repo-name] [repo url from hub create]
 meta git clone
 ```
 
+> Setup 1 meta repo for the complete project. Add for each self contained system on subrepo.
 
 ## Document projects
 
@@ -53,12 +54,12 @@ Add a `.zappr.yaml` ([Documentation](https://zappr.readthedocs.io/en/latest/setu
 
 ```yaml
 autobranch:
-  pattern: '{number}-{title}'
+  pattern: "{number}-{title}"
   length: 60
 commit:
   message:
     patterns:
-      - '#[0-9]+'
+      - "#[0-9]+"
 approvals:
   minimum: 1
   ignore: none
