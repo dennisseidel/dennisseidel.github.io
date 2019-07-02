@@ -3,7 +3,7 @@ id: softwaredesign
 title: PLAN: Software Design
 ---
 
-__Input__: Technical Solution Design & Architecture Belt (Architectural Practices)
+**Input**: Technical Solution Design & Architecture Belt (Architectural Practices)
 
 After I designed and identified
 
@@ -24,7 +24,7 @@ The software design includes how a component is implemented, the interface and a
 
 First we start designing the API with Swagger. The best tool to do this is the [swagger editor](https://github.com/swagger-api/swagger-editor) or using [Visual Studio Code with the openapi-lint extension](https://marketplace.visualstudio.com/items?itemName=mermade.openapi-lint).
 
-To understand *OpenAPI* you should read the basics in this [tutorial](https://idratherbewriting.com/learnapidoc/pubapis_openapi_tutorial_overview) and [how to document it on aws api gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-quick-start-import-export.html).
+To understand _OpenAPI_ you should read the basics in this [tutorial](https://idratherbewriting.com/learnapidoc/pubapis_openapi_tutorial_overview) and [how to document it on aws api gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-quick-start-import-export.html).
 
 While designing your API keep in mind idenpotency and transactionality - and opt for a simple solution otherwise you have to think a lot about Resilience (see below). This is part of following the API design best practices of:
 
@@ -44,12 +44,13 @@ code openapi.yaml
 
 ### Design your clode according to software best practices
 
-- Architecture: https://medium.com/the-software-architecture-chronicles/ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together-f2590c0aa7f6 / https://herbertograca.com/tag/software-architecture/page/2/ 
+- Architecture: https://medium.com/the-software-architecture-chronicles/ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together-f2590c0aa7f6 / https://herbertograca.com/tag/software-architecture/page/2/
 - Code Design Best Practices https://herbertograca.com/dev-theory-articles-listing/
 
 ### Design it Resilience
 
 - Recilience requirements in the cloud due to retries and network availability. Google suggest the following [best pratices on retries](https://cloud.google.com/functions/docs/bestpractices/retries)and [general tips](https://cloud.google.com/functions/docs/bestpractices/tips):
+
   - Use retry to handle transient errors
   - Set an end condition to avoid infinite retry loops
   - Distinguish between retriable and fatal errors
@@ -62,13 +63,3 @@ code openapi.yaml
   - Do lazy initialization of global variables
 
 - AWS lambda tips for idempotency [here](https://cloudonaut.io/your-lambda-function-might-execute-twice-deal-with-it/)
-
-## Architectural Decisions
-
-<!-- adrlog -->
-
-- [ADR-0001](adr/0001-implement-general-services-in-nodejs-and-ml-services-in-python.md) - Implement general services in NodeJS and ML services in Python
-- [ADR-0002](adr/0002-use-pulumi-localstack-over-aws-sam-as-serverless-deployment.md) - Use pulumi+localstack over AWS SAM as serverless deployment
-- [ADR-0003](adr/0003-use-typescript-over-javascript-when-possible.md) - Use Typescript over Javascript when possible
-
-<!-- adrlogstop -->
