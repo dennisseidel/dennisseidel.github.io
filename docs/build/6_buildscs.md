@@ -59,7 +59,125 @@ sls deploy -v
 sls remove
 ```
 
-## `ui` component
+## Add data storage to service
+
+Create a SQL database with terraform:
+
+[`infrastructure/infrastructure.tf`](https://github.com/denseidel/saas-plaform-tenant-management/tree/master/infrastructure):
+
+```terraform
+# https://medium.com/swlh/integrating-the-serverless-framework-and-terraform-874215daa8bf
+
+provider "aws" {
+  region = "${var.AWS_REGION}"
+}
+
+terraform {
+  backend "s3" {
+    bucket = "saas-platform-terraform-state"
+    key    = "tenant-management/terraform.tfstate"
+    region = "eu-central-1"
+  }
+}
+
+locals {
+  service_name = "tenant-management"
+  #service_stage = "${terraform.workspace}"
+  service_stage = "dev"
+}
+
+# you might create your own seperate vpc and your subnets
+# in this example I use the existing ones.
+
+# add default subnets to rds private subnet group
+resource "aws_db_subnet_group" "rds-private-subnet" {
+  name       = "rds-private-subnet-group"
+  subnet_ids = "${var.rds_subnets}"
+}
+
+resource "aws_rds_cluster" "tenant-management" {
+  engine_mode          = "serverless"
+  master_password      = "${var.mysql_password}"
+  master_username      = "${var.mysql_username}"
+  cluster_identifier   = "tenant-management"
+  skip_final_snapshot  = true
+  db_subnet_group_name = "${aws_db_subnet_group.rds-private-subnet.name}"
+  scaling_configuration {
+    auto_pause               = true
+    max_capacity             = 1
+    min_capacity             = 1
+    seconds_until_auto_pause = 300
+  }
+}
+
+output "tenant-management_db_arn" {
+  value = "${aws_rds_cluster.tenant-management.arn}"
+}
+
+output "tenant-management_rds_secret_arn" {
+  value = "${var.rds_secret_arn}"
+}
+```
+
+[`infrastructure/vars.tf`](https://github.com/denseidel/saas-plaform-tenant-management/tree/master/infrastructure):
+
+```terraform
+variable "AWS_REGION" {
+  type    = "string"
+  default = "us-east-1"
+}
+
+variable "mysql_username" {
+  type    = "string"
+  default = "admin"
+}
+
+variable "mysql_password" {
+  type = "string"
+}
+
+variable "rds_subnets" {
+  type = list(string)
+}
+
+# this is the arn of the secret in the secet-manager that the data api uses, I only integrated it to
+# output it into one configiration file. If you generate the secret thorugh terraform it self and not 
+# thorugh the query manager you export it from there currently the queryeditor does not recognise the secrets 
+# generated with terraform. 
+variable "rds_secret_arn" {
+  type = "string"
+}
+```
+
+Finally you need to **enable the RDS Data API**, this is currently also not possible through terraform. We use the data api over a jdbc because I helps with the scalability issue of connection pools with lambda functions. Follow the instructions [here](https://web.archive.org/save/https://www.jeremydaly.com/aurora-serverless-data-api-a-first-look/).
+
+Create your DB table either through the queryeditor inside of AWS or use the api/cli based on your initialization or update script
+
+[/infrastructure/db.sql](https://github.com/denseidel/saas-plaform-tenant-management/tree/master/infrastructure):
+
+```sql
+create database if not exists tenant_management;
+create table tenant_management.tenants (
+  tenantId varchar(36) primary key,
+  tenantName varchar(255),
+  plan varchar(255),
+  createdAt timestamp not null default current_timestamp
+);
+create table tenant_management.tenant_members (
+  tenantId varchar(36) not null references tenant_management.tenants(teanntId),
+  userId varchar(255) not null,
+  userRole varchar(255) not null,
+  createdAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  primary key (tenantId, userId)
+);
+```
+
+Access Data API from Serverless Function:
+- Add IAM Roles
+- Implement in function
+
+
+## ui component
 
 The frontend section is seprated into **`ui` component section** of a self contained system that is provided by the service and the **frontend interface section** that combines those components into a user experience.
 

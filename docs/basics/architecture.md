@@ -5,7 +5,7 @@ title: Architecture
 
 This section describes [what is software architecture](#software-architecture). The decision I made, you can find in each section under **ADR** in the sidebar.
 
-Working with software architecture means applying [best pratices](#practices), use tools to [design and select a technology](#design) and document [decisions](#documentation-adrs).
+Working with software architecture means applying [best pratices](#practices), use tools to [design and select a technology](#design) and document [decisions](#documentation-adrs). Concret Processes are described in the [Runbook/Playbook](#Runbook--Playbook).
 
 ## Decisions
 
@@ -114,3 +114,22 @@ Write ADRs in [Y-Statement Format](https://adr.github.io/#sustainable-architectu
 ```bash
  adr new -s 9 Use Rust for performance-critical functionality
 ```
+
+## [Playbook](https://wa.aws.amazon.com/wat.concept.playbook.en.html)
+
+Definition Runbook:
+
+- **Problem/Sitation Description**: e.g. UnauthorizedAccess. An API was invoked from an IP address of an unusual network.
+- **Data gathered for planning/troubleshooting**:
+- **Steps to troubleshoot and fix**:
+- **Urgency category**:
+- **Escalation path**:
+
+**Situation Description**: `OpenArchitectureQuestion:SystemDesign/InterfaceGranularity` - this finding informs you that a system designs a new interface. This interface has not been implemented before.
+
+**Data to gather for processing**:
+
+- Business Requirements: Write down the customer expectation. What do we want to achieve. What is the journey.
+- External Functionalities: Which backend systems are involved (e.g. a service or an external api): Those are external functionalities I consume.
+- Internal functionalities: Which functions do I provide through my interfaces?
+-
