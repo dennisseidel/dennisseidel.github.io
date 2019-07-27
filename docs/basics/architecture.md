@@ -133,3 +133,34 @@ Definition Runbook:
 - External Functionalities: Which backend systems are involved (e.g. a service or an external api): Those are external functionalities I consume.
 - Internal functionalities: Which functions do I provide through my interfaces?
 -
+
+### `Testing and creating poc for new technology`
+
+#### Situation/Problem
+
+`OpenArchitectureQuestion:TechnologyEvaluation/*` - I am ask to test a new technology e.g. evaluate the use of AWS EKS / Aurora. This might be driven from the business - with a requirement to solve a problem or more often currently we are ask by the IT to evaluate a technology (e.g. migrate the data platform to the cloud).
+
+#### Data gathered for planning/troubleshooting
+
+- _Business Requirements:_ Write down what are the business requirements that are implacted by this technology. E.g. what application run currently on the plattform? What are their requirements? How could the technology imporve them? What application are currently not running on the plattform but would benefit from the plattform (technology)? For this contact the IT teams but also directly the business units to get feedback from them. The result: **Hypothesis and Requirements and measurable KPIs** from the business. TODO: Document/Template?
+- _Technology Information:_ Learn and document hands on (udemy, linkedin learning/ tutorials) about the technology before implementing any PoC. The experience is that this takes long and leads to sub optimal results (e.g. I paired for a day with a colleage but we could not set up EKS because we lack experience with cloud formation as well as eks). Better is to take 1 day to learn or do a tutorial so one understands how the technology should be use. Eventhough one is not as fast to start, overall one reduces time wasted and the solution quality. In this stage pairing value is limited, it makes more sense to split up and e.g. one check out eks and the other cloudformation. The result should be a **good understanding and handson description how to use the technology**. TODO: Document/Template?
+  Important for this stage is that we should work in an isolated but unrestricted environment to increase the learning speed. A harden environment like on a shared multi tenant account decreases learning speed significant because often interaction with the platform team are required to get access to permissions for new products.
+
+Gather data also by informing others (who? architecture board) what you are going to do.
+
+#### Steps to Troubleshoot and Fix
+
+1. Design the PoC based on the hypothesis (following the lessons learned and the technologies in this handbook)
+2. Gather feedback on the first PoC Design
+3. Implement a PoC (following the cloud first, MVP principles to gather speed). This should be done in the managed/restricted account. Therefore it is important to pair with someone from the platform team to fix issues fast e.g. new permissions. All should be documented into a _tutorial for this technology (what is it? when to (not) use it? how to use it?_ as well as what is require in the account. This is later the foundation for automation the access and management of the technology.
+4. Validate the Hypothesis with the business and the IT (e.g. based on the AWS Well Architected Framework)
+5. Iterate
+6. Final Evaluation (TODO: Template for ADR / Document the decision on the technology radar/ As well as a first autoamtion/operation concept)
+
+#### Urgency category
+
+normal - given the situation the urgancy can increase, but runbooks steps should never be skipt (e.g. learning about the technology first).
+
+#### Escalation path
+
+?
