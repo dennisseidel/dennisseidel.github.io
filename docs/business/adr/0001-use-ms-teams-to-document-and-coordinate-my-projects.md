@@ -4,7 +4,7 @@ Date: 2019-05-25
 
 ## Status
 
-Accepted
+Superceded by [2. Use todoist to docuemnt and coordinate my projects](0002-use-todoist-to-docuemnt-and-coordinate-my-projects.md)
 
 ## Context
 

@@ -1,16 +1,10 @@
 {
   "docs": {
-    "Basics": [
-      "basics/index",
-      "basics/architecture",
-      "basics/softwareengineering",
-      "basics/devsecops",
-      "basics/adr/adrlog"
-    ],
     "Startup Engineering & Product Requirements": [
       "business/index",
       "business/sales",
-      "business/distribution"
+      "business/distribution",
+      "business/adr/adrlog"
     ],
     "Plattform": [
       "platform/aws"
@@ -25,6 +19,13 @@
       "build/buildfrontend",
       "build/buildiam",
       "build/adr/adrlog"
+    ],
+    "Foundations": [
+      "basics/index",
+      "basics/softwareengineering",
+      "basics/architecture",
+      "basics/devsecops",
+      "basics/adr/adrlog"
     ]
   }
 }

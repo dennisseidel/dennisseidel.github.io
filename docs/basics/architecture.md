@@ -1,21 +1,26 @@
 ---
 id: architecture
-title: Architecture
+title: Software Architecture
 ---
 
 This section describes [what is software architecture](#software-architecture). The decision I made, you can find in each section under **ADR** in the sidebar.
 
+
+### Background
+
+To get a more details view I suggest learning about
+* [Software Architecture Foundations](https://www.linkedin.com/learning/software-architecture-foundations?u=2108001) by Allen Holub
+
+
+### What is and how to "do" software architecture?
+
+
+
+
+
+
+
 Working with software architecture means applying [best pratices](#practices), use tools to [design and select a technology](#design) and document [decisions](#documentation-adrs). Concret Processes are described in the [Runbook/Playbook](#Runbook--Playbook).
-
-## Decisions
-
-<!-- adrlog -->
-
-- [ADR-0001](adr/0001-record-architecture-decisions) - Record architecture decisions
-- [ADR-0002](adr/0002-use-docusaurus-for-documentation) - Use Docusaurus for Documentation
-- [ADR-0003](adr/0003-one-adr-for-each-repository-topic) - One ADR for each Repository/Topic
-
-<!-- adrlogstop -->
 
 ## What is Software Architecture?
 
@@ -134,13 +139,13 @@ Definition Runbook:
 - Internal functionalities: Which functions do I provide through my interfaces?
 -
 
-### `Testing and creating poc for new technology`
+#### `Testing and creating poc for new technology`
 
-#### Situation/Problem
+##### Situation/Problem
 
 `OpenArchitectureQuestion:TechnologyEvaluation/*` - I am ask to test a new technology e.g. evaluate the use of AWS EKS / Aurora. This might be driven from the business - with a requirement to solve a problem or more often currently we are ask by the IT to evaluate a technology (e.g. migrate the data platform to the cloud).
 
-#### Data gathered for planning/troubleshooting
+##### Data gathered for planning/troubleshooting
 
 - _Business Requirements:_ Write down what are the business requirements that are implacted by this technology. E.g. what application run currently on the plattform? What are their requirements? How could the technology imporve them? What application are currently not running on the plattform but would benefit from the plattform (technology)? For this contact the IT teams but also directly the business units to get feedback from them. The result: **Hypothesis and Requirements and measurable KPIs** from the business. TODO: Document/Template?
 - _Technology Information:_ Learn and document hands on (udemy, linkedin learning/ tutorials) about the technology before implementing any PoC. The experience is that this takes long and leads to sub optimal results (e.g. I paired for a day with a colleage but we could not set up EKS because we lack experience with cloud formation as well as eks). Better is to take 1 day to learn or do a tutorial so one understands how the technology should be use. Eventhough one is not as fast to start, overall one reduces time wasted and the solution quality. In this stage pairing value is limited, it makes more sense to split up and e.g. one check out eks and the other cloudformation. The result should be a **good understanding and handson description how to use the technology**. TODO: Document/Template?
@@ -148,7 +153,7 @@ Definition Runbook:
 
 Gather data also by informing others (who? architecture board) what you are going to do.
 
-#### Steps to Troubleshoot and Fix
+##### Steps to Troubleshoot and Fix
 
 1. Design the PoC based on the hypothesis (following the lessons learned and the technologies in this handbook)
 2. Gather feedback on the first PoC Design
@@ -157,10 +162,10 @@ Gather data also by informing others (who? architecture board) what you are goin
 5. Iterate
 6. Final Evaluation (TODO: Template for ADR / Document the decision on the technology radar/ As well as a first autoamtion/operation concept)
 
-#### Urgency category
+##### Urgency category
 
 normal - given the situation the urgancy can increase, but runbooks steps should never be skipt (e.g. learning about the technology first).
 
-#### Escalation path
+##### Escalation path
 
 ?

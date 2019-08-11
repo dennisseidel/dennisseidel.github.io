@@ -3,7 +3,7 @@ id: adrlog
 title: ADR
 ---
 
--* [1. Implement general services in NodeJS and ML services in Python](0001-implement-general-services-in-nodejs-and-ml-services-in-python.md)
+* [1. Implement general services in NodeJS and ML services in Python](0001-implement-general-services-in-nodejs-and-ml-services-in-python.md)
 * [[Superceded by 6.] 2. Use pulumi+localstack over AWS SAM as serverless deployment](0002-use-pulumi-localstack-over-aws-sam-as-serverless-deployment.md)
 * [3. Use Typescript over Javascript when possible](0003-use-typescript-over-javascript-when-possible.md)
 * [4. Document with README.md and Docusaurus](0004-document-with-readme-md-and-docusaurus.md)

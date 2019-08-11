@@ -21,7 +21,7 @@ I document here how I build platform and solution (in regulated industries) as a
 
 ## How I document here
 
-The **context** of a topic maps to the folder name, the **topic** maps to a seperated markdown file. This markdown file **describes** the topic and the **decisions** and links to a dedicated **sample code repo** per topic.
+The **context** of a topic maps to the folder name, the **topic** maps to a seperated markdown file. This markdown file **describes** the topic and links to a dedicated **sample code repo** per topic. The **decisions** in a context are under a specific topic **ADR** per context.
 
 ### Style
 
