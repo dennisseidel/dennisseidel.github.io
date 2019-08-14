@@ -86,6 +86,20 @@ Example:
 
 Then use the ["inspect and adapt" loop (max 2 days)](https://www.linkedin.com/learning/software-architecture-foundations/what-s-the-job-modern-architects?u=2108001) to iterate on the design, implementation and the idea.
 
+### Operationalize the experiment
+
+- Identify and set [goals and kpis](https://www.youtube.com/watch?time_continue=97&v=lL6GdUHIBsM): Define your primary metric (one!) **revenue** or active users and your [secondary metrics](https://youtu.be/lL6GdUHIBsM?t=717). The goal should be *fast initial growth*, *time to sale should decrease* and *exponential goals*. __Use the goal to prioritise time__ and __identify what is your biggest obstacle to hit the growth rate__. 
+- Define how you [analyse](https://www.youtube.com/watch?v=LLerCc7MOQo):
+  - [Funnel](https://youtu.be/LLerCc7MOQo?t=149) 
+  - Collect Data
+  - 3 Metrics: sign ups per week, retention cohorts, Revenue
+- Put this on a dashboard -> data driven team, communicate update to the stackholders
+- 43 Minuite email
+- don't obsess about tools, but prepare for change
+
+Find the [metrics that fit your business model](https://www.youtube.com/watch?v=PTg3RZPXgLg): Enterprise, SaaS, Usage-based, Subscription, Transactional, Marketplace, E-Commerce, Advertising and Hardware.
+
+
 
 ## Implementation Design
 

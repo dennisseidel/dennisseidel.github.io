@@ -3,16 +3,7 @@ id: aws
 title: AWS & Azure
 ---
 
-This section decsribe the platform I use to implement the solutions. I choose to use AWS as my platform to gain speed and focus on business. Building your own can make sense if your own economies of scale are large enough compared to AWS minus their mark up or it povides you ar deciding cometitive advantage.
-
-**Architecture Decisions**
-
-<!-- adrlog -->
-
-- [ADR-0001](adr/0001-use-aws-services-as-my-platform) - Use AWS services as my platform
-- [ADR-0002](adr/0002-use-azure-pipeline-for-cicd.md) - Use Azure Pipeline for CICD
-
-<!-- adrlogstop -->
+This section describe the platform I use to implement the solutions. This is the foundation for the build section starting with designing the [solution architecture](../build/1_solutionarchitecture.md).
 
 ## AWS
 
@@ -61,7 +52,7 @@ Next I use the *access_key_id* and *secret_access_key* to setup my infrastructur
 
 ### Account structure
 
-I create multiple accounts for each stage to isolate changes, it could also make sense to give each team their own account. In this case the question is how to integrate the different services of the teams? I propose the idea of autonomous teams that work in their [bounded/autonomous context](#linkToSolutionDesign/Architecture) end to end (from the frontend component to the database) this means they integrate through their component reuse or API provided by the team OR a shared event infrastructure.
+I create multiple accounts for each stage to isolate changes, it could also make sense to give each team their own account. In this case the question is how to integrate the different services of the teams? I propose the idea of autonomous teams that work in their _bounded/autonomous context_ end to end (from the frontend component to the database) this means they integrate through their component reuse or API provided by the team OR a shared event infrastructure.
 
 ## Plaform Features
 
@@ -74,26 +65,6 @@ For the next step the solution design I understand the [features the platform pr
 - Application Integration: [SQS](https://docs.aws.amazon.com/sqs/?id=docs_gateway)/[SNS](https://docs.aws.amazon.com/sns/?id=docs_gateway), [Kinesis](https://docs.aws.amazon.com/kinesis/?id=docs_gateway), [StepFunctions](https://docs.aws.amazon.com/step-functions/?id=docs_gateway)
 - CICD: [Azure Pipeline](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started-yaml?view=azure-devops)
 
-
-
-
-As a next step I [map the requirements of the application to the plaform technology as part of the solution design]() and after desgining the application.
-
 ## Automation (Terraform)
 
-https://learn.hashicorp.com/terraform/?track=aws#aws
-
-
-======
-
-Most of the time the workflow consists of: [building the deployment artifact](#seeServiceSection) (e.g. ziping up a lambda), [upload the artifact to the repository](#seeServiceSection) (e.g. uploading the zip file to s3), deploy the infrastructure(e.g. api gateway, policies, lambdas, ...), validate the artefact works, undeploy the artefact.
-
-
-**Architecture Decisions**
-
-<!-- adrlog -->
-- [ADR-0002](adr/0002-use-hosted-services-over-containers-but-document-tested-abstractions-and-migration-strategies) - Use hosted services over containers, but document (tested) abstractions and migration strategies    <--- Solution Design
-- [ADR-0003](adr/0003-use-aws-amplify-to-interface-with-the-platform) - Use AWS Amplify to interface with the platform <-- Tools
-- [ADR-0004](0004-use-pulumi-to-setup-the-infrastructure.md) - Use pulumi to setup the infrastructure <-- Tools
-- [ADR-0006](0006-use-terraform-to-setup-infrastructure.md) - Use terraform to setup infrastructure <-- Tools?
-<!-- adrlogstop -->
+Setup the AWS infrastructure for your solution using [Terraform](https://learn.hashicorp.com/terraform/?track=aws#aws).

@@ -141,15 +141,15 @@ variable "rds_subnets" {
 }
 
 # this is the arn of the secret in the secet-manager that the data api uses, I only integrated it to
-# output it into one configiration file. If you generate the secret thorugh terraform it self and not 
-# thorugh the query manager you export it from there currently the queryeditor does not recognise the secrets 
-# generated with terraform. 
+# output it into one configiration file. If you generate the secret thorugh terraform it self and not
+# thorugh the query manager you export it from there currently the queryeditor does not recognise the secrets
+# generated with terraform.
 variable "rds_secret_arn" {
   type = "string"
 }
 ```
 
-Finally you need to **enable the RDS Data API**, this is currently also not possible through terraform. We use the data api over a jdbc because I helps with the scalability issue of connection pools with lambda functions. Follow the instructions [here](https://web.archive.org/save/https://www.jeremydaly.com/aurora-serverless-data-api-a-first-look/).
+Finally you need to **enable the RDS Data API**, this is currently not possible through terraform(!). We use the data api over a jdbc because I helps with the scalability issue of connection pools with lambda functions. Follow the instructions [here](https://web.archive.org/save/https://www.jeremydaly.com/aurora-serverless-data-api-a-first-look/).
 
 Create your DB table either through the queryeditor inside of AWS or use the api/cli based on your initialization or update script
 
@@ -172,10 +172,115 @@ create table tenant_management.tenant_members (
 );
 ```
 
-Access Data API from Serverless Function:
-- Add IAM Roles
-- Implement in function
+Access Data API from Serverless Function as describes [here](https://github.com/denseidel/saas-plaform-tenant-management/commit/bbb67a4a5984da50a164e4ecb397500df27098af#diff-4b5a18024a0822d8479984998a3dc42f):
 
+Add IAM Roles to function:
+
+```yaml
+Allow Actions:
+  - rds-data:BatchExecuteStatement
+  - rds-data:BeginTransaction
+  - rds-data:CommitTransaction
+  - rds-data:RollbackTransaction
+On Rsource (db arn):
+Resource:
+  - ${file(../infrastructure/config.json):tenant-management_db_arn)}
+```
+
+Implement in function using the [data api](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) with [transactions](https://docs.aws.amazon.com/rdsdataservice/latest/APIReference/API_BeginTransaction.html) using the [aws sdk](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/RDSDataService.html#commitTransaction-property).
+
+```js
+import { RDSDataService } from "aws-sdk";
+
+const config = {
+  tenant_management_db_arn: process.env.tenant_management_db_arn,
+  tenant_management_rds_secret_arn: process.env.tenant_management_rds_secret_arn
+};
+
+const rdsDataService = new RDSDataService();
+
+// get / select
+getTenantByUserId: (id: string) => Promise<Tenant[]> = async (id: string) => {
+    try {
+      var selectParams = {
+        resourceArn: config.tenant_management_db_arn,
+        secretArn: config.tenant_management_rds_secret_arn,
+        sql: `select t.tenantId, t.tenantName, t.plan, tm.userId, tm.userRole from tenant_management.tenants as t join tenant_management.tenant_members as tm on t.tenantId = tenant_management.tm.tenantId where tm.userId = '${id}';`
+      }
+      console.log(selectParams)
+      const tenants = await rdsDataService.executeStatement(selectParams).promise();
+      const res: Tenant[] = tenants.records.map(tenant => this.createTenantFromRDSResult(tenant))
+      return res
+    } catch (error) {
+      console.log(error)
+      return error
+    }
+  }
+
+// create/insert a tenant with a transaction and multiple sql
+createTenant = async (tenant: Tenant) => {
+  try {
+    const startTransactionParams = {
+      resourceArn: config.tenant_management_db_arn /* required */,
+      secretArn: config.tenant_management_rds_secret_arn /* required */
+    };
+    const dbTransaction = await rdsDataService
+      .beginTransaction(startTransactionParams)
+      .promise();
+    const dbTransactionId = dbTransaction.transactionId;
+    const insertNewTenantParams = {
+      includeResultMetadata: true,
+      resourceArn: config.tenant_management_db_arn /* required */,
+      secretArn: config.tenant_management_rds_secret_arn /* required */,
+      sql: `insert into
+        tenant_management.tenants (
+          tenantId,
+          tenantName,
+          plan
+        )
+      values
+        (
+          '${tenant.id}',
+          '${tenant.name}',
+          '${tenant.plan}'
+        );` /* required */,
+      transactionId: dbTransactionId
+    };
+    await rdsDataService.executeStatement(insertNewTenantParams).promise();
+    const insertNewTenantMemberParams = {
+      includeResultMetadata: true,
+      resourceArn: config.tenant_management_db_arn /* required */,
+      secretArn: config.tenant_management_rds_secret_arn /* required */,
+      sql: `insert into
+        tenant_management.tenant_members (
+          tenantId,
+          userId,
+          userRole
+        )
+      values
+        (
+          '${tenant.id}',
+          '${tenant.userId}',
+          '${tenant.userRole}'
+        );` /* required */,
+      transactionId: dbTransactionId
+    };
+    await rdsDataService
+      .executeStatement(insertNewTenantMemberParams)
+      .promise();
+    const commitParams = {
+      resourceArn: config.tenant_management_db_arn /* required */,
+      secretArn: config.tenant_management_rds_secret_arn /* required */,
+      transactionId: dbTransactionId /* required */
+    };
+    await rdsDataService.commitTransaction(commitParams).promise();
+    return tenant;
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+};
+```
 
 ## ui component
 

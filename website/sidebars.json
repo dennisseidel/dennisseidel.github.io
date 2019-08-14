@@ -2,12 +2,11 @@
   "docs": {
     "Startup Engineering & Product Requirements": [
       "business/index",
-      "business/sales",
-      "business/distribution",
       "business/adr/adrlog"
     ],
     "Plattform": [
-      "platform/aws"
+      "platform/aws",
+      "platform/adr/adrlog"
     ],
     "Build": [
       "build/solutionarchitecture",
