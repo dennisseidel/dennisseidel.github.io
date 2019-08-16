@@ -2,4 +2,4 @@ language: node_js
 cache: yarn
 node_js:
   - "8"
-script: GIT_USER=denseidel CURRENT_BRANCH=source yarn run publish-gh-pages
+script: cd website && GIT_USER=denseidel CURRENT_BRANCH=source yarn run publish-gh-pages
