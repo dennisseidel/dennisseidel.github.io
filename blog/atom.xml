@@ -2,12 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://denseidel.github.io/blog</id>
     <title>Cloud Solution Architect Notes Blog</title>
-    <updated>2019-05-08T06:00:00Z</updated>
+    <updated>2019-08-12T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://denseidel.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Cloud Solution Architect Notes news and events.</subtitle>
     <logo>https://denseidel.github.io/</logo>
     <rights>Copyright © 2019 Dennis Seidel</rights>
+    <entry>
+        <title type="html"><![CDATA[Get started with angular]]></title>
+        <id>https://denseidel.github.io/blog/2019/08/12/SaaS.html</id>
+        <link href="https://denseidel.github.io/blog/2019/08/12/SaaS.html">
+        </link>
+        <updated>2019-08-12T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<h1><a class="anchor" aria-hidden="true" id="setup-angular-cli-locally"></a><a href="#setup-angular-cli-locally" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Setup Angular CLI locally</h1> <p><a href="https://medium.com/@starikovs/how-to-use-angular-cli-locally-729dbb6707dd">Source</a></p> <pre><code class="hljs css language-bash"><span class="hljs-comment"># generate project</span> npx -p @angular/cli ng new hello-world-project <span class="hljs-comment"># generate component</span> npx ng generate component my-component </code></pre> <p>less vs scss vs css</p> <ul> <li>less is more like javascript</li> <li>less is used by ant.design</li> <li>but before us...</li></ul>]]></summary>
+        <author>
+            <name>Den</name>
+            <uri>http://twitter.com/d10l6</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Software as a Service - How to use it and how to build it.]]></title>
         <id>https://denseidel.github.io/blog/2019/05/08/SaaS.html</id>
