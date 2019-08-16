@@ -2,4 +2,8 @@ language: node_js
 cache: yarn
 node_js:
   - "8"
-script: ./scripts/deploy.sh
+script: |
+  git config --global user.email "denseidel@users.noreply.github.com"
+  git config --global user.name "denseidel"
+  echo "machine github.com login denseidel password $GITHUB_TOKEN" > ~/.netrc
+  cd website && yarn install && GIT_USER=denseidel yarn run publish-gh-pages
