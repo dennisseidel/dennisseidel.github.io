@@ -18,6 +18,30 @@ After you setup your meta repo and created a subrepo for your self contained sys
 
 > [Tenant-Management](https://github.com/denseidel/saas-plaform-tenant-management)
 
+## Design the APIs / Events (first)
+
+https://medium.com/adobetech/three-principles-of-api-first-design-fa6666d9f694
+
+First we start designing the API with Swagger. The best tool to do this is the [swagger editor](https://github.com/swagger-api/swagger-editor) or using [Visual Studio Code with the openapi-lint extension](https://marketplace.visualstudio.com/items?itemName=mermade.openapi-lint).
+
+To understand _OpenAPI_ you should read the basics in this [tutorial](https://idratherbewriting.com/learnapidoc/pubapis_openapi_tutorial_overview) and [how to document it on aws api gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-quick-start-import-export.html).
+
+While designing your API keep in mind idenpotency and transactionality - and opt for a simple solution otherwise you have to think a lot about Resilience (see below). This is part of following the API design best practices of:
+
+- [Microsoft](https://docs.microsoft.com/de-de/azure/architecture/best-practices/api-design)
+- [Zalando](https://opensource.zalando.com/restful-api-guidelines/)
+
+#### Validate for API Guidelines
+
+Setup [Zally](https://github.com/zalando/zally) for api validation.
+
+#### Create your spec
+
+```bash
+# create file
+code openapi.yaml
+```
+
 ## Serverless with typescript
 
 - https://www.jamestharpe.com/serverless-typescript-getting-started/
@@ -489,3 +513,7 @@ npm config set '@bit:registry' https://node.bit.dev
 npm i @bit/mui-org.material-ui.button
 
 ````
+
+## Background
+
+- [AWS - Implementing Microservices](https://d0.awsstatic.com/whitepapers/microservices-on-aws.pdf)

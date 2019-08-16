@@ -79,7 +79,8 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href="docs/index.html">Get started</Button>
+            <Button href="
+            docs/basics/index.html">Get started</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -166,11 +167,7 @@ const Description = props => (
      {
        title: "Platform & developer experience.",
        content: "Build your own platform and developer experience, start with a CLI that might wrap an existing cloud platform (be transparent to the developer)."
-     },
-     { 
-       title: "Security: Make it easy with tooling & Limit your bast radius & remember it is a business decision",
-       content: "Apply Industry best pratices & mandatory requirements, but make this easy by providing tooling and sevices to your developers. But keep in mind security is not a goal itself but part of the business evaluation of each decision - and keep applying simplcity."
-    }
+     }
    ]}
   </Block>
 )

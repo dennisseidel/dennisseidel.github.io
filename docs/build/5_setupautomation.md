@@ -7,7 +7,7 @@ After setting up your repisitory for your "self contained system" setup the pipe
 
 ## Sample Pipelines
 
-* [API Lambda/ DB + Component](#LinkToSampleInGithub) -> CLI command: `amplify repo serverless-scs pipeline` (default without pipeline generates the full repo assess including sample and more)
+- [API Lambda/ DB + Component](#LinkToSampleInGithub) -> CLI command: `amplify repo serverless-scs pipeline` (default without pipeline generates the full repo assess including sample and more)
 
 ## Background Info on Azure Pipelines
 
@@ -15,7 +15,7 @@ Create your first pipeline based on your github repository [here](https://docs.m
 
 ### Important Use Cases
 
-* [Ignoring path, files or branches for the pipeline trigger](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=yaml)
+- [Ignoring path, files or branches for the pipeline trigger](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=yaml)
 
 ### [Sample](https://github.com/denseidel/saas-platform-template/blob/master/devops/frontend-preview/azure-pipelines.yaml)
 
@@ -27,67 +27,67 @@ Create your first pipeline based on your github repository [here](https://docs.m
 pr:
   branches:
     include:
-    - master
+      - master
   paths:
     include:
-    - /frontend
+      - /frontend
     exclude:
-    - README.md
-    - /adr/*
-    - .adr-dir
+      - README.md
+      - /adr/*
+      - .adr-dir
 
 pool:
-  vmImage: 'Ubuntu-16.04'
+  vmImage: "Ubuntu-16.04"
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '8.x'
-  displayName: 'Install Node.js'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "8.x"
+    displayName: "Install Node.js"
 
-- script: |
-    apt-get update && apt-get install -y libgconf-2-4
-    curl -fsSL https://get.pulumi.com | sh
-  displayName: 'setup credentials & dependencies'
+  - script: |
+      apt-get update && apt-get install -y libgconf-2-4
+      curl -fsSL https://get.pulumi.com | sh
+    displayName: "setup credentials & dependencies"
 
-- script: |
-    export PATH=$PATH:$HOME/.pulumi/bin
-    cd devops/frontend-preview
-    npm install
-    pulumi stack select denseidel/saas-template-frontend/dev
-    pulumi stack output -j > ../../frontend/src/config.json
-    cd ../../frontend
-    npm install && npm run build
-  env:
+  - script: |
+      export PATH=$PATH:$HOME/.pulumi/bin
+      cd devops/frontend-preview
+      npm install
+      pulumi stack select denseidel/saas-template-frontend/dev
+      pulumi stack output -j > ../../frontend/src/config.json
+      cd ../../frontend
+      npm install && npm run build
+    env:
       PULUMI_ACCESS_TOKEN: $(pulumi.access.token)
       AWS_ACCESS_KEY_ID: $(aws.master.accesskey)
       AWS_SECRET_ACCESS_KEY: $(aws.master.accesssecret)
-  displayName: 'build'
+    displayName: "build"
 
-- script: |
-    cd frontend
-    npm run e2e
-  displayName: 'run test'
+  - script: |
+      cd frontend
+      npm run e2e
+    displayName: "run test"
 
-- script: |
-    # setup preview environment & artifact bucket & upload to artifiact bucket
-    export PATH=$PATH:$HOME/.pulumi/bin
-    cd devops/frontend-preview
-    #npm install
-    pulumi stack select denseidel/saas-template-frontend/dev
-    pulumi up -y
-  env:
+  - script: |
+      # setup preview environment & artifact bucket & upload to artifiact bucket
+      export PATH=$PATH:$HOME/.pulumi/bin
+      cd devops/frontend-preview
+      #npm install
+      pulumi stack select denseidel/saas-template-frontend/dev
+      pulumi up -y
+    env:
       PULUMI_ACCESS_TOKEN: $(pulumi.access.token)
       AWS_ACCESS_KEY_ID: $(aws.master.accesskey)
       AWS_SECRET_ACCESS_KEY: $(aws.master.accesssecret)
-  displayName: 'Setup Infrastucture & Deploy to preview environment'
+    displayName: "Setup Infrastucture & Deploy to preview environment"
 ```
 
 ## Decisons
 
 <!-- adrlog -->
 
-* [ADR-0005](adr/0005-use-azure-pipeline-for-cicd.md) - Use Azure Pipeline for CICD
-* [ADR-0006](0006-implement-a-terraform-deployment-for-each-scs-not-one-general-infrastructure-stack-for-all-components.md) - Implement a (terraform) deployment for each SCS, not one general infrastructure stack for all components
+- [ADR-0005](adr/0005-use-azure-pipeline-for-cicd.md) - Use Azure Pipeline for CICD
+- [ADR-0006](0006-implement-a-terraform-deployment-for-each-scs-not-one-general-infrastructure-stack-for-all-components.md) - Implement a (terraform) deployment for each SCS, not one general infrastructure stack for all components
 
 <!-- adrlogstop -->

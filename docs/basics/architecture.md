@@ -5,22 +5,15 @@ title: Software Architecture
 
 This section describes [what is software architecture](#software-architecture). The decision I made, you can find in each section under **ADR** in the sidebar.
 
-
 ### Background
 
 To get a more details view I suggest learning about
-* [Software Architecture Foundations](https://www.linkedin.com/learning/software-architecture-foundations?u=2108001) by Allen Holub
 
+- [Software Architecture Foundations](https://www.linkedin.com/learning/software-architecture-foundations?u=2108001) by Allen Holub
 
-### What is and how to "do" software architecture?
+### What is and how to "do" software architecture
 
-
-
-
-
-
-
-Working with software architecture means applying [best pratices](#practices), use tools to [design and select a technology](#design) and document [decisions](#documentation-adrs). Concret Processes are described in the [Runbook/Playbook](#Runbook--Playbook).
+Working with software architecture means applying [best pratices](#practices), use tools to [design and select a technology](#design) and document [decisions](#documentation-adrs).
 
 ## What is Software Architecture?
 
@@ -90,35 +83,6 @@ Heuristic to do technology selection beyond the tech radars: Go to Github and do
 #### Create your own technology radar
 
 Follow the instructions on the [Thoughtworks Website](https://www.thoughtworks.com/radar/how-to-byor). If your GoogleSheets Url does not work use csv file as a workaround by adding `/gviz/tq?tqx=out:csv` to the end of your Google Sheet url e.g. `https://docs.google.com/spreadsheets/d/1Z8G8PW6HLjmA4fbqhe1hxlQgEVN7802t7Nen8HjVHFY/gviz/tq?tqx=out:csv`.
-
-## Documentation / ADRs
-
-Architectural decision should be documented in a [light weight architecture decision record](https://www.thoughtworks.com/radar/techniques/lightweight-architecture-decision-records) as proposed by the ThoughtWorks Tech Radar. More insights on why can be found from the [IBM Watson Team](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=497744). An overview of the ADR ecosystem is provided on [github](https://adr.github.io/). I use the most popular tool [adr-tools](https://github.com/npryce/adr-tools).
-
-```bash
-brew install adr-tools
-npm i -g adr-log
-# init in root of project / decision context
-adr init adr
-```
-
-### Create a new ADR
-
-```bash
-adr new Implement as Unix shell scripts
-# write the ADR
-# create a updated TOC list
-adr-log -d adr
-# (If you use docusarus you have to add `adr/` in front of the path and remove `.md` e.g. - [ADR-0001](adr/0001-record-architecture-decisions) - Record architecture decisions )
-```
-
-Write ADRs in [Y-Statement Format](https://adr.github.io/#sustainable-architectural-decisions): `In the context of <use case/user story u>, facing <concern c> we decided for <option o> to achieve <quality q>, accepting <downside d>.`
-
-### Replace an ADR
-
-```bash
- adr new -s 9 Use Rust for performance-critical functionality
-```
 
 ## [Playbook](https://wa.aws.amazon.com/wat.concept.playbook.en.html)
 

@@ -10,7 +10,6 @@
     ],
     "Build": [
       "build/solutionarchitecture",
-      "build/softwaredesign",
       "build/setuptools",
       "build/setuprepo",
       "build/setupautomation",
