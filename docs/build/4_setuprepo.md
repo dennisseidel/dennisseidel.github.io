@@ -11,25 +11,22 @@ Initialize the [meta](https://github.com/mateodelnorte/meta) repo if multiple re
 
 ```bash
 # create a new directory for your meta project and initialize a new git repository in your new dir:
-hub init my-meta-repo & cd my-my-meta-repo
+mkdir my-meta-repo && cd my-my-meta-repo & git init
 # initialize your new repository as a meta repo:
 meta init
+# add inital file
+git add . && git commit -am "chore: inital setup"
+# create repo in the up
+git remote add origin https://github.com/dennis-seidel/datenplatform-saas-backend.git
+git push -u origin master
 ```
 
-Create the repos with hub:
-
-```sh
-# initalize the repo
-hub init your-repo-name
-# create the repo on github
-cd your-repo-name & hub create
-```
-
-Add repos: to meta repo:
+Add repos to meta repo:
 
 ```bash
-# to add new projects, use
-meta project import [your-repo-name] [repo url from hub create]
+# create repo in github ui
+# then add new project within the meta folder
+meta project import [your-repo-name] [repo url]
 # clone meta repo and all its projects
 meta git clone
 ```
