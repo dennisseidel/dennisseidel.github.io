@@ -3,49 +3,45 @@ id: buildapi
 title: DO: Build the SCS (API + UI Component)
 ---
 
-After you setup your meta repo and created a subrepo for your self contained system. Start by creating the API with serverless framework - do not use it for infrastructure. Infrastrucuture should be managed seperately through Terraform.
-
-## SCS Components / Repository Structure
-
-- `/infrastructure`: including databases, usw. and the config file of the current state
-- `/servcice`: including service configs (e.g. serverless.yaml), infrastructure (e.g. container for serverless functions - should be replacable e.g. with Docker), business (business logic functions)
-- `/scripts`: scripts to e.g. deploy infrastructure, build and deploy/release service
-- `/ui`: include the ui component
-- `api-swagger?`: where? ui? integration with serverless framework? api first?
-- `README.md`: ...
+After you setup your meta repo and created a subrepo for your self contained system. Start creating the documenation `README.md` then by designing the API `/reference`, then build the services `/service` and then add the ui components `/ui` when every you require infrastucture add it to `/infrastructure`.
 
 ## Sample Project
 
 > [Tenant-Management](https://github.com/denseidel/saas-plaform-tenant-management)
 
-## Design the APIs / Events (first)
+### SCS Components / Repository Structure
 
-https://medium.com/adobetech/three-principles-of-api-first-design-fa6666d9f694
+- `/infrastructure`: including databases, usw. and the config file of the current state
+- `/service`: including service configs (e.g. serverless.yaml), infrastructure (e.g. container for serverless functions - should be replacable e.g. with Docker), business (business logic functions)
+- `/scripts`: scripts to e.g. deploy infrastructure, build and deploy/release service
+- `/ui`: include the ui component
+- `/reference`: the api definitions
+- `README.md`: ...
 
-First we start designing the API with Swagger. The best tool to do this is the [swagger editor](https://github.com/swagger-api/swagger-editor) or using [Visual Studio Code with the openapi-lint extension](https://marketplace.visualstudio.com/items?itemName=mermade.openapi-lint).
+## Design the APIs / Events
 
-To understand _OpenAPI_ you should read the basics in this [tutorial](https://idratherbewriting.com/learnapidoc/pubapis_openapi_tutorial_overview) and [how to document it on aws api gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-quick-start-import-export.html).
+_Your API is the first user interface of your application_: This means there is no feature in your ui's that is not modeled in your API.
+Therefor _Your API comes first, then the implementation_: You should interate on the api description to get it right and then keep it stable even when the implemenation changes.
+_Your API is described (and maybe even self-descriptive)_: Your API offers an experience therefor documentation and expected behavoir is very important. ([Adobe](https://web.archive.org/web/20190817145357/https://medium.com/adobetech/three-principles-of-api-first-design-fa6666d9f694))
+
+Use the [stoplight studio](https://stoplight.io/p/studio) to create well formed swagger spec graphically you can modify them later ([tutorial](https://idratherbewriting.com/learnapidoc/pubapis_openapi_tutorial_overview)).
+
+```stoplight
+# open the repository in stoplight and create the api
+# the api will be safed under
+./reference/{api-name}/openapi.yaml
+```
 
 While designing your API keep in mind idenpotency and transactionality - and opt for a simple solution otherwise you have to think a lot about Resilience (see below). This is part of following the API design best practices of:
 
 - [Microsoft](https://docs.microsoft.com/de-de/azure/architecture/best-practices/api-design)
 - [Zalando](https://opensource.zalando.com/restful-api-guidelines/)
 
-#### Validate for API Guidelines
+You might setup [Zally](https://github.com/zalando/zally) for api validation.
 
-Setup [Zally](https://github.com/zalando/zally) for api validation.
+Finally deploy the API to the AWS API gateway([docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-quick-start-import-export.html)).
 
-#### Create your spec
-
-```bash
-# create file
-code openapi.yaml
-```
-
-## Serverless with typescript
-
-- https://www.jamestharpe.com/serverless-typescript-getting-started/
-- https://github.com/prisma/serverless-plugin-typescript
+## Build the service
 
 ### Install the serverless framework
 
@@ -62,6 +58,8 @@ mkdir service && cd service && serverless create --template aws-nodejs-typescrip
 ```
 
 ### Develop, Test and Iterate
+
+Implement the service in Typescirpt following this [guide](https://web.archive.org/web/20190817184129/https://www.jamestharpe.com/serverless-typescript-getting-started/). You can modify the [typescript plugin](https://github.com/prisma/serverless-plugin-typescript). Keep im mind [testing](https://epsagon.com/blog/how-to-test-serverless-apps/)/[testing2](https://serverless.com/framework/docs/providers/aws/guide/testing/).
 
 Deploy the function with `sls deploy -v` make sure you logout the event and create test cases that can be infoke loacally.
 
@@ -517,3 +515,8 @@ npm i @bit/mui-org.material-ui.button
 ## Background
 
 - [AWS - Implementing Microservices](https://d0.awsstatic.com/whitepapers/microservices-on-aws.pdf)
+
+Info on Azure Pipelines:
+
+- Create your first pipeline based on your github repository [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/?view=azure-devops).
+- [Ignoring path, files or branches for the pipeline trigger](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=yaml)

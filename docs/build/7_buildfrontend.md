@@ -28,6 +28,7 @@ Use [create-react-app with antd](https://ant.design/docs/react/use-with-create-r
 
 ```bash
 # add antd
+npx create-react-app yourProject --typescript && cd yourProject
 npm install antd
 # configure the build to work with scss https://ant.design/docs/react/use-with-create-react-app#Advanced-Guides (required for antd)
 ```

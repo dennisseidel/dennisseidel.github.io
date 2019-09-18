@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Cloud Solution Architect Notes' /* title for your website */,
+  title: 'Cloud Solution Playbook' /* title for your website */,
   tagline: 'Lessons learned building platforms in regulated industiries.',
   url: 'https://denseidel.github.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,

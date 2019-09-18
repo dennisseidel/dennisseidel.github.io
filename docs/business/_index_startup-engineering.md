@@ -92,6 +92,13 @@ Then use the ["inspect and adapt" loop (max 2 days)](https://www.linkedin.com/le
 
 Find the [metrics that fit your business model](https://www.youtube.com/watch?v=PTg3RZPXgLg): Enterprise, SaaS, Usage-based, Subscription, Transactional, Marketplace, E-Commerce, Advertising and Hardware.
 
+! Don't overanalyze and microoptimizes [dangers of growth hacking](https://web.archive.org/web/20190918091609/https://conversionxl.com/blog/dont-build-growth-teams/) with A/B Testing but keep the larger scope in mind:
+
+1. Use your funnel as a guide for a healthy business.
+1. To fix your funnel, eyeball iterations that go after big wins.
+1. Test homepage headlines.
+1. Check off the conversion best practices.
+
 ## Implementation Design
 
 [Indentify the agents in the system by using event storming and understanding the requirements/business](https://www.linkedin.com/learning/software-architecture-foundations/identifying-bounded-contexts-and-entities?u=2108001).

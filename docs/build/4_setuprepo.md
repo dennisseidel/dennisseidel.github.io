@@ -16,7 +16,7 @@ mkdir my-meta-repo && cd my-my-meta-repo & git init
 meta init
 # add inital file
 git add . && git commit -am "chore: inital setup"
-# create repo in the up
+# create repo in the ui
 git remote add origin https://github.com/dennis-seidel/datenplatform-saas-backend.git
 git push -u origin master
 ```

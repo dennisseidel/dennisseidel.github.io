@@ -2,6 +2,7 @@
   "docs": {
     "Startup Engineering & Product Requirements": [
       "business/index",
+      "basics/softskills",
       "business/adr/adrlog"
     ],
     "Plattform": [
@@ -12,7 +13,6 @@
       "build/solutionarchitecture",
       "build/setuptools",
       "build/setuprepo",
-      "build/setupautomation",
       "build/buildapi",
       "build/buildfrontend",
       "build/buildiam",
