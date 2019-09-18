@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Cloud Solution Architect Notes Blog</title>
+        <title>Cloud Solution Playbook Blog</title>
         <link>https://denseidel.github.io/blog</link>
-        <description>The best place to stay up-to-date with the latest Cloud Solution Architect Notes news and events.</description>
+        <description>The best place to stay up-to-date with the latest Cloud Solution Playbook news and events.</description>
         <lastBuildDate>Mon, 12 Aug 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
-            <title>Cloud Solution Architect Notes Blog</title>
+            <title>Cloud Solution Playbook Blog</title>
             <url>https://denseidel.github.io/</url>
             <link>https://denseidel.github.io/blog</link>
         </image>

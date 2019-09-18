@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://denseidel.github.io/blog</id>
-    <title>Cloud Solution Architect Notes Blog</title>
+    <title>Cloud Solution Playbook Blog</title>
     <updated>2019-08-12T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://denseidel.github.io/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest Cloud Solution Architect Notes news and events.</subtitle>
+    <subtitle>The best place to stay up-to-date with the latest Cloud Solution Playbook news and events.</subtitle>
     <logo>https://denseidel.github.io/</logo>
     <rights>Copyright © 2019 Dennis Seidel</rights>
     <entry>
