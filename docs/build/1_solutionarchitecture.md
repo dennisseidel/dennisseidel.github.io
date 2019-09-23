@@ -3,11 +3,11 @@ id: solutionarchitecture
 title: PLAN: Solution Architecture
 ---
 
-After you clarified your idea in the [startup engineering phase](../business/_index_startup-engineering.md) and you have your **user stories & problems** and your map out the business with an **[event storming map](http://localhost:3000/docs/business/index.html#implementation-design)** you begin with the solution design.
+After you clarified your idea in the [startup engineering phase](../business/_index_startup-engineering.md) and you have your **user stories & problems** and your map out the business with an **[event storming map](/docs/business/index.html#implementation-design)** you begin with the solution design.
 
 ## Enabelment about good design
 
-Good architecture cover the areas **simplicity**, **non functional requirement** and **system design (for change)**.
+Good architecture cover the areas **simplicity**, **non functional requirement** and **system design (for change)**. And read [software architecture is overrated, clean and simple design is underrated](https://web.archive.org/web/20190920073642/https://blog.pragmaticengineer.com/software-architecture-is-overrated/) first!
 
 ### Simplicity
 
@@ -87,7 +87,7 @@ Example:
 
 > 1. Identify encapsulated functionality (without dataflow / communication) from the event storming map. These are often business domains (life, motor, health) as they don't communicate with each other rather then objects (contracts, parties, documents) as functionality most often will require a data flow across those objects. [Source](https://www.youtube.com/watch?v=0TYbHVc2yWI) / [Source](https://learn-particular.thinkific.com/courses/take/explore-ddd-boundaries/lessons/4836638-service-boundaries).
 
-1. Sketch down the components in a [c4 digramm](https://c4model.com/) & how they interact at runtime with a [sequence diagram](http://plantuml.com/sequence-diagram). You should use [c4 for plantuml](https://github.com/RicardoNiepel/C4-PlantUML).
+1. Sketch down the components in a [c4 digramm](https://c4model.com/) & how they interact at runtime with a [sequence diagram](http://plantuml.com/sequence-diagram). You should use [c4 for plantuml](https://github.com/RicardoNiepel/C4-PlantUML) or use the native [aws diagram](https://github.com/awslabs/aws-icons-for-plantuml).
 
 - (Define the SCSs and their functional and non functional requirements)
 - create technology architecture map ([draw.io template](https://www.draw.io/#G1xFliNe2GF3Z79eeZheFbrTdEle95ucmd))
