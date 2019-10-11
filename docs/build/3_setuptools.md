@@ -24,6 +24,8 @@ You can follow the [mac setup guide](https://d10l.github.io/mac-setup/) to setup
 - [Terraform](https://d10l.github.io/mac-setup/Terraform/)
 - [Kubernetes](ttps://d10l.github.io/mac-setup/Kubernetes/)
 
+TODO: Add golang to setup
+
 ## Assets
 
 All Assets can be found under the [d10l](https://github.com/d10l) github organization. Including the [cli](https://github.com/d10l/cli) code, [templates](https://github.com/d10l/templates) as well as coding best pratices [typescript](https://github.com/d10l/clean-code-typescript) and [python](https://github.com/d10l/clean-code-python) and [toolsetup](https://github.com/d10l/mac-setup).
