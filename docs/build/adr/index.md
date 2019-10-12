@@ -22,4 +22,4 @@ title: ADR
 * [17. Implement the policy agent in the native programming language](0017-implement-the-policy-agent-in-the-native-programming-language.md)
 * [18. Test your javascript code with Jest](0018-test-your-javascript-code-with-jest.md)
 * [19. Implement the frontend as monoliths over SCS components](0019-implement-the-frontend-as-monoliths-over-scs-components.md)
-* [20. Implement backends in Golang](0020-implement-backends-in-golang.md)
+* [20. Implement backends in Typescript](0020-implement-backends-in-typescript.md)
