@@ -15,7 +15,7 @@ I document here how I build platform and solution (in regulated industries) as a
 
 ## Requirements
 
-* Basic programming knowledge \(best Python & Javascript\)
+* Basic programming knowledge \(best Typescript & Golang & Python\)
 * Mac / Linux / Windows machine
 * Know the basic command line
 

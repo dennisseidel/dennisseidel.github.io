@@ -19,3 +19,7 @@ title: ADR
 * [14. Use Gatsby for Landing Pages](0014-use-gatsby-for-landing-pages.md)
 * [15. Use web over native for UIs](0015-use-web-over-native-for-uis.md)
 * [16. Frontend components that share state (e.g. like redux) should be created by on team](0016-frontend-components-that-share-state-e-g-like-redux-should-be-created-by-on-team.md)
+* [17. Implement the policy agent in the native programming language](0017-implement-the-policy-agent-in-the-native-programming-language.md)
+* [18. Test your javascript code with Jest](0018-test-your-javascript-code-with-jest.md)
+* [19. Implement the frontend as monoliths over SCS components](0019-implement-the-frontend-as-monoliths-over-scs-components.md)
+* [20. Implement backends in Typescript](0020-implement-backends-in-typescript.md)
