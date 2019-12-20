@@ -1,16 +1,17 @@
 ---
 id: buildapi
-title: DO: Build the SCS (API + UI Component)
+title: DO: Build the Backend (API)
 ---
 
-After you setup your meta repo and created a subrepo for your self contained system. Start creating the documenation `README.md` then by designing the API `/reference`, then build the services `/service` and then add the ui components `/ui` when every you require infrastucture add it to `/infrastructure`.
+After you setup your meta repo and created a subrepo for your backend. Start creating the documenation `README.md` then by designing the API `/reference`, then build the services `/service` when every you require infrastucture add it to `/infrastructure`.
 
 ## Sample Project
 
 > [Tenant-Management](https://github.com/denseidel/saas-plaform-tenant-management)
 
-### SCS Components / Repository Structure
+### Repository Structure
 
+- `azure-pipelines.yml`: The automated build pipeline.
 - `/infrastructure`: including databases, usw. and the config file of the current state
 - `/service`: including service configs (e.g. serverless.yaml), infrastructure (e.g. container for serverless functions - should be replacable e.g. with Docker), business (business logic functions)
 - `/scripts`: scripts to e.g. deploy infrastructure, build and deploy/release service
@@ -18,7 +19,47 @@ After you setup your meta repo and created a subrepo for your self contained sys
 - `/reference`: the api definitions
 - `README.md`: ...
 
-## Design the APIs / Events
+## Setup inital CI/CD - `./azure.pipelines.yml`
+
+`./azure-pipelines.yml`
+
+```yaml
+# https://github.com/denseidel/saas-platform-template/blob/master/devops/frontend-preview/azure-pipelines.yaml
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+pr:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - /
+    exclude:
+      - README.md
+      - /adr/*
+      - .adr-dir
+
+pool:
+  vmImage: "Ubuntu-16.04"
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "8.x"
+    displayName: "Install Node.js"
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: "3.6"
+      architecture: "x64"
+  - script: |
+      npm install -g serverless
+    displayName: "install dependancies"
+```
+
+Create a microsoft [devops pipeline](https://azure.microsoft.com/de-de/services/devops/pipelines/), add a new project, add a new pipeline (github -> repo -> existing pipeline).
+
+## Design the APIs / Events - `/reference`
 
 _Your API is the first user interface of your application_: This means there is no feature in your ui's that is not modeled in your API.
 Therefor _Your API comes first, then the implementation_: You should interate on the api description to get it right and then keep it stable even when the implemenation changes.
@@ -39,9 +80,9 @@ While designing your API keep in mind idenpotency and transactionality - and opt
 
 You might setup [Zally](https://github.com/zalando/zally) for api validation.
 
-Finally deploy the API to the AWS API gateway([docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-quick-start-import-export.html)).
+Next implement the services for this api with the serverless framework.
 
-## Build the service
+## Build the service - `/service`
 
 ### Install the serverless framework
 
@@ -59,7 +100,7 @@ mkdir service && cd service && serverless create --template aws-nodejs-typescrip
 
 ### Develop, Test and Iterate
 
-Implement the service in Typescirpt following this [guide](https://web.archive.org/web/20190817184129/https://www.jamestharpe.com/serverless-typescript-getting-started/). You can modify the [typescript plugin](https://github.com/prisma/serverless-plugin-typescript). Keep im mind [testing](https://epsagon.com/blog/how-to-test-serverless-apps/)/[testing2](https://serverless.com/framework/docs/providers/aws/guide/testing/).
+Implement the service in Typescirpt following this [guide](https://web.archive.org/web/20190817184129/https://www.jamestharpe.com/serverless-typescript-getting-started/). Use a [hexagonal architecture](https://web.archive.org/web/20190424014125/https://vacationtracker.io/blog/big-bad-serverless-vendor-lock-in/) to reduce switching cost. You can modify the [typescript plugin](https://github.com/prisma/serverless-plugin-typescript). Keep im mind [testing](https://epsagon.com/blog/how-to-test-serverless-apps/)/[testing2](https://serverless.com/framework/docs/providers/aws/guide/testing/).
 
 Deploy the function with `sls deploy -v` make sure you logout the event and create test cases that can be infoke loacally.
 
@@ -303,6 +344,10 @@ createTenant = async (tenant: Tenant) => {
   }
 };
 ```
+
+## Publish API
+
+Finally publish the API specification to the deployed apis on the AWS API gateway([docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-quick-start-import-export.html)) .
 
 ## ui component
 

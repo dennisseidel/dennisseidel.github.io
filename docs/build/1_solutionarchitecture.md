@@ -63,7 +63,7 @@ adr-log -d adr
 adr new -s 9 Use Rust for performance-critical functionality
 ```
 
-> <img src="/img/tech-radar.png" />
+> <a href="/docs/techradar.html"><img src="/img/tech-radar.png" /></a>
 
 > Runbook/Playbook tbd - show picture of how to add them to git repo
 

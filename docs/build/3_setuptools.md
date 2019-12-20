@@ -37,4 +37,4 @@ As described in the DevSecOps section I decided to use AWS as my platform. To in
 npm install -g dencli
 ```
 
-For more info please checkout the CLI [README](https://github.com/d10l/cli) some features are: `initializing a git repo`, `add a git guideline agent` and `add a aws service`.
+For more info please checkout the CLI [README](https://github.com/d10l/cli) some features are: `add a git guideline agent` and `add a aws service`.

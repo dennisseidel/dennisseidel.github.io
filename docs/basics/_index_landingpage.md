@@ -3,7 +3,7 @@ id: index
 title: Get Started
 ---
 
-I document here how I build platform and solution (in regulated industries) as a Solution Architect. This includes topics involved in building solutions overall all parts of the regulated industry domain: like infrastructure, devops, frontend, algorithms and data science / data driven development e.g. analytics, machine learning.  Most of the code currently is in [**javascript (now moving to typescript)** and **python**](/docs/techradar.html). As a foundational process I apply the `Plan - Do - Check - Act` [cycle](https://de.wikipedia.org/wiki/Demingkreis) in all section from frontend development, service development to intrastructure.
+I document here how I build platform and solution (in regulated industries) as a Solution Architect. This includes topics involved in building solutions overall all parts of the regulated industry domain: like infrastructure, devops, frontend, algorithms and data science / data driven development e.g. analytics, machine learning.  Most of the code currently is in [**Typescript**](/docs/techradar.html). As a foundational process I apply the `Plan - Do - Check - Act` [cycle](https://de.wikipedia.org/wiki/Demingkreis) in all section from frontend development, service development to intrastructure.
 
 ## Topics
 
@@ -15,7 +15,7 @@ I document here how I build platform and solution (in regulated industries) as a
 
 ## Requirements
 
-* Basic programming knowledge \(best Typescript & Golang & Python\)
+* Basic programming knowledge \(best Typescript\)
 * Mac / Linux / Windows machine
 * Know the basic command line
 
@@ -26,4 +26,6 @@ The **context** of a topic maps to the folder name, the **topic** maps to a sepe
 ### Style
 
 * [Style](https://istio.io/about/contribute/style-guide/)
-* [Writing a new topic](https://istio.io/about/contribute/writing-a-new-topic/)
+* [Writing a new topic](https://istio.io/about/contribute/creating-and-editing-pages/)
+* [Clear writing style](https://web.archive.org/web/20190927011534/https://www.nature.com/articles/d41586-019-02918-5)
+* [Digrams](https://istio.io/about/contribute/diagrams/)
