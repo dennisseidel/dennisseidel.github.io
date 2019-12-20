@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://denseidel.github.io/blog</id>
     <title>Cloud Solution Playbook Blog</title>
-    <updated>2019-08-12T06:00:00Z</updated>
-    <generator>Feed for Node.js</generator>
+    <updated>2019-08-12T06:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://denseidel.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Cloud Solution Playbook news and events.</subtitle>
     <logo>https://denseidel.github.io/</logo>
@@ -11,229 +11,229 @@
     <entry>
         <title type="html"><![CDATA[Get started with angular]]></title>
         <id>https://denseidel.github.io/blog/2019/08/12/SaaS.html</id>
-        <link href="https://denseidel.github.io/blog/2019/08/12/SaaS.html">
-        </link>
-        <updated>2019-08-12T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2019/08/12/SaaS.html"/>
+        <updated>2019-08-12T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<h1><a class="anchor" aria-hidden="true" id="setup-angular-cli-locally"></a><a href="#setup-angular-cli-locally" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Setup Angular CLI locally</h1> <p><a href="https://medium.com/@starikovs/how-to-use-angular-cli-locally-729dbb6707dd">Source</a></p> <pre><code class="hljs css language-bash"><span class="hljs-comment"># generate project</span> npx -p @angular/cli ng new hello-world-project <span class="hljs-comment"># generate component</span> npx ng generate component my-component </code></pre> <p>less vs scss vs css</p> <ul> <li>less is more like javascript</li> <li>less is used by ant.design</li> <li>but before us...</li></ul>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/d10l6</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Software as a Service - How to use it and how to build it.]]></title>
         <id>https://denseidel.github.io/blog/2019/05/08/SaaS.html</id>
-        <link href="https://denseidel.github.io/blog/2019/05/08/SaaS.html">
-        </link>
-        <updated>2019-05-08T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2019/05/08/SaaS.html"/>
+        <updated>2019-05-08T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>SaaS is important tool for commodity functionality of your business as well as a default principle for implementing services &amp; frontends.</p> <h3><a class="anchor" aria-hidden="true" id="architectural-decisions"></a><a href="#architectural-decisions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Architectural Decisions</h3> <p>tbd</p> <h2><a class="anchor" aria-hidden="true" id="using-saas"></a><a href="#using-saas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Using SaaS</h2> <ul> <li>Make sure it is not a high business value functionality? What happen...</li></ul>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/d10l6</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Improve Softskills - Never Split the Difference: Negotiating as if Your Life Depended on It]]></title>
         <id>https://denseidel.github.io/blog/2019/05/05/Negotition.html</id>
-        <link href="https://denseidel.github.io/blog/2019/05/05/Negotition.html">
-        </link>
-        <updated>2019-05-05T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2019/05/05/Negotition.html"/>
+        <updated>2019-05-05T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>In the last month there were intense discussion about the system architecture at work. And while we invested a lot of time nothing moved forward. This made me feel like I wasted a lot of time. But after I watch the Keynote about <a href="https://www.youtube.com/watch?v=iLS6NXMXtLI">TechLeads</a> I realized ...</p>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/d10l6</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Product Design - Idea & Testing (for my healthcare project)]]></title>
         <id>https://denseidel.github.io/blog/2018/12/27/ab-testing.html</id>
-        <link href="https://denseidel.github.io/blog/2018/12/27/ab-testing.html">
-        </link>
-        <updated>2018-12-27T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<h2><a class="anchor" aria-hidden="true" id="test-your-product-idea-with-a-b-testing"></a><a href="#test-your-product-idea-with-a-b-testing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Test your product idea with A/B Testing</h2> <p>randomized experiment <a href="https://en.wikipedia.org/wiki/A/B_testing">https://en.wikipedia.org/wiki/A/B_testing</a></p> <p>NOTES:</p> <ul> <li>Check if this is needed: <a href="https://eu.udacity.com/course/rapid-prototyping--ud723">Rapid Prototyping</a></li> <li><a href="https://eu.udacity.com/course/google-ads-nanodegree--nd124">Promote &amp; Test: Google Ads</a> -&gt; <a href="https://eu.udacity.com/course/digital-marketing-nanodegree--nd018">Digital Marketing</a> <ul> <li><a href="https://www.producthunt.com/upcoming">https://www.producthunt.com/upcoming</a></li> </ul></li> <li><a href="https://eu.udacity.com/course/ux-design-for-mobile-developers--ud849">B...</a></li></ul>]]></summary>
+        <link href="https://denseidel.github.io/blog/2018/12/27/ab-testing.html"/>
+        <updated>2018-12-27T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<h2><a class="anchor" aria-hidden="true" id="test-your-product-idea-with-ab-testing"></a><a href="#test-your-product-idea-with-ab-testing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Test your product idea with A/B Testing</h2> <p>randomized experiment <a href="https://en.wikipedia.org/wiki/A/B_testing">https://en.wikipedia.org/wiki/A/B_testing</a></p> <p>NOTES:</p> <ul> <li>Check if this is needed: <a href="https://eu.udacity.com/course/rapid-prototyping--ud723">Rapid Prototyping</a></li> <li><a href="https://eu.udacity.com/course/google-ads-nanodegree--nd124">Promote &amp; Test: Google Ads</a> -&gt; <a href="https://eu.udacity.com/course/digital-marketing-nanodegree--nd018">Digital Marketing</a> <ul> <li><a href="https://www.producthunt.com/upcoming">https://www.producthunt.com/upcoming</a></li> </ul></li> <li><a href="https://eu.udacity.com/course/ux-design-for-mobile-developers--ud849">B...</a></li></ul>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Product Design - Idea & Testing (for my healthcare project)]]></title>
         <id>https://denseidel.github.io/blog/2018/12/24/product-design.html</id>
-        <link href="https://denseidel.github.io/blog/2018/12/24/product-design.html">
-        </link>
-        <updated>2018-12-24T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2018/12/24/product-design.html"/>
+        <updated>2018-12-24T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<h2><a class="anchor" aria-hidden="true" id="find-your-product-idea"></a><a href="#find-your-product-idea" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Find your product idea</h2> <p>To learn about product design I found a course on <a href="https://classroom.udacity.com/courses/ud509/lessons/4289858997/concepts/42747890850923">Udacity</a>. After learning about different types of product ideas and the <em>hook</em> mechanic, I <strong>started by brainstorming problems around me and solutions for these problems</strong>. I evaluated...</p>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Getting into healthcare it over the holidays]]></title>
         <id>https://denseidel.github.io/blog/2018/12/22/getting-into-health-it-over-the-holidays.html</id>
-        <link href="https://denseidel.github.io/blog/2018/12/22/getting-into-health-it-over-the-holidays.html">
-        </link>
-        <updated>2018-12-22T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2018/12/22/getting-into-health-it-over-the-holidays.html"/>
+        <updated>2018-12-22T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>Welcome to my journey learning the essentials to build a product in the the healthcare domain. I will start by learning the principles about product design and bootstraping a product, and will continue with the implementation as well as legal aspects...</p>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Healthtech IT Skill Demand]]></title>
         <id>https://denseidel.github.io/blog/2018/12/21/healthcare-it-skill-demand.html</id>
-        <link href="https://denseidel.github.io/blog/2018/12/21/healthcare-it-skill-demand.html">
-        </link>
-        <updated>2018-12-21T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2018/12/21/healthcare-it-skill-demand.html"/>
+        <updated>2018-12-21T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>As some of you my know I was always very interested in the healthcare sector, because I think it is one of the most important challanges we can tackle as humans: Understand how we can make use live better, healthier and longer. That's why I want to c...</p>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Intrapreneur Hustleing / Idea Sales]]></title>
         <id>https://denseidel.github.io/blog/2018/08/05/intrapreneur-husteling.html</id>
-        <link href="https://denseidel.github.io/blog/2018/08/05/intrapreneur-husteling.html">
-        </link>
-        <updated>2018-08-05T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2018/08/05/intrapreneur-husteling.html"/>
+        <updated>2018-08-05T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>There are so many ideas in the world that your idea is just one of many. People only use, invest in ideas and product they know, and will not use the best product if they don't know about it's greatness. Therefore one key activity of business is to p...</p>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Building Java Docker images with Gradle and Docker multistage builds]]></title>
         <id>https://denseidel.github.io/blog/2018/07/25/docker-gradle-multistage-builds.html</id>
-        <link href="https://denseidel.github.io/blog/2018/07/25/docker-gradle-multistage-builds.html">
-        </link>
-        <updated>2018-07-25T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2018/07/25/docker-gradle-multistage-builds.html"/>
+        <updated>2018-07-25T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>Today I had the challange that I needed to build java images. Most of the examples I found where building the artefact on the host and then copying it into the image. I don't like this because it creates some dependencies on the host. Better is build...</p>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Write Markdown to Medium]]></title>
         <id>https://denseidel.github.io/blog/2018/07/13/markdown-to-medium.html</id>
-        <link href="https://denseidel.github.io/blog/2018/07/13/markdown-to-medium.html">
-        </link>
-        <updated>2018-07-13T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2018/07/13/markdown-to-medium.html"/>
+        <updated>2018-07-13T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>To keep the ownership of my content I decided to first publish my content in markdown on my own page - and then share it with the world on medium.com. Medium does not support markdown therefore I have to use the <a href="https://www.npmjs.com/package/markdown-to-medium">markdown-to-medium npm package</a> to publ...</p>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Migration of all online resources to this page]]></title>
         <id>https://denseidel.github.io/blog/2018/07/08/migrating-my-online-resources.html</id>
-        <link href="https://denseidel.github.io/blog/2018/07/08/migrating-my-online-resources.html">
-        </link>
-        <updated>2018-07-08T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2018/07/08/migrating-my-online-resources.html"/>
+        <updated>2018-07-08T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>This weekend I started to migrate all my online resouces to this page. This includes my <a href="https://den.gitbook.io/developerplaybook/">Developer Playbook</a>, where I noted down all my tech lessons (including architectural decision records). As of today this has finished and the <em>Developer Playbook</em> wi...</p>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Change git origin]]></title>
         <id>https://denseidel.github.io/blog/2017/12/28/change-git-origin.html</id>
-        <link href="https://denseidel.github.io/blog/2017/12/28/change-git-origin.html">
-        </link>
-        <updated>2017-12-28T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2017/12/28/change-git-origin.html"/>
+        <updated>2017-12-28T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>After I delete a repository and create a new one I want to change the repository saved under origin in my local repo to the new repository location:</p> <p><code>git remote set-url origin https://newurl.com</code></p> <p>(<a href="https://help.github.com/articles/changing-a-remote-s-url/">&gt;&gt; Github</a>)</p> ]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Indent multiple lines in visuals studio code]]></title>
         <id>https://denseidel.github.io/blog/2017/12/27/indent-multiple-lines-in-visual-studio-code.html</id>
-        <link href="https://denseidel.github.io/blog/2017/12/27/indent-multiple-lines-in-visual-studio-code.html">
-        </link>
-        <updated>2017-12-27T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2017/12/27/indent-multiple-lines-in-visual-studio-code.html"/>
+        <updated>2017-12-27T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>I like to indent with a keyboard shortcut multiple lines of python code:</p> <ul> <li>Indent: Highlight multiple lines and hit <code>TAB</code></li> <li>Outdent: Highlight multiple lines and hit <code>Shift</code> + <code>TAB</code></li> </ul> <p>(<a href="https://stackoverflow.com/questions/40492960/how-to-indent-format-a-selection-of-code-in-vscode-with-ctrlshiftf">&gt;&gt; StackOverflow</a>)</p> ]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Bind this keyword to a callback in ES6 / React]]></title>
         <id>https://denseidel.github.io/blog/2017/12/18/react-bind-this-keyword-in-callbacks.html</id>
-        <link href="https://denseidel.github.io/blog/2017/12/18/react-bind-this-keyword-in-callbacks.html">
-        </link>
-        <updated>2017-12-18T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2017/12/18/react-bind-this-keyword-in-callbacks.html"/>
+        <updated>2017-12-18T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>I had the problem that I could not call <code>this.setState()</code> inside a callback function. This was related to the scope of this (it referenced to the function not the class). I either should use <strong>es6 arrow function</strong> or <strong>bind this to the callback function</strong>. (<a href="https://stackoverflow.com/a/31045750/1929968">&g...</a></p>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Windows 10 Setup for Development and easy Migration [In Progress]]]></title>
         <id>https://denseidel.github.io/blog/2017/11/25/windows-setup.html</id>
-        <link href="https://denseidel.github.io/blog/2017/11/25/windows-setup.html">
-        </link>
-        <updated>2017-11-25T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2017/11/25/windows-setup.html"/>
+        <updated>2017-11-25T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<ol> <li>OS: Start with a naked Windows 10 Pro.</li> <li>Install the basic tooling with scripts. <a href="#">TBD</a> (Including Google Drive)</li> <li>Setup WSL for Linux. <a href>TDB</a></li> <li>Log into Google Drive and store everything there/download the old files.</li> </ol> <p>Install Windows Store Apps [TODO: Script t...</p>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[My Dev Tool Setup [In Progress]]]></title>
         <id>https://denseidel.github.io/blog/2017/11/25/dev-tool-setup.html</id>
-        <link href="https://denseidel.github.io/blog/2017/11/25/dev-tool-setup.html">
-        </link>
-        <updated>2017-11-25T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2017/11/25/dev-tool-setup.html"/>
+        <updated>2017-11-25T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<ul> <li>Startup Engineering Course Tools</li> <li>Design Graphs <a href="http://plantuml.com/sequence-diagram">PantUML</a> and <a href="http://www.gravizo.com/#converter">Gravizo</a></li> </ul> <ul> <li>Auido Books (for the growx )</li> </ul> ]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Find the resources that are intersting to bootstrap your ecosystem [In Progress]]]></title>
         <id>https://denseidel.github.io/blog/2017/11/24/types-of-relevant-resources-to-ecosystems.html</id>
-        <link href="https://denseidel.github.io/blog/2017/11/24/types-of-relevant-resources-to-ecosystems.html">
-        </link>
-        <updated>2017-11-24T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2017/11/24/types-of-relevant-resources-to-ecosystems.html"/>
+        <updated>2017-11-24T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>When you start your ecosystem you need to decide which type of relationship you want to build up in the first place:</p> <ul> <li><strong>Products</strong>: This is the traditional multi level marketing / broker concept transfert to the digital age. Other have the possibility to...</li></ul>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[How to transform a regional seperated enterprise into a global service provider like Google [In Progress]]]></title>
         <id>https://denseidel.github.io/blog/2017/11/24/strategy-to-transform-to-one-global-enterprise.html</id>
-        <link href="https://denseidel.github.io/blog/2017/11/24/strategy-to-transform-to-one-global-enterprise.html">
-        </link>
-        <updated>2017-11-24T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2017/11/24/strategy-to-transform-to-one-global-enterprise.html"/>
+        <updated>2017-11-24T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>The economies of scale (<a href="#">why will software eat the world</a> forces enterpise to become global. Most enterprise established a regional differentiated network of local organizational units. Ask services will become more global those OEs will need to be int...</p>]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Create a REST API with Spring Boot [In Progress]]]></title>
         <id>https://denseidel.github.io/blog/2017/11/24/create-rest-api-with-spring-boot.html</id>
-        <link href="https://denseidel.github.io/blog/2017/11/24/create-rest-api-with-spring-boot.html">
-        </link>
-        <updated>2017-11-24T06:00:00Z</updated>
+        <link href="https://denseidel.github.io/blog/2017/11/24/create-rest-api-with-spring-boot.html"/>
+        <updated>2017-11-24T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p><strong>TL;DR:</strong> I getting started with Spring Boot by building a REST API and look into the RESTful Principles.</p>
 ]]></summary>
         <author>
             <name>Den</name>
+            <email/>
             <uri>http://twitter.com/denseidel</uri>
         </author>
     </entry>
