@@ -23,3 +23,4 @@ title: ADR
 * [18. Test your javascript code with Jest](0018-test-your-javascript-code-with-jest.md)
 * [19. Implement the frontend as monoliths over SCS components](0019-implement-the-frontend-as-monoliths-over-scs-components.md)
 * [20. Implement backends in Typescript](0020-implement-backends-in-typescript.md)
+* [21. Setup infrastructure with the tool of choice of the specific cloud](0021-setup-infrastructure-with-the-tool-of-choice-of-the-specific-cloud.md)

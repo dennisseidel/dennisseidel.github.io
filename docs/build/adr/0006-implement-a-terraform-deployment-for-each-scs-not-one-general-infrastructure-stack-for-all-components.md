@@ -4,9 +4,9 @@ Date: 2019-05-10
 
 ## Status
 
-Accepted
-
 Supercedes [2. Use pulumi+localstack over AWS SAM as serverless deployment](0002-use-pulumi-localstack-over-aws-sam-as-serverless-deployment.md)
+
+Superceded by [21. Setup infrastructure with the tool of choice of the specific cloud](0021-setup-infrastructure-with-the-tool-of-choice-of-the-specific-cloud.md)
 
 ## Context
 
